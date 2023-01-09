@@ -16,4 +16,5 @@
 - [ ] Designate how many rolls for interests
 - [ ] Designate how many rolls for personality
 - [ ] Designate how many rolls for hobby
+- [ ] Assign a random colour to inidicate favourite colour
 - [ ] Random name should be chosen (Future Implementation once API researched)
