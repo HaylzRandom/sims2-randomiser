@@ -1,0 +1,20 @@
+.title {
+  font-weight: bold;
+}
+
+li > p {
+  text-transform: capitalize;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ul li {
+  padding: 0.5em;
+}

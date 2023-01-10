@@ -1,0 +1,39 @@
+.sim__gender--select {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    margin-top: 1em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5em;
+    margin-bottom: 1em;
+}
+
+input {
+    cursor: pointer;
+}
+
+.gender__selection {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 1000vw;
+    border: none;
+    padding: 1em;
+}
+
+button:hover {
+    background-color: greenyellow;
+    border: 1px solid black;
+}
+
