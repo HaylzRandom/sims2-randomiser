@@ -1,8 +1,19 @@
 const templates = ['face', 'brow', 'eyes', 'nose', 'mouth', 'jaw'];
 
+const maleMin = 1;
+const maleMax = 55;
+const femaleMin = 1;
+const femaleMax = 54;
+
 const FaceTemplates = ({ gender }) => {
 	const generateFaceTemplates = () => {
-		return Math.floor(Math.random() * (27 - 1 + 1)) + 1;
+		if (gender === 'male') {
+			return Math.floor(Math.random() * (maleMax - maleMin + 1)) + maleMin;
+		} else {
+			return (
+				Math.floor(Math.random() * (femaleMax - femaleMin + 1)) + femaleMin
+			);
+		}
 	};
 
 	return (

@@ -8,7 +8,7 @@ const skinTonesMax = 24;
 const eyebrowsMin = 1;
 const eyebrowsMax = 4;
 
-const SimInfo = ({ gender }) => {
+const SimInfo = ({ gender, generateSim }) => {
 	const [hairColour, setHairColour] = useState('blonde');
 	const [name, setName] = useState('John Smith');
 	const [glasses, setGlasses] = useState(false);
@@ -24,7 +24,7 @@ const SimInfo = ({ gender }) => {
 		generateSkinTone();
 		generateEyebrows();
 		generateHairColour();
-	}, [gender]);
+	}, [generateSim]);
 
 	const wearGlasses = () => {
 		setGlasses(Math.random() > 0.5 ? true : false);

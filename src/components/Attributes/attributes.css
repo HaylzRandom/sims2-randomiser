@@ -1,0 +1,9 @@
+.colour {
+    width: 50px;
+    aspect-ratio: 1 / 2;
+    color: black;
+    padding: 0.5em;
+    border-radius: 1000vw;
+    text-transform: uppercase;
+    font-weight: bold;
+}

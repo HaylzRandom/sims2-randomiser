@@ -4,17 +4,24 @@ import FaceTemplates from '../FaceTemplates/FaceTemplates';
 import Attributes from '../Attributes/Attributes';
 import Modifiers from '../Modifiers/Modifiers';
 
+
 const SimMain = () => {
 	const [gender, setGender] = useState('');
 	const [generateSim, setgenerateSim] = useState(false);
 
-	const handleGender = (e) => {
-		setGender(e.target.value);
+	const generateSimBtn = (e) => {
+		e.preventDefault();
+		setgenerateSim(!generateSim);
 	};
 
-	const generateSimBtn = () => {
-		setgenerateSim(true);
-	};
+	const content = (
+		<>
+			<SimInfo gender={gender} generateSim={generateSim} />
+			<FaceTemplates gender={gender} />
+			<Modifiers />
+			<Attributes generateSim={generateSim} />
+		</>
+	);
 
 	return (
 		<>
@@ -28,7 +35,7 @@ const SimMain = () => {
 								name='gender'
 								id='male'
 								value='male'
-								onChange={handleGender}
+								onChange={(e) => setGender(e.target.value)}
 							/>
 							<label htmlFor='male'>Male</label>
 							<input
@@ -36,7 +43,7 @@ const SimMain = () => {
 								name='gender'
 								id='female'
 								value='female'
-								onChange={handleGender}
+								onChange={(e) => setGender(e.target.value)}
 							/>
 							<label htmlFor='female'>Female</label>
 						</div>
@@ -44,14 +51,10 @@ const SimMain = () => {
 					</form>
 				</div>
 			</section>
-			{/* Sim Info */}
-			<SimInfo gender={gender} />
-			{/* Face Templates */}
-			<FaceTemplates gender={gender} />
-			{/* Modifiers */}
-			<Modifiers />
-			{/* Attributes */}
-			<Attributes gender={gender} />
+
+			{generateSim && content}
+
+			<button onClick={generateSimBtn}>Reset</button>
 		</>
 	);
 };

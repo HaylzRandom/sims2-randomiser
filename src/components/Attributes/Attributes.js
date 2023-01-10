@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 
+import './attributes.css';
+
 const aspirationsArr = [
 	'Family',
 	'Fortune',
@@ -61,40 +63,51 @@ const turnOnsOffArr = [
 	'Blue Eyes',
 ];
 
-const Attributes = ({ gender }) => {
+const Attributes = ({ generateSim }) => {
 	const [turnOns, setTurnOns] = useState([]);
 	const [turnOff, setTurnOff] = useState('');
+	const [favouriteColour, setFavouriteColour] = useState('#2563de');
 
-	useEffect(() => {}, [gender]);
+	useEffect(() => {
+		generateFavouriteColour();
+		generateTurnOnsOffs();
+	}, [generateSim]);
 
+	const generateZodiacSign = () => {
+		return zodiacsArr[Math.floor(Math.random() * zodiacsArr.length)];
+	};
+
+	const generateAspiration = () => {
+		return aspirationsArr[Math.floor(Math.random() * aspirationsArr.length)];
+	};
+
+	const generateFavouriteColour = () => {
+		setFavouriteColour('#' + Math.floor(Math.random() * 16777215).toString(16));
+	};
+
+	// Need to find a better method
 	const generateTurnOnsOffs = () => {
 		let count = 1;
 		let values = [];
+		let newTurnOns = [];
 
 		while (count <= 3) {
-			let arrVal;
-
-			if (count !== 3) {
-				arrVal =
-					turnOnsOffArr[Math.floor(Math.random() * turnOnsOffArr.length)];
-
-				values.push(turnOnsOffArr.filter((val) => val === arrVal));
-				console.log('Values', values);
-
-				console.log(arrVal, count);
-				console.log('TurnOns', turnOns);
-			} else {
-				setTurnOff(
-					turnOnsOffArr[Math.floor(Math.random() * turnOnsOffArr.length)]
-				);
-			}
+			values.push(
+				turnOnsOffArr[Math.floor(Math.random() * turnOnsOffArr.length)]
+			);
 
 			count++;
 		}
-		console.log('Values end', values);
-		setTurnOns(values, ...turnOns);
-		console.log(turnOff);
-		console.log(turnOns);
+
+		newTurnOns.push(values[0]);
+		newTurnOns.push(values[1]);
+		setTurnOff(values[2]);
+
+		setTurnOns(newTurnOns);
+	};
+
+	const generateRandomRoll = () => {
+		return Math.floor(Math.random() * (10 - 1 + 1)) + 1;
 	};
 
 	return (
@@ -107,12 +120,14 @@ const Attributes = ({ gender }) => {
 					<ul className='sim-attributes__list'>
 						<li>
 							<p>
-								<span className='title'>Aspiration: </span>
+								<span className='title'>Aspiration: </span>{' '}
+								{generateAspiration()}
 							</p>
 						</li>
 						<li>
 							<p>
-								<span className='title'>Zodiac Sign: </span>
+								<span className='title'>Zodiac Sign: </span>{' '}
+								{generateZodiacSign()}
 							</p>
 						</li>
 						<li>
@@ -129,21 +144,29 @@ const Attributes = ({ gender }) => {
 						<li>
 							<p>
 								<span className='title'>Interest Rolls: </span>
+								{generateRandomRoll()}
 							</p>
 						</li>
 						<li>
 							<p>
 								<span className='title'>Personality Rolls: </span>
+								{generateRandomRoll()}
 							</p>
 						</li>
 						<li>
 							<p>
 								<span className='title'>Hobby Rolls: </span>
+								{generateRandomRoll()}
 							</p>
 						</li>
 						<li>
 							<p>
-								<span className='title'>Favourite Colour: </span>
+								<span className='title'>Favourite Colour: </span>{' '}
+								<span
+									className='colour'
+									style={{ backgroundColor: favouriteColour }}>
+									{favouriteColour}
+								</span>
 							</p>
 						</li>
 					</ul>
