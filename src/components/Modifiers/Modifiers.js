@@ -1,3 +1,5 @@
+import './modifiers.css';
+
 const faceModifiersArr = [
 	'face outer orbit depth',
 	'face earshape',
@@ -129,83 +131,85 @@ const Modifiers = () => {
 			<header>
 				<h2>Modifiers</h2>
 			</header>
-			<div className='modifiers__face'>
-				<h3>Face</h3>
-				<ul className='modifiers__list'>
-					{faceModifiersArr.map((faceVal) => (
-						<li key={faceVal}>
-							<p>
-								<span className='title'>{faceVal}: </span>
-								{generateValue()}
-							</p>
-						</li>
-					))}
-				</ul>
-			</div>
-			<div className='modifiers__brow'>
-				<h3>Brow</h3>
-				<ul className='modifiers__list'>
-					{browModifiersArr.map((browVal) => (
-						<li key={browVal}>
-							<p>
-								<span className='title'>{browVal}: </span>
-								{generateValue()}
-							</p>
-						</li>
-					))}
-				</ul>
-			</div>
-			<div className='modifiers__eyes'>
-				<h3>Eyes</h3>
-				<ul className='modifiers__list'>
-					{eyeModifiersArr.map((eyeVal) => (
-						<li key={eyeVal}>
-							<p>
-								<span className='title'>{eyeVal}: </span>
-								{generateValue()}
-							</p>
-						</li>
-					))}
-				</ul>
-			</div>
-			<div className='modifiers__nose'>
-				<h3>Nose</h3>
-				<ul className='modifiers__list'>
-					{noseModifiersArr.map((noseVal) => (
-						<li key={noseVal}>
-							<p>
-								<span className='title'>{noseVal}: </span>
-								{generateValue()}
-							</p>
-						</li>
-					))}
-				</ul>
-			</div>
-			<div className='modifiers__mouth'>
-				<h3>Mouth</h3>
-				<ul className='modifiers__list'>
-					{mouthModifiersArr.map((mouthVal) => (
-						<li key={mouthVal}>
-							<p>
-								<span className='title'>{mouthVal}: </span>
-								{generateValue()}
-							</p>
-						</li>
-					))}
-				</ul>
-			</div>
-			<div className='modifiers__jaw'>
-				<h3>Jaw</h3>
-				<ul className='modifiers__list'>
-					{jawModifiersArr.map((jawVal) => (
-						<li key={jawVal}>
-							<p>
-								<span className='title'>{jawVal}: </span>
-								{generateValue()}
-							</p>
-						</li>
-					))}
-				</ul>
+			<div className='modifiers'>
+				<div className='modifiers__face'>
+					<h3>Face</h3>
+					<ul className='modifiers__list'>
+						{faceModifiersArr.map((faceVal) => (
+							<li key={faceVal}>
+								<p>
+									<span className='title'>{faceVal}: </span>
+									{generateValue()}
+								</p>
+							</li>
+						))}
+					</ul>
+				</div>
+				<div className='modifiers__brow'>
+					<h3>Brow</h3>
+					<ul className='modifiers__list'>
+						{browModifiersArr.map((browVal) => (
+							<li key={browVal}>
+								<p>
+									<span className='title'>{browVal}: </span>
+									{generateValue()}
+								</p>
+							</li>
+						))}
+					</ul>
+				</div>
+				<div className='modifiers__eyes'>
+					<h3>Eyes</h3>
+					<ul className='modifiers__list'>
+						{eyeModifiersArr.map((eyeVal) => (
+							<li key={eyeVal}>
+								<p>
+									<span className='title'>{eyeVal}: </span>
+									{generateValue()}
+								</p>
+							</li>
+						))}
+					</ul>
+				</div>
+				<div className='modifiers__nose'>
+					<h3>Nose</h3>
+					<ul className='modifiers__list'>
+						{noseModifiersArr.map((noseVal) => (
+							<li key={noseVal}>
+								<p>
+									<span className='title'>{noseVal}: </span>
+									{generateValue()}
+								</p>
+							</li>
+						))}
+					</ul>
+				</div>
+				<div className='modifiers__mouth'>
+					<h3>Mouth</h3>
+					<ul className='modifiers__list'>
+						{mouthModifiersArr.map((mouthVal) => (
+							<li key={mouthVal}>
+								<p>
+									<span className='title'>{mouthVal}: </span>
+									{generateValue()}
+								</p>
+							</li>
+						))}
+					</ul>
+				</div>
+				<div className='modifiers__jaw'>
+					<h3>Jaw</h3>
+					<ul className='modifiers__list'>
+						{jawModifiersArr.map((jawVal) => (
+							<li key={jawVal}>
+								<p>
+									<span className='title'>{jawVal}: </span>
+									{generateValue()}
+								</p>
+							</li>
+						))}
+					</ul>
+				</div>
 			</div>
 		</section>
 	);
