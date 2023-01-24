@@ -10,11 +10,12 @@ import Attributes from '../Attributes/Attributes';
 import Modifiers from '../Modifiers/Modifiers';
 
 const SimMain = () => {
-	const [gender, setGender] = useState('');
+	const [gender, setGender] = useState(null);
 	const [generateSim, setgenerateSim] = useState(false);
 
 	const generateSimBtn = (e) => {
 		e.preventDefault();
+		if (!gender) return;
 		setgenerateSim(!generateSim);
 	};
 
@@ -22,13 +23,13 @@ const SimMain = () => {
 		<div className='group'>
 			<div className='group-1'>
 				<SimInfo gender={gender} generateSim={generateSim} />
-				<FaceTemplates gender={gender} />
+				<Attributes gender={gender} generateSim={generateSim} />
 			</div>
 			<div className='group-2'>
 				<Modifiers />
 			</div>
 			<div className='group-3'>
-				<Attributes generateSim={generateSim} />
+				<FaceTemplates gender={gender} />
 			</div>
 		</div>
 	);

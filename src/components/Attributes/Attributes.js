@@ -85,18 +85,15 @@ const Attributes = ({ generateSim }) => {
 		setFavouriteColour('#' + Math.floor(Math.random() * 16777215).toString(16));
 	};
 
-	// Need to find a better method
 	const generateTurnOnsOffs = () => {
-		let count = 1;
+		let count = 3;
 		let values = [];
 		let newTurnOns = [];
+		let _tmp = turnOnsOffArr.slice();
 
-		while (count <= 3) {
-			values.push(
-				turnOnsOffArr[Math.floor(Math.random() * turnOnsOffArr.length)]
-			);
-
-			count++;
+		for (let i = 1; i <= count; i++) {
+			let idx = Math.floor(Math.random() * 10) % _tmp.length;
+			values.push(_tmp.splice(idx, 1)[0]);
 		}
 
 		newTurnOns.push(values[0]);
