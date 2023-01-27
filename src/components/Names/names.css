@@ -1,0 +1,58 @@
+hr {
+    width: 80%;
+    color: blueviolet;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.pet__selection {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.gender__selection--choice,
+.pet__selection--choice,
+.form__selection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.gender__icon,
+.pet__icon {
+    font-size: 1.5rem;
+}
+
+.random__name--pet,
+.random__name--sim,
+.search__name--sim {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.random__name--answer {
+    display: flex;
+    justify-content: center;
+    margin: 1.5em;
+}
+
+.random__name--name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 1000vw;
+    padding: 0.5em 2em;
+}
+
+.search__name--results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5em;
+    height: 200px;
+}

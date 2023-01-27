@@ -1,5 +1,6 @@
 # User Stories
 
+- [ ] Allow a user to choose whether to generate a sim or generate a name
 - [x] User should choose whether a male or female sim should be generated
 - [x] Skin colour should be randomly chosen
 - [x] Eye colour should be randomly chosen
@@ -17,4 +18,11 @@
 - [x] Designate how many rolls for personality
 - [x] Designate how many rolls for hobby
 - [x] Assign a random colour to inidicate favourite colour
-- [ ] Random name should be chosen (Future Implementation once API researched)
+- [ ] Random name should be chosen when generating a sim
+- [ ] When choosing to generate a name, several options should appear
+- [ ] Choose a gender for a name for a sim to be chosen
+- [ ] Randomly choose one name for a sim from a list and display to user
+- [ ] Filter by 1st letter of name and display selection of names
+- [ ] Choose a gender for a name for a pet to be chosen
+- [ ] Randomly choose one name for a pet from a list and display to user
+- [ ] Filter by 1st letter of name and display selection of names
