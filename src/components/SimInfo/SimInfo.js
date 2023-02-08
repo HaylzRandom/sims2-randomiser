@@ -6,7 +6,7 @@ const eyeColoursMax = 5;
 const skinTonesMin = 1;
 const skinTonesMax = 24;
 const eyebrowsMin = 1;
-const eyebrowsMax = 25;
+const eyebrowsMax = 58;
 
 const SimInfo = ({ gender, generateSim }) => {
 	const [hairColour, setHairColour] = useState('blonde');
