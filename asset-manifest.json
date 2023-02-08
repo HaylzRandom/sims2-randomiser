@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/sims2-randomiser/static/css/main.09f92a1d.css",
-    "main.js": "/sims2-randomiser/static/js/main.4902dbb6.js",
+    "main.js": "/sims2-randomiser/static/js/main.cd3be1cd.js",
     "index.html": "/sims2-randomiser/index.html",
     "main.09f92a1d.css.map": "/sims2-randomiser/static/css/main.09f92a1d.css.map",
-    "main.4902dbb6.js.map": "/sims2-randomiser/static/js/main.4902dbb6.js.map"
+    "main.cd3be1cd.js.map": "/sims2-randomiser/static/js/main.cd3be1cd.js.map"
   },
   "entrypoints": [
     "static/css/main.09f92a1d.css",
-    "static/js/main.4902dbb6.js"
+    "static/js/main.cd3be1cd.js"
   ]
 }
