@@ -1,7 +1,7 @@
 from globals import ASPIRATION_MODEL
 from .hobby import get_hobby
 from .personality import get_personality
-from .interests import get_interests
+from .interests import get_interests, interests_aspiration
 
 
 def generate_aspiration():
@@ -11,28 +11,75 @@ def generate_aspiration():
 
     match hobby:
         case "Arts & Crafts":
-            aspiration_choice["Popularity"] += 1
+            aspiration_choice["Family"] += 5
+            aspiration_choice["Fortune"] -= 5
+            aspiration_choice["Knowledge"] -= 5
+            aspiration_choice["Pleasure"] -= 5
+            aspiration_choice["Popularity"] += 5
+            aspiration_choice["Romance"] += 5
         case "Cuisine":
-            aspiration_choice["Family"] += 1
+            aspiration_choice["Family"] += 5
+            aspiration_choice["Fortune"] -= 5
+            aspiration_choice["Knowledge"] -= 5
+            aspiration_choice["Pleasure"] += 5
+            aspiration_choice["Popularity"] -= 5
+            aspiration_choice["Romance"] += 5
         case "Film & Literature":
-            aspiration_choice["Romance"] += 1
+            aspiration_choice["Family"] -= 5
+            aspiration_choice["Fortune"] -= 5
+            aspiration_choice["Knowledge"] -= 5
+            aspiration_choice["Popularity"] += 5
+            aspiration_choice["Romance"] += 5
+            aspiration_choice["Pleasure"] += 5
         case "Fitness":
-            aspiration_choice["Popularity"] += 1
-            aspiration_choice["Romance"] += 1
+            aspiration_choice["Family"] -= 5
+            aspiration_choice["Fortune"] += 5
+            aspiration_choice["Knowledge"] -= 5
+            aspiration_choice["Pleasure"] -= 5
+            aspiration_choice["Popularity"] += 5
+            aspiration_choice["Romance"] += 5
         case "Games":
-            aspiration_choice["Family"] += 1
-            aspiration_choice["Pleasure"] += 1
+            aspiration_choice["Family"] += 5
+            aspiration_choice["Fortune"] -= 5
+            aspiration_choice["Knowledge"] -= 5
+            aspiration_choice["Pleasure"] += 5
+            aspiration_choice["Popularity"] += 5
+            aspiration_choice["Romance"] -= 5
         case "Music & Dance":
-            aspiration_choice["Pleasure"] += 1
-            aspiration_choice["Fortune"] += 1
+            aspiration_choice["Family"] += 5
+            aspiration_choice["Fortune"] -= 5
+            aspiration_choice["Knowledge"] -= 5
+            aspiration_choice["Pleasure"] += 5
+            aspiration_choice["Popularity"] += 5
+            aspiration_choice["Romance"] += 5
         case "Nature":
-            aspiration_choice["Knowledge"] += 1
+            aspiration_choice["Family"] += 5
+            aspiration_choice["Fortune"] -= 5
+            aspiration_choice["Knowledge"] += 5
+            aspiration_choice["Pleasure"] -= 5
+            aspiration_choice["Popularity"] += 5
+            aspiration_choice["Romance"] -= 5
         case "Science":
-            aspiration_choice["Knowledge"] += 1
+            aspiration_choice["Family"] += 5
+            aspiration_choice["Fortune"] += 5
+            aspiration_choice["Knowledge"] += 5
+            aspiration_choice["Pleasure"] -= 5
+            aspiration_choice["Popularity"] -= 5
+            aspiration_choice["Romance"] -= 5
         case "Sports":
-            aspiration_choice["Popularity"] += 1
+            aspiration_choice["Family"] -= 5
+            aspiration_choice["Fortune"] += 5
+            aspiration_choice["Knowledge"] -= 5
+            aspiration_choice["Pleasure"] -= 5
+            aspiration_choice["Popularity"] += 5
+            aspiration_choice["Romance"] += 5
         case "Tinkering":
-            aspiration_choice["Fortune"] += 1
+            aspiration_choice["Family"] += 5
+            aspiration_choice["Fortune"] += 5
+            aspiration_choice["Knowledge"] += 5
+            aspiration_choice["Pleasure"] -= 5
+            aspiration_choice["Popularity"] -= 5
+            aspiration_choice["Romance"] -= 5
         case _:
             print("Unknown Hobby at this time!")
 
@@ -61,12 +108,27 @@ def generate_aspiration():
 
     personality_aspiration(neat, outgoing, active, playful, nice, aspiration_choice)
 
-    aspiration_choice["Family"] += school + toys + animals + food
-    aspiration_choice["Fortune"] += crime + money + work + politics
-    aspiration_choice["Knowledge"] += weather + paranormal + environment + sciFi
-    aspiration_choice["Pleasure"] += food + entertainment + culture + travel
-    aspiration_choice["Popularity"] += politics + sports + fashion + entertainment
-    aspiration_choice["Romance"] += fashion + travel + health + culture
+    interests_aspiration(
+        politics,
+        crime,
+        food,
+        sports,
+        work,
+        school,
+        money,
+        entertainment,
+        health,
+        paranormal,
+        weather,
+        toys,
+        environment,
+        culture,
+        fashion,
+        travel,
+        animals,
+        sciFi,
+        aspiration_choice,
+    )
 
     sim_data = {
         "neat": neat,

@@ -29,6 +29,325 @@ def get_interests():
     return interests.values()
 
 
+def interests_aspiration(
+    politics,
+    crime,
+    food,
+    sports,
+    work,
+    school,
+    money,
+    entertainment,
+    health,
+    paranormal,
+    weather,
+    toys,
+    environment,
+    culture,
+    fashion,
+    travel,
+    animals,
+    sciFi,
+    aspirations,
+):
+    # aspiration_choice["Family"] += school + toys + animals + food
+    # aspiration_choice["Fortune"] += crime + money + work + politics
+    # aspiration_choice["Knowledge"] += weather + paranormal + environment + sciFi
+    # aspiration_choice["Pleasure"] += food + entertainment + culture + travel
+    # aspiration_choice["Popularity"] += politics + sports + fashion + entertainment
+    # aspiration_choice["Romance"] += fashion + travel + health + culture
+
+    # Politics
+    if politics >= 6:
+        aspirations["Family"] -= 5
+        aspirations["Fortune"] += 5
+        aspirations["Knowledge"] -= 5
+        aspirations["Pleasure"] -= 5
+        aspirations["Popularity"] += 5
+        aspirations["Romance"] += 5
+    else:
+        aspirations["Family"] += 5
+        aspirations["Fortune"] -= 5
+        aspirations["Knowledge"] += 5
+        aspirations["Pleasure"] += 5
+        aspirations["Popularity"] -= 5
+        aspirations["Romance"] -= 5
+
+    # Crime
+    if crime >= 6:
+        aspirations["Family"] -= 5
+        aspirations["Fortune"] += 5
+        aspirations["Knowledge"] += 5
+        aspirations["Pleasure"] -= 5
+        aspirations["Popularity"] -= 5
+        aspirations["Romance"] += 5
+    else:
+        aspirations["Family"] += 5
+        aspirations["Fortune"] -= 5
+        aspirations["Knowledge"] -= 5
+        aspirations["Pleasure"] += 5
+        aspirations["Popularity"] += 5
+        aspirations["Romance"] -= 5
+
+    # Food
+    if food >= 6:
+        aspirations["Family"] += 5
+        aspirations["Fortune"] -= 5
+        aspirations["Knowledge"] -= 5
+        aspirations["Pleasure"] += 5
+        aspirations["Popularity"] -= 5
+        aspirations["Romance"] += 5
+    else:
+        aspirations["Family"] -= 5
+        aspirations["Fortune"] += 5
+        aspirations["Knowledge"] += 5
+        aspirations["Pleasure"] -= 5
+        aspirations["Popularity"] += 5
+        aspirations["Romance"] -= 5
+
+    # Sports
+    if sports >= 6:
+        aspirations["Family"] -= 5
+        aspirations["Fortune"] += 5
+        aspirations["Knowledge"] -= 5
+        aspirations["Pleasure"] -= 5
+        aspirations["Popularity"] += 5
+        aspirations["Romance"] += 5
+    else:
+        aspirations["Family"] += 5
+        aspirations["Fortune"] -= 5
+        aspirations["Knowledge"] += 5
+        aspirations["Pleasure"] += 5
+        aspirations["Popularity"] -= 5
+        aspirations["Romance"] -= 5
+
+    # Work
+    if work >= 6:
+        aspirations["Family"] -= 5
+        aspirations["Fortune"] += 5
+        aspirations["Knowledge"] += 5
+        aspirations["Pleasure"] -= 5
+        aspirations["Popularity"] += 5
+        aspirations["Romance"] -= 5
+    else:
+        aspirations["Family"] += 5
+        aspirations["Fortune"] -= 5
+        aspirations["Knowledge"] -= 5
+        aspirations["Pleasure"] += 5
+        aspirations["Popularity"] -= 5
+        aspirations["Romance"] += 5
+
+    # School
+    if school >= 6:
+        aspirations["Family"] += 5
+        aspirations["Fortune"] += 5
+        aspirations["Knowledge"] += 5
+        aspirations["Pleasure"] -= 5
+        aspirations["Popularity"] -= 5
+        aspirations["Romance"] -= 5
+    else:
+        aspirations["Family"] -= 5
+        aspirations["Fortune"] -= 5
+        aspirations["Knowledge"] -= 5
+        aspirations["Pleasure"] += 5
+        aspirations["Popularity"] += 5
+        aspirations["Romance"] += 5
+
+    # Money
+    if money >= 6:
+        aspirations["Family"] -= 5
+        aspirations["Fortune"] += 5
+        aspirations["Knowledge"] += 5
+        aspirations["Pleasure"] -= 5
+        aspirations["Popularity"] -= 5
+        aspirations["Romance"] += 5
+    else:
+        aspirations["Family"] += 5
+        aspirations["Fortune"] -= 5
+        aspirations["Knowledge"] -= 5
+        aspirations["Pleasure"] += 5
+        aspirations["Popularity"] += 5
+        aspirations["Romance"] -= 5
+
+    # Entertainment
+    if entertainment >= 6:
+        aspirations["Family"] -= 5
+        aspirations["Fortune"] -= 5
+        aspirations["Knowledge"] -= 5
+        aspirations["Pleasure"] += 5
+        aspirations["Popularity"] += 5
+        aspirations["Romance"] += 5
+    else:
+        aspirations["Family"] += 5
+        aspirations["Fortune"] += 5
+        aspirations["Knowledge"] += 5
+        aspirations["Pleasure"] -= 5
+        aspirations["Popularity"] -= 5
+        aspirations["Romance"] -= 5
+
+    # Health
+    if health >= 6:
+        aspirations["Family"] += 5
+        aspirations["Fortune"] -= 5
+        aspirations["Knowledge"] += 5
+        aspirations["Pleasure"] -= 5
+        aspirations["Popularity"] -= 5
+        aspirations["Romance"] += 5
+    else:
+        aspirations["Family"] -= 5
+        aspirations["Fortune"] += 5
+        aspirations["Knowledge"] -= 5
+        aspirations["Pleasure"] += 5
+        aspirations["Popularity"] += 5
+        aspirations["Romance"] -= 5
+
+    # Paranormal
+    if paranormal >= 6:
+        aspirations["Family"] += 5
+        aspirations["Fortune"] -= 5
+        aspirations["Knowledge"] += 5
+        aspirations["Pleasure"] += 5
+        aspirations["Popularity"] -= 5
+        aspirations["Romance"] -= 5
+    else:
+        aspirations["Family"] -= 5
+        aspirations["Fortune"] += 5
+        aspirations["Knowledge"] -= 5
+        aspirations["Pleasure"] -= 5
+        aspirations["Popularity"] += 5
+        aspirations["Romance"] += 5
+
+    # Weather
+    if weather >= 6:
+        aspirations["Family"] += 5
+        aspirations["Fortune"] -= 5
+        aspirations["Knowledge"] += 5
+        aspirations["Pleasure"] -= 5
+        aspirations["Popularity"] += 5
+        aspirations["Romance"] -= 5
+    else:
+        aspirations["Family"] -= 5
+        aspirations["Fortune"] += 5
+        aspirations["Knowledge"] -= 5
+        aspirations["Pleasure"] += 5
+        aspirations["Popularity"] -= 5
+        aspirations["Romance"] += 5
+
+    # Toys
+    if toys >= 6:
+        aspirations["Family"] += 5
+        aspirations["Fortune"] -= 5
+        aspirations["Knowledge"] -= 5
+        aspirations["Pleasure"] += 5
+        aspirations["Popularity"] += 5
+        aspirations["Romance"] -= 5
+    else:
+        aspirations["Family"] -= 5
+        aspirations["Fortune"] += 5
+        aspirations["Knowledge"] += 5
+        aspirations["Pleasure"] -= 5
+        aspirations["Popularity"] -= 5
+        aspirations["Romance"] += 5
+
+    # Environment
+    if environment >= 6:
+        aspirations["Family"] += 5
+        aspirations["Fortune"] -= 5
+        aspirations["Knowledge"] += 5
+        aspirations["Pleasure"] -= 5
+        aspirations["Popularity"] += 5
+        aspirations["Romance"] -= 5
+    else:
+        aspirations["Family"] -= 5
+        aspirations["Fortune"] += 5
+        aspirations["Knowledge"] -= 5
+        aspirations["Pleasure"] += 5
+        aspirations["Popularity"] -= 5
+        aspirations["Romance"] += 5
+
+    # Culture
+    if culture >= 6:
+        aspirations["Family"] -= 5
+        aspirations["Fortune"] -= 5
+        aspirations["Knowledge"] -= 5
+        aspirations["Pleasure"] += 5
+        aspirations["Popularity"] += 5
+        aspirations["Romance"] += 5
+    else:
+        aspirations["Family"] += 5
+        aspirations["Fortune"] += 5
+        aspirations["Knowledge"] += 5
+        aspirations["Pleasure"] -= 5
+        aspirations["Popularity"] -= 5
+        aspirations["Romance"] -= 5
+
+    # Fashion
+    if fashion >= 6:
+        aspirations["Family"] -= 5
+        aspirations["Fortune"] -= 5
+        aspirations["Knowledge"] -= 5
+        aspirations["Pleasure"] += 5
+        aspirations["Popularity"] += 5
+        aspirations["Romance"] += 5
+    else:
+        aspirations["Family"] += 5
+        aspirations["Fortune"] += 5
+        aspirations["Knowledge"] += 5
+        aspirations["Pleasure"] -= 5
+        aspirations["Popularity"] -= 5
+        aspirations["Romance"] -= 5
+
+    # Travel
+    if travel >= 6:
+        aspirations["Family"] -= 5
+        aspirations["Fortune"] -= 5
+        aspirations["Knowledge"] -= 5
+        aspirations["Pleasure"] += 5
+        aspirations["Popularity"] += 5
+        aspirations["Romance"] += 5
+    else:
+        aspirations["Family"] += 5
+        aspirations["Fortune"] += 5
+        aspirations["Knowledge"] += 5
+        aspirations["Pleasure"] -= 5
+        aspirations["Popularity"] -= 5
+        aspirations["Romance"] -= 5
+
+    # Animals
+    if animals >= 6:
+        aspirations["Family"] += 5
+        aspirations["Fortune"] -= 5
+        aspirations["Knowledge"] -= 5
+        aspirations["Pleasure"] += 5
+        aspirations["Popularity"] += 5
+        aspirations["Romance"] -= 5
+    else:
+        aspirations["Family"] -= 5
+        aspirations["Fortune"] += 5
+        aspirations["Knowledge"] += 5
+        aspirations["Pleasure"] -= 5
+        aspirations["Popularity"] -= 5
+        aspirations["Romance"] += 5
+
+    # SciFi
+    if sciFi >= 6:
+        aspirations["Family"] += 5
+        aspirations["Fortune"] -= 5
+        aspirations["Knowledge"] += 5
+        aspirations["Pleasure"] += 5
+        aspirations["Popularity"] -= 5
+        aspirations["Romance"] -= 5
+    else:
+        aspirations["Family"] -= 5
+        aspirations["Fortune"] += 5
+        aspirations["Knowledge"] -= 5
+        aspirations["Pleasure"] -= 5
+        aspirations["Popularity"] += 5
+        aspirations["Romance"] += 5
+
+    return aspirations
+
+
 def interests_traits(
     politics,
     crime,
