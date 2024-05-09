@@ -8,101 +8,111 @@ from globals import (
     ADULT_TRAITS,
     ADULT_NUM_TRAITS,
 )
+from .turn_ons_off import (
+    get_trait_turn_off_adult,
+    get_trait_turn_off_teen,
+    get_trait_turn_on_adult,
+    get_trait_turn_on_teen,
+)
 
+from .hobby import hobby_traits
+from .personality import personality_traits
+from .interests import interests_traits
+from .aspiration import aspiration_traits
 
-def get_traits_young(
-    age,
-    neat,
-    outgoing,
-    active,
-    playful,
-    nice,
-    hobby,
-    politics,
-    crime,
-    food,
-    sports,
-    work,
-    school,
-    money,
-    entertainment,
-    health,
-    paranormal,
-    weather,
-    toys,
-    environment,
-    culture,
-    fashion,
-    travel,
-    animals,
-    sciFi,
-):
-    if age == "toddler":
-        traits = TODDLER_TRAITS
-        hobby_traits(hobby, traits, age)
-        personality_traits(neat, outgoing, active, playful, nice, age, traits)
-        interests_traits(
-            politics,
-            crime,
-            food,
-            sports,
-            work,
-            school,
-            money,
-            entertainment,
-            health,
-            paranormal,
-            weather,
-            toys,
-            environment,
-            culture,
-            fashion,
-            travel,
-            animals,
-            sciFi,
-            traits,
-            age,
-        )
+# def get_traits_young(
+#     age,
+#     neat,
+#     outgoing,
+#     active,
+#     playful,
+#     nice,
+#     hobby,
+#     politics,
+#     crime,
+#     food,
+#     sports,
+#     work,
+#     school,
+#     money,
+#     entertainment,
+#     health,
+#     paranormal,
+#     weather,
+#     toys,
+#     environment,
+#     culture,
+#     fashion,
+#     travel,
+#     animals,
+#     sciFi,
+# ):
+#     if age == "toddler":
+#         traits = TODDLER_TRAITS
+#         hobby_traits(hobby, traits, age)
+#         personality_traits(neat, outgoing, active, playful, nice, age, traits)
+#         interests_traits(
+#             politics,
+#             crime,
+#             food,
+#             sports,
+#             work,
+#             school,
+#             money,
+#             entertainment,
+#             health,
+#             paranormal,
+#             weather,
+#             toys,
+#             environment,
+#             culture,
+#             fashion,
+#             travel,
+#             animals,
+#             sciFi,
+#             traits,
+#             age,
+#         )
 
-        top_toddler_traits = sorted(
-            traits.items(), key=lambda item: item[1], reverse=True
-        )[: TODDLER_NUM_TRAITS + 1]
-        toddler_traits_combined = [(key, value) for key, value in top_toddler_traits]
+#         top_toddler_traits = sorted(
+#             traits.items(), key=lambda item: item[1], reverse=True
+#         )[: TODDLER_NUM_TRAITS + 1]
+#         toddler_traits_combined = [(key, value) for key, value in top_toddler_traits]
 
-        return toddler_traits_combined
-    else:
-        traits = CHILD_TRAITS
-        hobby_traits(hobby, traits, age)
-        personality_traits(neat, outgoing, active, playful, nice, age, traits)
-        interests_traits(
-            politics,
-            crime,
-            food,
-            sports,
-            work,
-            school,
-            money,
-            entertainment,
-            health,
-            paranormal,
-            weather,
-            toys,
-            environment,
-            culture,
-            fashion,
-            travel,
-            animals,
-            sciFi,
-            traits,
-            age,
-        )
+#         return toddler_traits_combined
+#     else:
+#         traits = CHILD_TRAITS
+#         hobby_traits(hobby, traits, age)
+#         personality_traits(neat, outgoing, active, playful, nice, age, traits)
+#         interests_traits(
+#             politics,
+#             crime,
+#             food,
+#             sports,
+#             work,
+#             school,
+#             money,
+#             entertainment,
+#             health,
+#             paranormal,
+#             weather,
+#             toys,
+#             environment,
+#             culture,
+#             fashion,
+#             travel,
+#             animals,
+#             sciFi,
+#             traits,
+#             age,
+#         )
 
-        top_child_traits = sorted(
-            traits.items(), key=lambda item: item[1], reverse=True
-        )[: CHILD_NUM_TRAITS + 1]
-        child_traits_combined = [(key, value) for key, value in top_child_traits]
+#         top_child_traits = sorted(
+#             traits.items(), key=lambda item: item[1], reverse=True
+#         )[: CHILD_NUM_TRAITS + 1]
+#         child_traits_combined = [(key, value) for key, value in top_child_traits]
 
-        return child_traits_combined
+#         return child_traits_combined
 
 
 def get_traits_old(
