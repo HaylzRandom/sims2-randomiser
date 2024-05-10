@@ -419,7 +419,7 @@ def interests_traits(
             traits["disciplined"] += 1
         if health <= 3:
             traits["couch potato"] += 1
-            traits["slob"]
+            traits["slob"] += 1
         if health <= 2:
             traits["absent-minded"] += 1
             traits["hates the outdoors"] += 1
@@ -914,7 +914,7 @@ def interests_traits(
         if entertainment == 10:
             traits["star quality"] += 1
         if entertainment >= 9:
-            traits["diva"]
+            traits["diva"] += 1
             traits["natural born performer"] += 1
         if entertainment >= 8:
             traits["couch potato"] += 1

@@ -214,6 +214,8 @@ def get_traits_old(
             age,
         )
 
+        aspiration_traits(aspirations, age, traits)
+
         top_adult_traits = sorted(
             traits.items(), key=lambda item: item[1], reverse=True
         )[: ADULT_NUM_TRAITS + 1]
