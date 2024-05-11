@@ -24,99 +24,98 @@ from .personality import personality_traits
 from .interests import interests_traits
 from .aspiration import aspiration_traits
 
-# def get_traits_young(
-#     age,
-#     neat,
-#     outgoing,
-#     active,
-#     playful,
-#     nice,
-#     hobby,
-#     politics,
-#     crime,
-#     food,
-#     sports,
-#     work,
-#     school,
-#     money,
-#     entertainment,
-#     health,
-#     paranormal,
-#     weather,
-#     toys,
-#     environment,
-#     culture,
-#     fashion,
-#     travel,
-#     animals,
-#     sciFi,
-# ):
-#     if age == "toddler":
-#         traits = TODDLER_TRAITS
-#         hobby_traits(hobby, traits, age)
-#         personality_traits(neat, outgoing, active, playful, nice, age, traits)
-#         interests_traits(
-#             politics,
-#             crime,
-#             food,
-#             sports,
-#             work,
-#             school,
-#             money,
-#             entertainment,
-#             health,
-#             paranormal,
-#             weather,
-#             toys,
-#             environment,
-#             culture,
-#             fashion,
-#             travel,
-#             animals,
-#             sciFi,
-#             traits,
-#             age,
-#         )
 
-#         top_toddler_traits = sorted(
-#             traits.items(), key=lambda item: item[1], reverse=True
-#         )[: TODDLER_NUM_TRAITS + 1]
-#         toddler_traits_combined = [(key, value) for key, value in top_toddler_traits]
+def get_traits_young(
+    age,
+    neat,
+    outgoing,
+    active,
+    playful,
+    nice,
+    hobby,
+    politics,
+    crime,
+    food,
+    sports,
+    work,
+    school,
+    money,
+    entertainment,
+    health,
+    paranormal,
+    weather,
+    toys,
+    environment,
+    culture,
+    fashion,
+    travel,
+    animals,
+    sciFi,
+):
+    if age == "toddler":
+        traits = TODDLER_TRAITS
+        hobby_traits(hobby, traits, age)
+        personality_traits(neat, outgoing, active, playful, nice, age, traits)
+        interests_traits(
+            politics,
+            crime,
+            food,
+            sports,
+            work,
+            school,
+            money,
+            entertainment,
+            health,
+            paranormal,
+            weather,
+            toys,
+            environment,
+            culture,
+            fashion,
+            travel,
+            animals,
+            sciFi,
+            traits,
+            age,
+        )
 
-#         return toddler_traits_combined
-#     else:
-#         traits = CHILD_TRAITS
-#         hobby_traits(hobby, traits, age)
-#         personality_traits(neat, outgoing, active, playful, nice, age, traits)
-#         interests_traits(
-#             politics,
-#             crime,
-#             food,
-#             sports,
-#             work,
-#             school,
-#             money,
-#             entertainment,
-#             health,
-#             paranormal,
-#             weather,
-#             toys,
-#             environment,
-#             culture,
-#             fashion,
-#             travel,
-#             animals,
-#             sciFi,
-#             traits,
-#             age,
-#         )
+        sorted_traits = sorted(traits.items(), key=lambda x: x[1], reverse=True)
 
-#         top_child_traits = sorted(
-#             traits.items(), key=lambda item: item[1], reverse=True
-#         )[: CHILD_NUM_TRAITS + 1]
-#         child_traits_combined = [(key, value) for key, value in top_child_traits]
+        reordered_traits = {d: v for d, v in sorted_traits if v > 0}
 
-#         return child_traits_combined
+        return reordered_traits
+    else:
+        traits = CHILD_TRAITS
+        hobby_traits(hobby, traits, age)
+        personality_traits(neat, outgoing, active, playful, nice, age, traits)
+        interests_traits(
+            politics,
+            crime,
+            food,
+            sports,
+            work,
+            school,
+            money,
+            entertainment,
+            health,
+            paranormal,
+            weather,
+            toys,
+            environment,
+            culture,
+            fashion,
+            travel,
+            animals,
+            sciFi,
+            traits,
+            age,
+        )
+
+        sorted_traits = sorted(traits.items(), key=lambda x: x[1], reverse=True)
+
+        reordered_traits = {d: v for d, v in sorted_traits if v > 0}
+
+        return reordered_traits
 
 
 def get_traits_old(
@@ -182,10 +181,11 @@ def get_traits_old(
         )
         aspiration_traits(aspirations, age, traits)
 
-        top_teen_traits = sorted(traits.items(), key=lambda item: item[1], reverse=True)
-        teen_traits_combined = [(key, value) for key, value in top_teen_traits]
+        sorted_traits = sorted(traits.items(), key=lambda x: x[1], reverse=True)
 
-        return teen_traits_combined
+        reordered_traits = {d: v for d, v in sorted_traits if v > 0}
+
+        return reordered_traits
     else:
         traits = ADULT_TRAITS
         get_trait_turn_on_adult(turn_on_1, traits)
@@ -223,6 +223,7 @@ def get_traits_old(
         reordered_traits = {d: v for d, v in sorted_traits if v > 0}
 
         return reordered_traits
+
 
 def remove_conflicting_traits(traits, conflict_traits):
     # Make empty dict for final traits

@@ -1,6 +1,7 @@
 from sim_physical.aspiration import generate_aspiration
 from sim_physical.turn_ons_off import get_turn_ons_off
 from sim_physical.traits import get_traits_old, remove_conflicting_traits
+from sim_physical.generate_young import generate_young
 
 from globals import (
     TODDLER_CONFLICTS,
@@ -27,64 +28,6 @@ from globals import (
 # Calculate traits using personality, interests, hobby and turn ons/off
 
 # Aspirations - Family, Fortune, Romance, Popularity, Pleasure, Knowledge
-
-# def generate_young(age):
-#     hobby = get_hobby()
-
-#     neat, outgoing, active, playful, nice = get_personality()
-
-#     (
-#         politics,
-#         crime,
-#         food,
-#         sports,
-#         work,
-#         school,
-#         money,
-#         entertainment,
-#         health,
-#         paranormal,
-#         weather,
-#         toys,
-#         environment,
-#         culture,
-#         fashion,
-#         travel,
-#         animals,
-#         sciFi,
-#     ) = get_interests()
-
-#     traits = get_traits_young(
-#         age,
-#         neat,
-#         outgoing,
-#         active,
-#         playful,
-#         nice,
-#         hobby,
-#         politics,
-#         crime,
-#         food,
-#         sports,
-#         work,
-#         school,
-#         money,
-#         entertainment,
-#         health,
-#         paranormal,
-#         weather,
-#         toys,
-#         environment,
-#         culture,
-#         fashion,
-#         travel,
-#         animals,
-#         sciFi,
-#     )
-
-#     print(f"\nTraits for {age}:\n")
-#     for trait, value in traits:
-#         print(trait.capitalize(), value)
 
 
 def generate_old(age):
@@ -166,22 +109,21 @@ def generate_old(age):
     for aspiration, value in aspiration_selection_combined:
         print(aspiration, value)
 
-
     if age == "teen":
         filtered_traits = remove_conflicting_traits(traits, TEEN_CONFLICTS)
-        #print(f"\nFiltered Traits: {filtered_traits}")
+        # print(f"\nFiltered Traits: {filtered_traits}")
         teen_traits = list(filtered_traits.items())[:TEEN_NUM_TRAITS]
         print(f"Final Traits: {teen_traits}")
     else:
         filtered_traits = remove_conflicting_traits(traits, ADULT_CONFLICTS)
-        #print(f"Filtered Traits: {filtered_traits}")
+        # print(f"Filtered Traits: {filtered_traits}")
         adult_traits = list(filtered_traits.items())[:ADULT_NUM_TRAITS]
         print(f"Final Traits: {adult_traits}")
 
 
 age = input("\nWhat age is the Sim? ").lower()
 
-# if age in ["toddler", "child"]:
-#     generate_young(age)
-# elif age in ["teen", "adult", "elder"]:
-generate_old(age)
+if age in ["toddler", "child"]:
+    generate_young(age)
+elif age in ["teen", "adult", "elder"]:
+    generate_old(age)

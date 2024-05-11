@@ -375,747 +375,1320 @@ def interests_traits(
 
         # Crime
         if crime == 10:
-            traits["evil"] += 1
+            traits["evil"] += 5
+            traits["good"] -= 5
         if crime >= 9:
-            traits["brave"] += 1
-            traits["perceptive"] += 1
+            traits["brave"] += 5
+            traits["perceptive"] += 5
+            traits["insane"] += 5
+        if crime >= 8:
+            traits["excitable"] -= 5
+        if crime <= 2:
+            traits["excitable"] += 5
+            traits["brave"] -= 5
+            traits["perceptive"] -= 5
+            traits["insane"] -= 5
         if crime == 0:
-            traits["good"] += 1
+            traits["good"] += 5
+            traits["evil"] -= 5
 
         # Culture
         if culture >= 8:
-            traits["virtuoso"] += 1
+            traits["virtuoso"] += 5
         if culture >= 7:
-            traits["artistic"] += 1
+            traits["artistic"] += 5
         if culture == 6:
-            traits["easily impressed"] += 1
+            traits["easily impressed"] += 5
+        if culture <= 3:
+            traits["virtuoso"] -= 5
+            traits["artistic"] -= 5
 
         # Entertainment
         if entertainment >= 8:
-            traits["couch potato"] += 1
-            traits["virtuoso"] += 1
+            traits["couch potato"] += 5
+            traits["virtuoso"] += 5
+            traits["loner"] -= 5
+        if entertainment <= 2:
+            traits["loner"] += 5
+            traits["couch potato"] -= 5
+            traits["virtuoso"] -= 5
 
         # Environment
+        if environment >= 9:
+            traits["neurotic"] -= 5
         if environment >= 8:
-            traits["loves the outdoors"] += 1
+            traits["loves the outdoors"] += 5
+            traits["hates the outdoors"] -= 5
+            traits["absent-minded"] -= 5
+            traits["clumsy"] -= 5
+            traits["grumpy"] -= 5
         if environment <= 5:
-            traits["neurotic"] += 1
+            traits["neurotic"] += 5
         if environment <= 3:
-            traits["absent-minded"] += 1
-            traits["clumsy"] += 1
-            traits["grumpy"] += 1
+            traits["absent-minded"] += 5
+            traits["clumsy"] += 5
+            traits["grumpy"] += 5
         if environment <= 2:
-            traits["hates the outdoors"] += 1
+            traits["hates the outdoors"] += 5
+            traits["loves the outdoors"] -= 5
 
         # Food
         if food >= 8:
-            traits["slob"] += 1
+            traits["slob"] += 5
+            traits["absent-minded"] -= 5
+        if food <= 2:
+            traits["absent-minded"] += 5
+            traits["slob"] -= 5
 
         # Health
         if health >= 9:
-            traits["brave"] += 1
-            traits["neurotic"] += 1
+            traits["brave"] += 5
+            traits["neurotic"] += 5
+            traits["absent-minded"] -= 5
+            traits["hates the outdoors"] -= 5
+            traits["insane"] -= 5
+            traits["couch potato"] -= 5
+            traits["slob"] -= 5
         if health >= 8:
-            traits["disciplined"] += 1
+            traits["disciplined"] += 5
         if health <= 3:
-            traits["couch potato"] += 1
-            traits["slob"] += 1
+            traits["couch potato"] += 5
+            traits["slob"] += 5
         if health <= 2:
-            traits["absent-minded"] += 1
-            traits["hates the outdoors"] += 1
-            traits["insane"] += 1
+            traits["absent-minded"] += 5
+            traits["hates the outdoors"] += 5
+            traits["insane"] += 5
+            traits["brave"] -= 5
+            traits["neurotic"] -= 5
+            traits["disciplined"] -= 5
 
         # Money
         if money >= 8:
-            traits["evil"] += 1
+            traits["evil"] += 5
+            traits["good"] -= 5
+        if money <= 2:
+            traits["evil"] -= 5
+            traits["good"] += 5
 
         # Politics
         if politics == 10:
-            traits["evil"] += 1
+            traits["evil"] += 5
         if politics >= 9:
-            traits["grumpy"] += 1
+            traits["grumpy"] += 5
+            traits["friendly"] -= 5
         if politics <= 4:
-            traits["good"] += 1
+            traits["good"] += 5
+        if politics <= 2:
+            traits["friendly"] += 5
+            traits["evil"] -= 5
 
         # School
+        if school >= 9:
+            traits["light sleeper"] += 5
+            traits["heavy sleeper"] -= 5
         if school >= 8:
-            traits["genius"] += 1
+            traits["genius"] += 5
+            traits["perceptive"] += 5
         if school <= 3:
-            traits["heavy sleeper"] += 1
+            traits["heavy sleeper"] += 5
+            traits["genius"] -= 5
+            traits["perceptive"] -= 5
+            traits["light sleeper"] -= 5
 
         # SciFi
+        if sciFi >= 9:
+            traits["loner"] += 5
+            traits["neurotic"] += 5
+            traits["absent-minded"] -= 5
+            traits["artistic"] -= 5
+            traits["virtuoso"] -= 5
         if sciFi >= 7:
-            traits["eccentric"] += 1
+            traits["eccentric"] += 5
+            traits["easily impressed"] -= 5
+        if sciFi <= 3:
+            traits["loner"] -= 5
+            traits["neurotic"] -= 5
+        if sciFi <= 2:
+            traits["absent-minded"] += 5
+            traits["easily impressed"] += 5
+            traits["artistic"] += 5
+            traits["virtuoso"] += 5
+            traits["eccentric"] -= 5
 
         # Sports
+        if sports >= 8:
+            traits["athletic"] += 5
+            traits["couch potato"] += 5
+            traits["disciplined"] -= 5
         if sports == 5:
-            traits["excitable"] += 1
+            traits["excitable"] += 5
+        if sports <= 2:
+            traits["disciplined"] += 5
+            traits["athletic"] -= 5
+            traits["couch potato"] -= 5
 
         # Travel
         if travel >= 8:
-            traits["loves the outdoors"] += 1
+            traits["brave"] += 5
+            traits["loves the outdoors"] += 5
+            traits["grumpy"] -= 5
         if travel <= 2:
-            traits["hates the outdoors"] += 1
+            traits["grumpy"] += 5
+            traits["hates the outdoors"] += 5
+            traits["brave"] -= 5
 
         # Weather
         if weather >= 9:
-            traits["loves the outdoors"] += 1
+            traits["loves the outdoors"] += 5
+        if weather >= 8:
+            traits["hates the outdoors"] -= 5
+        if weather >= 7:
+            traits["eccentric"] += 5
+        if weather <= 2:
+            traits["hates the outdoors"] += 5
+            traits["loves the outdoors"] -= 5
+            traits["eccentric"] -= 5
 
         # Work
         if work >= 9:
-            traits["light sleeper"] += 1
-            traits["perceptive"] += 1
+            traits["light sleeper"] += 5
+            traits["perceptive"] += 5
+            traits["hates the outdoors"] += 5
+            traits["clumsy"] -= 5
+            traits["heavy sleeper"] -= 5
         if work <= 3:
-            traits["heavy sleeper"] += 1
+            traits["clumsy"] += 5
+            traits["heavy sleeper"] += 5
+            traits["hates the outdoors"] -= 5
+            traits["light sleeper"] -= 5
 
     elif age == "child":
         # Crime
         if crime == 10:
-            traits["evil"] += 1
+            traits["evil"] += 5
+            traits["good"] -= 5
         if crime >= 9:
-            traits["brave"] += 1
-            traits["perceptive"] += 1
+            traits["brave"] += 5
+            traits["perceptive"] += 5
+            traits["insane"] += 5
         if crime >= 8:
-            traits["kleptomaniac"] += 1
+            traits["kleptomaniac"] += 5
+            traits["excitable"] -= 5
+            traits["coward"] -= 5
         if crime >= 6:
-            traits["frugal"] += 1
+            traits["frugal"] += 5
         if crime <= 3:
-            traits["coward"] += 1
+            traits["coward"] += 5
         if crime <= 2:
-            traits["shy"] += 1
+            traits["shy"] += 5
+            traits["excitable"] += 5
+            traits["brave"] -= 5
+            traits["perceptive"] -= 5
+            traits["insane"] -= 5
+            traits["kleptomaniac"] -= 5
+            traits["frugal"] -= 5
         if crime == 0:
-            traits["good"] += 1
+            traits["good"] += 5
+            traits["evil"] -= 5
 
         # Culture
         if culture == 10:
-            traits["star quality"] += 1
+            traits["star quality"] += 5
         if culture >= 8:
-            traits["over-emotional"] += 1
-            traits["photographer's eye"] += 1
-            traits["virtuoso"] += 1
+            traits["over-emotional"] += 5
+            traits["photographer's eye"] += 5
+            traits["virtuoso"] += 5
+            traits["can't stand art"] -= 5
         if culture >= 7:
-            traits["artistic"] += 1
+            traits["artistic"] += 5
         if culture == 6:
-            traits["easily impressed"] += 1
+            traits["easily impressed"] += 5
+        if culture <= 3:
+            traits["virtuoso"] -= 5
+            traits["artistic"] -= 5
+            traits["photographer's eye"] -= 5
         if culture <= 2:
-            traits["can't stand art"] += 1
+            traits["can't stand art"] += 5
+            traits["star quality"] -= 5
+            traits["over-emotional"] -= 5
 
         # Entertainment
         if entertainment == 10:
-            traits["star quality"] += 1
+            traits["star quality"] += 5
         if entertainment >= 8:
-            traits["couch potato"] += 1
-            traits["good sense of humour"] += 1
-            traits["over-emotional"] += 1
-            traits["virtuoso"] += 1
+            traits["couch potato"] += 5
+            traits["good sense of humour"] += 5
+            traits["over-emotional"] += 5
+            traits["virtuoso"] += 5
+            traits["loner"] -= 5
+            traits["no sense of humour"] -= 5
         if entertainment <= 2:
-            traits["no sense of humour"] += 1
-            traits["technophobe"] += 1
+            traits["no sense of humour"] += 5
+            traits["technophobe"] += 5
+            traits["loner"] += 5
+            traits["couch potato"] -= 5
+            traits["virtuoso"] -= 5
+            traits["star quality"] -= 5
+            traits["good sense of humour"] -= 5
 
         # Environment
         if environment >= 9:
-            traits["eco-friendly"] += 1
+            traits["eco-friendly"] += 5
+            traits["neurotic"] -= 5
         if environment >= 8:
-            traits["loves the outdoors"] += 1
+            traits["loves the outdoors"] += 5
+            traits["hates the outdoors"] -= 5
+            traits["absent-minded"] -= 5
+            traits["clumsy"] -= 5
+            traits["grumpy"] -= 5
         if environment >= 7:
-            traits["angler"] += 1
+            traits["angler"] += 5
         if environment <= 5:
-            traits["neurotic"] += 1
+            traits["neurotic"] += 5
         if environment <= 3:
-            traits["absent-minded"] += 1
-            traits["clumsy"] += 1
-            traits["grumpy"] += 1
+            traits["absent-minded"] += 5
+            traits["clumsy"] += 5
+            traits["grumpy"] += 5
         if environment <= 2:
-            traits["hates the outdoors"] += 1
+            traits["hates the outdoors"] += 5
+            traits["loves the outdoors"] -= 5
+            traits["eco-friendly"] -= 5
 
         # Fashion
         if fashion >= 9:
-            traits["snob"] += 1
+            traits["snob"] += 5
+            traits["can't stand art"] -= 5
+            traits["never nude"] -= 5
         if fashion <= 2:
-            traits["can't stand art"] += 1
-            traits["never nude"] += 1
+            traits["can't stand art"] += 5
+            traits["never nude"] += 5
+            traits["snob"] -= 5
 
         # Food
         if food >= 8:
-            traits["slob"] += 1
-            traits["vegetarian"] += 1
+            traits["slob"] += 5
+            traits["vegetarian"] += 5
+            traits["absent-minded"] -= 5
+        if food <= 2:
+            traits["absent-minded"] += 5
+            traits["slob"] -= 5
+            traits["vegetarian"] -= 5
 
         # Health
         if health >= 9:
-            traits["brave"] += 1
-            traits["neurotic"] += 1
+            traits["brave"] += 5
+            traits["neurotic"] += 5
+            traits["absent-minded"] -= 5
+            traits["hates the outdoors"] -= 5
+            traits["insane"] -= 5
+            traits["couch potato"] -= 5
+            traits["slob"] -= 5
         if health >= 8:
-            traits["disciplined"] += 1
-            traits["neat"] += 1
-            traits["vegetarian"] += 1
+            traits["disciplined"] += 5
+            traits["neat"] += 5
+            traits["vegetarian"] += 5
         if health <= 4:
-            traits["technophobe"] += 1
+            traits["technophobe"] += 5
         if health <= 3:
-            traits["couch potato"] += 1
-            traits["slob"] += 1
+            traits["couch potato"] += 5
+            traits["slob"] += 5
         if health <= 2:
-            traits["absent-minded"] += 1
-            traits["hates the outdoors"] += 1
-            traits["hydrophobic"] += 1
-            traits["inappropriate"] += 1
-            traits["insane"] += 1
+            traits["absent-minded"] += 5
+            traits["hates the outdoors"] += 5
+            traits["hydrophobic"] += 5
+            traits["inappropriate"] += 5
+            traits["insane"] += 5
+            traits["brave"] -= 5
+            traits["neurotic"] -= 5
+            traits["disciplined"] -= 5
+            traits["neat"] -= 5
+            traits["vegetarian"] -= 5
 
         # Money
         if money >= 9:
-            traits["frugal"] += 1
-            traits["mooch"] += 1
-            traits["snob"] += 1
+            traits["frugal"] += 5
+            traits["mooch"] += 5
+            traits["snob"] += 5
+            traits["loser"] -= 5
         if money >= 8:
-            traits["evil"] += 1
+            traits["evil"] += 5
+            traits["good"] -= 5
+        if money <= 2:
+            traits["evil"] -= 5
+            traits["good"] += 5
+            traits["frugal"] -= 5
+            traits["mooch"] -= 5
+            traits["snob"] -= 5
         if money == 0:
-            traits["loser"] += 1
+            traits["loser"] += 5
 
         # Paranormal
+        if paranormal >= 8:
+            traits["coward"] -= 5
         if paranormal <= 3:
-            traits["coward"] += 1
+            traits["coward"] += 5
 
         # Politics
         if politics == 10:
-            traits["evil"] += 1
+            traits["evil"] += 5
         if politics >= 9:
-            traits["grumpy"] += 1
+            traits["grumpy"] += 5
+            traits["friendly"] -= 5
+            traits["good"] -= 5
         if politics >= 8:
-            traits["hot-headed"] += 1
+            traits["hot-headed"] += 5
+            traits["rebellious"] -= 5
+            traits["shy"] -= 5
         if politics >= 7:
-            traits["ambitious"] += 1
+            traits["ambitious"] += 5
         if politics <= 4:
-            traits["good"] += 1
+            traits["good"] += 5
         if politics <= 2:
-            traits["rebellious"] += 1
-            traits["shy"] += 1
+            traits["rebellious"] += 5
+            traits["shy"] += 5
+            traits["friendly"] += 5
+            traits["evil"] -= 5
+            traits["ambitious"] -= 5
+            traits["grumpy"] -= 5
+            traits["hot-headed"] -= 5
 
         # School
         if school >= 9:
-            traits["light sleeper"] += 1
-            traits["workaholic"] += 1
+            traits["light sleeper"] += 5
+            traits["workaholic"] += 5
+            traits["heavy sleeper"] -= 5
         if school >= 8:
-            traits["bookworm"] += 1
-            traits["family-oriented"] += 1
-            traits["genius"] += 1
+            traits["bookworm"] += 5
+            traits["family-oriented"] += 5
+            traits["genius"] += 5
+            traits["perceptive"] += 5
         if school <= 3:
-            traits["heavy sleeper"] += 1
+            traits["heavy sleeper"] += 5
+            traits["genius"] -= 5
+            traits["perceptive"] -= 5
+            traits["light sleeper"] -= 5
+            traits["workaholic"] -= 5
         if school <= 2:
-            traits["rebellious"] += 1
+            traits["rebellious"] += 5
+            traits["genius"] -= 5
+            traits["family-oriented"] -= 5
+            traits["bookworm"] -= 5
 
         # SciFi
+        if sciFi >= 9:
+            traits["loner"] += 5
+            traits["neurotic"] += 5
+            traits["absent-minded"] -= 5
+            traits["artistic"] -= 5
+            traits["virtuoso"] -= 5
+            traits["coward"] -= 5
         if sciFi >= 7:
-            traits["computer whiz"] += 1
-            traits["eccentric"] += 1
+            traits["computer whiz"] += 5
+            traits["eccentric"] += 5
+            traits["easily impressed"] -= 5
         if sciFi <= 3:
-            traits["coward"] += 1
+            traits["coward"] += 5
+            traits["loner"] -= 5
+            traits["neurotic"] -= 5
         if sciFi <= 2:
-            traits["technophobe"] += 1
+            traits["technophobe"] += 5
+            traits["absent-minded"] += 5
+            traits["easily impressed"] += 5
+            traits["artistic"] += 5
+            traits["virtuoso"] += 5
+            traits["eccentric"] -= 5
 
         # Sports
         if sports >= 8:
-            traits["daredevil"] += 1
+            traits["daredevil"] += 5
+            traits["athletic"] += 5
+            traits["couch potato"] += 5
+            traits["disciplined"] -= 5
         if sports == 5:
-            traits["excitable"] += 1
+            traits["excitable"] += 5
+        if sports <= 2:
+            traits["disciplined"] += 5
+            traits["athletic"] -= 5
+            traits["couch potato"] -= 5
+            traits["daredevil"] -= 5
 
         # Toys
         if toys >= 8:
-            traits["family-oriented"] += 1
+            traits["family-oriented"] += 5
+        if toys <= 2:
+            traits["family-oriented"] -= 5
 
         # Travel
         if travel >= 8:
-            traits["adventurous"] += 1
-            traits["loves the outdoors"] += 1
-            traits["photographer's eye"] += 1
+            traits["adventurous"] += 5
+            traits["loves the outdoors"] += 5
+            traits["photographer's eye"] += 5
+            traits["brave"] += 5
+            traits["grumpy"] -= 5
+            traits["hates the outdoors"] -= 5
         if travel <= 2:
-            traits["hates the outdoors"] += 1
+            traits["grumpy"] += 5
+            traits["hates the outdoors"] += 5
+            traits["brave"] -= 5
+            traits["adventurous"] -= 5
+            traits["loves the outdoors"] -= 5
+            traits["photographer's eye"] -= 5
 
         # Weather
         if weather >= 9:
-            traits["eco-friendly"] += 1
-            traits["loves the outdoors"] += 1
+            traits["eco-friendly"] += 5
+            traits["loves the outdoors"] += 5
         if weather >= 8:
-            traits["angler"] += 1
+            traits["angler"] += 5
+            traits["hates the outdoors"] -= 5
+        if weather >= 7:
+            traits["eccentric"] += 5
+        if weather <= 3:
+            traits["angler"] -= 5
         if weather <= 2:
-            traits["hydrophobic"] += 1
+            traits["hydrophobic"] += 5
+            traits["hates the outdoors"] += 5
+            traits["loves the outdoors"] -= 5
+            traits["eccentric"] -= 5
+            traits["eco-friendly"] -= 5
 
         # Work
         if work == 10:
-            traits["perfectionist"] += 1
+            traits["perfectionist"] += 5
         if work >= 9:
-            traits["light sleeper"] += 1
-            traits["perceptive"] += 1
-            traits["workaholic"] += 1
+            traits["light sleeper"] += 5
+            traits["perceptive"] += 5
+            traits["workaholic"] += 5
+            traits["hates the outdoors"] += 5
+            traits["clumsy"] -= 5
+            traits["heavy sleeper"] -= 5
         if work >= 8:
-            traits["ambitious"] += 1
+            traits["ambitious"] += 5
+            traits["clumsy"] -= 5
+            traits["rebellious"] -= 5
         if work <= 3:
-            traits["heavy sleeper"] += 1
-            traits["hot-headed"] += 1
+            traits["clumsy"] += 5
+            traits["heavy sleeper"] += 5
+            traits["hates the outdoors"] -= 5
+            traits["hot-headed"] += 5
+            traits["light sleeper"] -= 5
         if work <= 2:
-            traits["rebellious"] += 1
+            traits["rebellious"] += 5
+            traits["perfectionist"] -= 5
+            traits["perceptive"] -= 5
+            traits["workaholic"] -= 5
         if work == 0:
-            traits["loser"] += 1
+            traits["loser"] += 5
 
     elif age == "teen":
         # Crime
         if crime == 10:
-            traits["evil"] += 1
+            traits["evil"] += 5
+            traits["good"] -= 5
         if crime >= 9:
-            traits["brave"] += 1
-            traits["perceptive"] += 1
+            traits["brave"] += 5
+            traits["perceptive"] += 5
+            traits["insane"] += 5
         if crime >= 8:
-            traits["kleptomaniac"] += 1
+            traits["kleptomaniac"] += 5
+            traits["excitable"] -= 5
+            traits["coward"] -= 5
         if crime >= 6:
-            traits["frugal"] += 1
+            traits["frugal"] += 5
         if crime <= 3:
-            traits["coward"] += 1
+            traits["coward"] += 5
         if crime <= 2:
-            traits["shy"] += 1
+            traits["shy"] += 5
+            traits["excitable"] += 5
+            traits["brave"] -= 5
+            traits["perceptive"] -= 5
+            traits["insane"] -= 5
+            traits["kleptomaniac"] -= 5
+            traits["frugal"] -= 5
         if crime == 0:
-            traits["good"] += 1
+            traits["good"] += 5
+            traits["evil"] -= 5
 
         # Culture
         if culture == 10:
-            traits["star quality"] += 1
+            traits["star quality"] += 5
         if culture >= 8:
-            traits["over-emotional"] += 1
-            traits["photographer's eye"] += 1
-            traits["savvy sculptor"] += 1
-            traits["virtuoso"] += 1
+            traits["over-emotional"] += 5
+            traits["photographer's eye"] += 5
+            traits["savvy sculptor"] += 5
+            traits["virtuoso"] += 5
+            traits["can't stand art"] -= 5
+            traits["hopeless romantic"] += 5
         if culture >= 7:
-            traits["artistic"] += 1
+            traits["artistic"] += 5
+            traits["great kisser"] += 5
         if culture == 6:
-            traits["easily impressed"] += 1
+            traits["easily impressed"] += 5
+        if culture <= 3:
+            traits["virtuoso"] -= 5
+            traits["artistic"] -= 5
+            traits["savvy sculptor"] -= 5
+            traits["photographer's eye"] -= 5
         if culture <= 2:
-            traits["can't stand art"] += 1
+            traits["can't stand art"] += 5
+            traits["star quality"] -= 5
+            traits["over-emotional"] -= 5
+            traits["great kisser"] -= 5
+            traits["hopeless romantic"] -= 5
 
         # Entertainment
         if entertainment == 10:
-            traits["star quality"] += 1
-        if entertainment >= 8:
-            traits["couch potato"] += 1
-            traits["dramatic"] += 1
-            traits["good sense of humour"] += 1
-            traits["over-emotional"] += 1
-            traits["virtuoso"] += 1
-        if entertainment <= 2:
-            traits["no sense of humour"] += 1
-            traits["technophobe"] += 1
-
-        # Environment
-        if environment >= 9:
-            traits["eco-friendly"] += 1
-        if environment >= 8:
-            traits["green thumb"] += 1
-            traits["loves the outdoors"] += 1
-        if environment >= 7:
-            traits["angler"] += 1
-        if environment <= 5:
-            traits["neurotic"] += 1
-        if environment <= 3:
-            traits["absent-minded"] += 1
-            traits["clumsy"] += 1
-            traits["grumpy"] += 1
-        if environment <= 2:
-            traits["hates the outdoors"] += 1
-
-        # Fashion
-        if fashion >= 9:
-            traits["snob"] += 1
-        if fashion >= 8:
-            traits["dramatic"] += 1
-        if fashion <= 2:
-            traits["can't stand art"] += 1
-            traits["never nude"] += 1
-
-        # Food
-        if food >= 8:
-            traits["natural cook"] += 1
-            traits["slob"] += 1
-            traits["vegetarian"] += 1
-
-        # Health
-        if health >= 9:
-            traits["brave"] += 1
-            traits["neurotic"] += 1
-        if health >= 8:
-            traits["disciplined"] += 1
-            traits["neat"] += 1
-            traits["vegetarian"] += 1
-        if health <= 4:
-            traits["technophobe"] += 1
-        if health <= 3:
-            traits["couch potato"] += 1
-            traits["slob"] += 1
-        if health <= 2:
-            traits["absent-minded"] += 1
-            traits["hates the outdoors"] += 1
-            traits["hydrophobic"] += 1
-            traits["inappropriate"] += 1
-            traits["insane"] += 1
-
-        # Money
-        if money >= 9:
-            traits["frugal"] += 1
-            traits["mooch"] += 1
-            traits["snob"] += 1
-        if money >= 8:
-            traits["born salesman"] += 1
-            traits["evil"] += 1
-        if money <= 5:
-            traits["handy"] += 1
-        if money == 0:
-            traits["loser"] += 1
-
-        # Paranormal
-        if paranormal <= 3:
-            traits["coward"] += 1
-
-        # Politics
-        if politics == 10:
-            traits["evil"] += 1
-        if politics >= 9:
-            traits["grumpy"] += 1
-        if politics >= 8:
-            traits["charismatic"] += 1
-            traits["hot-headed"] += 1
-            traits["schmoozer"] += 1
-        if politics >= 7:
-            traits["ambitious"] += 1
-        if politics <= 4:
-            traits["good"] += 1
-        if politics <= 2:
-            traits["rebellious"] += 1
-            traits["shy"] += 1
-
-        # School
-        if school >= 9:
-            traits["light sleeper"] += 1
-            traits["workaholic"] += 1
-        if school >= 8:
-            traits["bookworm"] += 1
-            traits["family-oriented"] += 1
-            traits["genius"] += 1
-            traits["nurturing"] += 1
-        if school <= 3:
-            traits["heavy sleeper"] += 1
-        if school <= 2:
-            traits["rebellious"] += 1
-
-        # SciFi
-        if sciFi >= 7:
-            traits["computer whiz"] += 1
-            traits["eccentric"] += 1
-        if sciFi <= 3:
-            traits["coward"] += 1
-        if sciFi <= 2:
-            traits["technophobe"] += 1
-
-        # Sports
-        if sports >= 8:
-            traits["daredevil"] += 1
-        if sports == 5:
-            traits["excitable"] += 1
-
-        # Toys
-        if toys >= 8:
-            traits["childish"] += 1
-            traits["family-oriented"] += 1
-        if toys >= 6:
-            traits["nurturing"] += 1
-        if toys <= 2:
-            traits["dislikes children"] += 1
-
-        # Travel
-        if travel >= 8:
-            traits["adventurous"] += 1
-            traits["loves the outdoors"] += 1
-            traits["photographer's eye"] += 1
-        if travel <= 2:
-            traits["hates the outdoors"] += 1
-
-        # Weather
-        if weather >= 9:
-            traits["eco-friendly"] += 1
-            traits["loves the outdoors"] += 1
-        if weather >= 8:
-            traits["angler"] += 1
-        if weather <= 2:
-            traits["hydrophobic"] += 1
-
-        # Work
-        if work == 10:
-            traits["perfectionist"] += 1
-        if work >= 9:
-            traits["light sleeper"] += 1
-            traits["perceptive"] += 1
-            traits["workaholic"] += 1
-        if work >= 8:
-            traits["ambitious"] += 1
-            traits["born salesman"] += 1
-            traits["schmoozer"] += 1
-        if work <= 5:
-            traits["handy"] += 1
-        if work <= 3:
-            traits["heavy sleeper"] += 1
-            traits["hot-headed"] += 1
-        if work <= 2:
-            traits["rebellious"] += 1
-        if work == 0:
-            traits["loser"] += 1
-
-    else:
-        # Animals
-        if animals >= 8:
-            traits["animal lover"] += 1
-        if animals >= 7:
-            traits["equestrian"] += 1
-        if animals >= 5:
-            traits["cat person"] += 1
-            traits["dog person"] += 1
-
-        # Crime
-        if crime == 10:
-            traits["evil"] += 1
-        if crime >= 9:
-            traits["brave"] += 1
-            traits["perceptive"] += 1
-        if crime >= 8:
-            traits["kleptomaniac"] += 1
-        if crime >= 6:
-            traits["frugal"] += 1
-        if crime <= 3:
-            traits["coward"] += 1
-        if crime <= 2:
-            traits["shy"] += 1
-        if crime == 0:
-            traits["good"] += 1
-
-        # Culture
-        if culture == 10:
-            traits["star quality"] += 1
-        if culture >= 9:
-            traits["brooding"] += 1
-        if culture >= 8:
-            traits["avant garde"] += 1
-            traits["natural born performer"] += 1
-            traits["over-emotional"] += 1
-            traits["photographer's eye"] += 1
-            traits["proper"] += 1
-            traits["savvy sculptor"] += 1
-            traits["virtuoso"] += 1
-        if culture >= 7:
-            traits["artistic"] += 1
-        if culture == 6:
-            traits["easily impressed"] += 1
-        if culture <= 2:
-            traits["can't stand art"] += 1
-
-        # Entertainment
-        if entertainment == 10:
-            traits["star quality"] += 1
+            traits["star quality"] += 5
         if entertainment >= 9:
-            traits["diva"] += 1
-            traits["natural born performer"] += 1
+            traits["hopeless romantic"] += 5
         if entertainment >= 8:
-            traits["couch potato"] += 1
-            traits["dramatic"] += 1
-            traits["good sense of humour"] += 1
-            traits["over-emotional"] += 1
-            traits["virtuoso"] += 1
+            traits["couch potato"] += 5
+            traits["dramatic"] += 5
+            traits["good sense of humour"] += 5
+            traits["over-emotional"] += 5
+            traits["virtuoso"] += 5
+            traits["party animal"] += 5
+            traits["loner"] -= 5
+            traits["no sense of humour"] -= 5
+        if entertainment >= 7:
+            traits["great kisser"] += 5
+            traits["flirty"] += 5
+        if entertainment <= 3:
+            traits["party animal"] -= 5
         if entertainment <= 2:
-            traits["no sense of humour"] += 1
-            traits["technophobe"] += 1
+            traits["no sense of humour"] += 5
+            traits["technophobe"] += 5
+            traits["loner"] += 5
+            traits["couch potato"] -= 5
+            traits["virtuoso"] -= 5
+            traits["star quality"] -= 5
+            traits["good sense of humour"] -= 5
+            traits["dramatic"] -= 5
+            traits["great kisser"] -= 5
+            traits["flirty"] -= 5
+            traits["hopeless romantic"] -= 5
 
         # Environment
         if environment >= 9:
-            traits["eco-friendly"] += 1
+            traits["eco-friendly"] += 5
+            traits["neurotic"] -= 5
         if environment >= 8:
-            traits["green thumb"] += 1
-            traits["loves the outdoors"] += 1
-            traits["sailor"] += 1
+            traits["green thumb"] += 5
+            traits["loves the outdoors"] += 5
+            traits["hates the outdoors"] -= 5
+            traits["absent-minded"] -= 5
+            traits["clumsy"] -= 5
+            traits["grumpy"] -= 5
         if environment >= 7:
-            traits["angler"] += 1
-        if environment >= 6:
-            traits["loves the cold"] += 1
-        if environment == 5:
-            traits["gatherer"] += 1
+            traits["angler"] += 5
         if environment <= 5:
-            traits["neurotic"] += 1
+            traits["neurotic"] += 5
         if environment <= 3:
-            traits["absent-minded"] += 1
-            traits["clumsy"] += 1
-            traits["grumpy"] += 1
-            traits["loves the heat"] += 1
+            traits["absent-minded"] += 5
+            traits["clumsy"] += 5
+            traits["grumpy"] += 5
         if environment <= 2:
-            traits["hates the outdoors"] += 1
+            traits["hates the outdoors"] += 5
+            traits["loves the outdoors"] -= 5
+            traits["eco-friendly"] -= 5
+            traits["green thumb"] -= 5
+            traits["angler"] -= 5
 
         # Fashion
         if fashion >= 9:
-            traits["diva"] += 1
-            traits["snob"] += 1
+            traits["snob"] += 5
+            traits["can't stand art"] -= 5
+            traits["never nude"] -= 5
+            traits["hopeless romantic"] += 5
         if fashion >= 8:
-            traits["dramatic"] += 1
-            traits["proper"] += 1
+            traits["dramatic"] += 5
+            traits["great kisser"] += 5
+        if fashion <= 3:
+            traits["great kisser"] -= 5
         if fashion <= 2:
-            traits["can't stand art"] += 1
-            traits["never nude"] += 1
+            traits["can't stand art"] += 5
+            traits["never nude"] += 5
+            traits["dramatic"] -= 5
+            traits["snob"] -= 5
+            traits["hopeless romantic"] -= 5
 
         # Food
         if food >= 8:
-            traits["natural cook"] += 1
-            traits["slob"] += 1
-            traits["vegetarian"] += 1
+            traits["natural cook"] += 5
+            traits["slob"] += 5
+            traits["vegetarian"] += 5
+            traits["absent-minded"] -= 5
+        if food <= 2:
+            traits["absent-minded"] += 5
+            traits["slob"] -= 5
+            traits["vegetarian"] -= 5
+            traits["natural cook"] -= 5
 
         # Health
         if health >= 9:
-            traits["brave"] += 1
-            traits["neurotic"] += 1
+            traits["brave"] += 5
+            traits["neurotic"] += 5
+            traits["absent-minded"] -= 5
+            traits["hates the outdoors"] -= 5
+            traits["insane"] -= 5
+            traits["couch potato"] -= 5
+            traits["slob"] -= 5
         if health >= 8:
-            traits["disciplined"] += 1
-            traits["loves to swim"] += 1
-            traits["neat"] += 1
-            traits["vegetarian"] += 1
+            traits["disciplined"] += 5
+            traits["neat"] += 5
+            traits["vegetarian"] += 5
+            traits["nurturing"] += 5
         if health <= 4:
-            traits["technophobe"] += 1
-        if health == 3:
-            traits["unstable"] += 1
+            traits["technophobe"] += 5
         if health <= 3:
-            traits["couch potato"] += 1
-            traits["night owl"] += 1
-            traits["slob"] += 1
+            traits["couch potato"] += 5
+            traits["slob"] += 5
         if health <= 2:
-            traits["absent-minded"] += 1
-            traits["hates the outdoors"] += 1
-            traits["hydrophobic"] += 1
-            traits["inappropriate"] += 1
-            traits["insane"] += 1
+            traits["absent-minded"] += 5
+            traits["hates the outdoors"] += 5
+            traits["hydrophobic"] += 5
+            traits["inappropriate"] += 5
+            traits["insane"] += 5
+            traits["brave"] -= 5
+            traits["neurotic"] -= 5
+            traits["disciplined"] -= 5
+            traits["neat"] -= 5
+            traits["vegetarian"] -= 5
+            traits["nurturing"] -= 5
 
         # Money
         if money >= 9:
-            traits["frugal"] += 1
-            traits["mooch"] += 1
-            traits["snob"] += 1
+            traits["frugal"] += 5
+            traits["mooch"] += 5
+            traits["snob"] += 5
+            traits["loser"] -= 5
+            traits["handy"] -= 5
         if money >= 8:
-            traits["born salesman"] += 1
-            traits["evil"] += 1
+            traits["born salesman"] += 5
+            traits["evil"] += 5
+            traits["good"] -= 5
         if money <= 5:
-            traits["handy"] += 1
+            traits["handy"] += 5
+        if money <= 2:
+            traits["evil"] -= 5
+            traits["good"] += 5
+            traits["frugal"] -= 5
+            traits["mooch"] -= 5
+            traits["snob"] -= 5
+            traits["born salesman"] -= 5
         if money == 0:
-            traits["loser"] += 1
+            traits["loser"] += 5
 
         # Paranormal
-        if paranormal >= 9:
-            traits["supernatural fan"] += 1
+        if paranormal >= 8:
+            traits["coward"] -= 5
         if paranormal <= 3:
-            traits["coward"] += 1
-        if paranormal <= 2:
-            traits["supernatural sceptic"] += 1
+            traits["coward"] += 5
 
         # Politics
         if politics == 10:
-            traits["evil"] += 1
+            traits["evil"] += 5
         if politics >= 9:
-            traits["grumpy"] += 1
+            traits["grumpy"] += 5
+            traits["friendly"] -= 5
+            traits["good"] -= 5
         if politics >= 8:
-            traits["charismatic"] += 1
-            traits["hot-headed"] += 1
-            traits["schmoozer"] += 1
+            traits["charismatic"] += 5
+            traits["hot-headed"] += 5
+            traits["schmoozer"] += 5
+            traits["rebellious"] -= 5
+            traits["shy"] -= 5
         if politics >= 7:
-            traits["ambitious"] += 1
+            traits["ambitious"] += 5
         if politics <= 4:
-            traits["good"] += 1
+            traits["good"] += 5
+            traits["schmoozer"] -= 5
         if politics <= 2:
-            traits["rebellious"] += 1
-            traits["shy"] += 1
+            traits["rebellious"] += 5
+            traits["shy"] += 5
+            traits["friendly"] += 5
+            traits["evil"] -= 5
+            traits["ambitious"] -= 5
+            traits["grumpy"] -= 5
+            traits["hot-headed"] -= 5
+            traits["charismatic"] -= 5
 
         # School
         if school >= 9:
-            traits["light sleeper"] += 1
-            traits["workaholic"] += 1
+            traits["light sleeper"] += 5
+            traits["workaholic"] += 5
+            traits["heavy sleeper"] -= 5
         if school >= 8:
-            traits["bookworm"] += 1
-            traits["family-oriented"] += 1
-            traits["genius"] += 1
-            traits["nurturing"] += 1
+            traits["bookworm"] += 5
+            traits["family-oriented"] += 5
+            traits["genius"] += 5
+            traits["nurturing"] += 5
         if school <= 3:
-            traits["heavy sleeper"] += 1
+            traits["heavy sleeper"] += 5
+            traits["genius"] -= 5
+            traits["perceptive"] -= 5
+            traits["light sleeper"] -= 5
+            traits["workaholic"] -= 5
         if school <= 2:
-            traits["rebellious"] += 1
+            traits["rebellious"] += 5
+            traits["genius"] -= 5
+            traits["family-oriented"] -= 5
+            traits["bookworm"] -= 5
+            traits["nurturing"] -= 5
 
         # SciFi
         if sciFi >= 9:
-            traits["supernatural fan"] += 1
+            traits["loner"] += 5
+            traits["neurotic"] += 5
+            traits["absent-minded"] -= 5
+            traits["artistic"] -= 5
+            traits["virtuoso"] -= 5
+            traits["coward"] -= 5
         if sciFi >= 7:
-            traits["bot fan"] += 1
-            traits["computer whiz"] += 1
-            traits["eccentric"] += 1
+            traits["computer whiz"] += 5
+            traits["eccentric"] += 5
+            traits["easily impressed"] -= 5
         if sciFi <= 3:
-            traits["coward"] += 1
+            traits["coward"] += 5
+            traits["loner"] -= 5
+            traits["neurotic"] -= 5
         if sciFi <= 2:
-            traits["supernatural sceptic"] += 1
-            traits["technophobe"] += 1
+            traits["technophobe"] += 5
+            traits["absent-minded"] += 5
+            traits["easily impressed"] += 5
+            traits["artistic"] += 5
+            traits["virtuoso"] += 5
+            traits["eccentric"] -= 5
 
         # Sports
         if sports >= 8:
-            traits["daredevil"] += 1
-            traits["social butterfly"] += 1
+            traits["daredevil"] += 5
+            traits["athletic"] += 5
+            traits["couch potato"] += 5
+            traits["disciplined"] -= 5
         if sports == 5:
-            traits["excitable"] += 1
+            traits["excitable"] += 5
+        if sports <= 2:
+            traits["disciplined"] += 5
+            traits["athletic"] -= 5
+            traits["couch potato"] -= 5
+            traits["daredevil"] -= 5
 
         # Toys
         if toys >= 8:
-            traits["childish"] += 1
-            traits["family-oriented"] += 1
+            traits["childish"] += 5
+            traits["family-oriented"] += 5
         if toys >= 6:
-            traits["nurturing"] += 1
+            traits["nurturing"] += 5
         if toys <= 2:
-            traits["dislikes children"] += 1
+            traits["dislikes children"] += 5
+            traits["family-oriented"] -= 5
+            traits["nurturing"] -= 5
 
         # Travel
         if travel >= 8:
-            traits["adventurous"] += 1
-            traits["loves the outdoors"] += 1
-            traits["photographer's eye"] += 1
-            traits["sailor"] += 1
-        if travel >= 7:
-            traits["loves the heat"] += 1
-        if travel <= 3:
-            traits["loves the cold"] += 1
+            traits["adventurous"] += 5
+            traits["loves the outdoors"] += 5
+            traits["photographer's eye"] += 5
+            traits["brave"] += 5
+            traits["grumpy"] -= 5
+            traits["hates the outdoors"] -= 5
         if travel <= 2:
-            traits["hates the outdoors"] += 1
+            traits["grumpy"] += 5
+            traits["hates the outdoors"] += 5
+            traits["brave"] -= 5
+            traits["adventurous"] -= 5
+            traits["loves the outdoors"] -= 5
+            traits["photographer's eye"] -= 5
 
         # Weather
         if weather >= 9:
-            traits["eco-friendly"] += 1
-            traits["loves the outdoors"] += 1
+            traits["eco-friendly"] += 5
+            traits["loves the outdoors"] += 5
         if weather >= 8:
-            traits["angler"] += 1
-            traits["loves to swim"] += 1
-            traits["sailor"] += 1
+            traits["angler"] += 5
+            traits["hates the outdoors"] -= 5
         if weather >= 7:
-            traits["loves the heat"] += 1
+            traits["eccentric"] += 5
         if weather <= 3:
-            traits["loves the cold"] += 1
+            traits["angler"] -= 5
         if weather <= 2:
-            traits["hydrophobic"] += 1
+            traits["hydrophobic"] += 5
+            traits["hates the outdoors"] += 5
+            traits["loves the outdoors"] -= 5
+            traits["eccentric"] -= 5
+            traits["eco-friendly"] -= 5
 
         # Work
         if work == 10:
-            traits["perfectionist"] += 1
+            traits["perfectionist"] += 5
         if work >= 9:
-            traits["light sleeper"] += 1
-            traits["perceptive"] += 1
-            traits["workaholic"] += 1
+            traits["light sleeper"] += 5
+            traits["perceptive"] += 5
+            traits["workaholic"] += 5
+            traits["hates the outdoors"] += 5
+            traits["clumsy"] -= 5
+            traits["heavy sleeper"] -= 5
         if work >= 8:
-            traits["ambitious"] += 1
-            traits["born salesman"] += 1
-            traits["schmoozer"] += 1
+            traits["ambitious"] += 5
+            traits["born salesman"] += 5
+            traits["schmoozer"] += 5
+            traits["clumsy"] -= 5
+            traits["rebellious"] -= 5
         if work <= 5:
-            traits["handy"] += 1
+            traits["handy"] += 5
         if work <= 3:
-            traits["heavy sleeper"] += 1
-            traits["hot-headed"] += 1
+            traits["heavy sleeper"] += 5
+            traits["hot-headed"] += 5
+            traits["clumsy"] += 5
+            traits["hates the outdoors"] -= 5
+            traits["light sleeper"] -= 5
         if work <= 2:
-            traits["rebellious"] += 1
+            traits["rebellious"] += 5
+            traits["perfectionist"] -= 5
+            traits["perceptive"] -= 5
+            traits["workaholic"] -= 5
+            traits["born salesman"] -= 5
+            traits["schmoozer"] -= 5
         if work == 0:
-            traits["loser"] += 1
+            traits["loser"] += 5
+
+    else:
+        # Animals
+        if animals >= 9:
+            traits["animal lover"] += 5
+            traits["cat person"] -= 5
+            traits["dog person"] -= 5
+        if animals >= 7:
+            traits["equestrian"] += 5
+        if animals >= 5:
+            traits["cat person"] += 5
+            traits["dog person"] += 5
+        if animals <= 2:
+            traits["animal lover"] -= 5
+            traits["equestrian"] -= 5
+            traits["cat person"] -= 5
+            traits["dog person"] -= 5
+
+        # Crime
+        if crime == 10:
+            traits["evil"] += 5
+        if crime >= 9:
+            traits["brave"] += 5
+            traits["perceptive"] += 5
+            traits["insane"] += 5
+        if crime >= 8:
+            traits["kleptomaniac"] += 5
+            traits["excitable"] -= 5
+            traits["coward"] -= 5
+        if crime >= 6:
+            traits["frugal"] += 5
+        if crime <= 3:
+            traits["coward"] += 5
+        if crime <= 2:
+            traits["shy"] += 5
+            traits["excitable"] += 5
+            traits["brave"] -= 5
+            traits["perceptive"] -= 5
+            traits["insane"] -= 5
+            traits["kleptomaniac"] -= 5
+            traits["frugal"] -= 5
+        if crime == 0:
+            traits["good"] += 5
+            traits["evil"] -= 5
+
+        # Culture
+        if culture == 10:
+            traits["star quality"] += 5
+        if culture >= 9:
+            traits["brooding"] += 5
+        if culture >= 8:
+            traits["avant garde"] += 5
+            traits["natural born performer"] += 5
+            traits["over-emotional"] += 5
+            traits["photographer's eye"] += 5
+            traits["proper"] += 5
+            traits["savvy sculptor"] += 5
+            traits["virtuoso"] += 5
+            traits["can't stand art"] -= 5
+            traits["hopeless romantic"] += 5
+        if culture >= 7:
+            traits["artistic"] += 5
+            traits["great kisser"] += 5
+        if culture == 6:
+            traits["easily impressed"] += 5
+        if culture <= 3:
+            traits["virtuoso"] -= 5
+            traits["artistic"] -= 5
+            traits["savvy sculptor"] -= 5
+            traits["photographer's eye"] -= 5
+        if culture <= 2:
+            traits["can't stand art"] += 5
+            traits["proper"] += 5
+            traits["star quality"] -= 5
+            traits["over-emotional"] -= 5
+            traits["great kisser"] -= 5
+            traits["hopeless romantic"] -= 5
+
+        # Entertainment
+        if entertainment == 10:
+            traits["star quality"] += 5
+        if entertainment >= 9:
+            traits["diva"] += 5
+            traits["natural born performer"] += 5
+            traits["hopeless romantic"] += 5
+        if entertainment >= 8:
+            traits["couch potato"] += 5
+            traits["dramatic"] += 5
+            traits["good sense of humour"] += 5
+            traits["over-emotional"] += 5
+            traits["virtuoso"] += 5
+            traits["party animal"] += 5
+            traits["loner"] -= 5
+            traits["no sense of humour"] -= 5
+        if entertainment >= 7:
+            traits["great kisser"] += 5
+            traits["flirty"] += 5
+        if entertainment <= 3:
+            traits["party animal"] -= 5
+        if entertainment <= 2:
+            traits["no sense of humour"] += 5
+            traits["technophobe"] += 5
+            traits["loner"] += 5
+            traits["couch potato"] -= 5
+            traits["virtuoso"] -= 5
+            traits["star quality"] -= 5
+            traits["good sense of humour"] -= 5
+            traits["dramatic"] -= 5
+            traits["great kisser"] -= 5
+            traits["flirty"] -= 5
+            traits["natural born performer"] -= 5
+            traits["hopeless romantic"] -= 5
+
+        # Environment
+        if environment >= 9:
+            traits["eco-friendly"] += 5
+            traits["neurotic"] -= 5
+            traits["loves the heat"] -= 5
+        if environment >= 8:
+            traits["green thumb"] += 5
+            traits["loves the outdoors"] += 5
+            traits["sailor"] += 5
+            traits["hates the outdoors"] -= 5
+            traits["absent-minded"] -= 5
+            traits["clumsy"] -= 5
+            traits["grumpy"] -= 5
+        if environment >= 7:
+            traits["angler"] += 5
+        if environment >= 6:
+            traits["loves the cold"] += 5
+        if environment == 5:
+            traits["gatherer"] += 5
+        if environment <= 5:
+            traits["neurotic"] += 5
+        if environment <= 3:
+            traits["absent-minded"] += 5
+            traits["clumsy"] += 5
+            traits["grumpy"] += 5
+            traits["loves the heat"] += 5
+        if environment <= 2:
+            traits["hates the outdoors"] += 5
+            traits["loves the outdoors"] -= 5
+            traits["eco-friendly"] -= 5
+            traits["green thumb"] -= 5
+            traits["angler"] -= 5
+            traits["loves the cold"] -= 5
+            traits["sailor"] -= 5
+
+        # Fashion
+        if fashion >= 9:
+            traits["diva"] += 5
+            traits["snob"] += 5
+            traits["can't stand art"] -= 5
+            traits["never nude"] -= 5
+            traits["hopeless romantic"] += 5
+        if fashion >= 8:
+            traits["dramatic"] += 5
+            traits["proper"] += 5
+            traits["great kisser"] += 5
+        if fashion <= 3:
+            traits["great kisser"] -= 5
+        if fashion <= 2:
+            traits["can't stand art"] += 5
+            traits["never nude"] += 5
+            traits["dramatic"] -= 5
+            traits["snob"] -= 5
+            traits["hopeless romantic"] -= 5
+            traits["diva"] -= 5
+            traits["proper"] -= 5
+
+        # Food
+        if food >= 8:
+            traits["natural cook"] += 5
+            traits["slob"] += 5
+            traits["vegetarian"] += 5
+            traits["absent-minded"] -= 5
+        if food <= 2:
+            traits["absent-minded"] += 5
+            traits["slob"] -= 5
+            traits["vegetarian"] -= 5
+            traits["natural cook"] -= 5
+
+        # Health
+        if health >= 9:
+            traits["brave"] += 5
+            traits["neurotic"] += 5
+            traits["absent-minded"] -= 5
+            traits["hates the outdoors"] -= 5
+            traits["insane"] -= 5
+            traits["couch potato"] -= 5
+            traits["slob"] -= 5
+            traits["night owl"] -= 5
+        if health >= 8:
+            traits["disciplined"] += 5
+            traits["loves to swim"] += 5
+            traits["neat"] += 5
+            traits["vegetarian"] += 5
+            traits["nurturing"] += 5
+        if health <= 4:
+            traits["technophobe"] += 5
+        if health == 3:
+            traits["unstable"] += 5
+        if health <= 3:
+            traits["couch potato"] += 5
+            traits["night owl"] += 5
+            traits["slob"] += 5
+        if health <= 2:
+            traits["absent-minded"] += 5
+            traits["hates the outdoors"] += 5
+            traits["hydrophobic"] += 5
+            traits["inappropriate"] += 5
+            traits["insane"] += 5
+            traits["brave"] -= 5
+            traits["neurotic"] -= 5
+            traits["disciplined"] -= 5
+            traits["neat"] -= 5
+            traits["vegetarian"] -= 5
+            traits["nurturing"] -= 5
+            traits["loves to swim"] -= 5
+
+        # Money
+        if money >= 9:
+            traits["frugal"] += 5
+            traits["mooch"] += 5
+            traits["snob"] += 5
+            traits["loser"] -= 5
+            traits["handy"] -= 5
+        if money >= 8:
+            traits["born salesman"] += 5
+            traits["evil"] += 5
+            traits["good"] -= 5
+        if money <= 5:
+            traits["handy"] += 5
+        if money <= 2:
+            traits["evil"] -= 5
+            traits["good"] += 5
+            traits["frugal"] -= 5
+            traits["mooch"] -= 5
+            traits["snob"] -= 5
+            traits["born salesman"] -= 5
+        if money == 0:
+            traits["loser"] += 5
+
+        # Paranormal
+        if paranormal >= 9:
+            traits["supernatural fan"] += 5
+        if paranormal >= 8:
+            traits["coward"] -= 5
+        if paranormal <= 3:
+            traits["coward"] += 5
+        if paranormal <= 2:
+            traits["supernatural sceptic"] += 5
+
+        # Politics
+        if politics == 10:
+            traits["evil"] += 5
+        if politics >= 9:
+            traits["grumpy"] += 5
+            traits["friendly"] -= 5
+            traits["good"] -= 5
+        if politics >= 8:
+            traits["charismatic"] += 5
+            traits["hot-headed"] += 5
+            traits["schmoozer"] += 5
+            traits["rebellious"] -= 5
+            traits["shy"] -= 5
+        if politics >= 7:
+            traits["ambitious"] += 5
+        if politics <= 4:
+            traits["good"] += 5
+            traits["schmoozer"] -= 5
+        if politics <= 2:
+            traits["rebellious"] += 5
+            traits["shy"] += 5
+            traits["friendly"] += 5
+            traits["evil"] -= 5
+            traits["ambitious"] -= 5
+            traits["grumpy"] -= 5
+            traits["hot-headed"] -= 5
+            traits["charismatic"] -= 5
+
+        # School
+        if school >= 9:
+            traits["light sleeper"] += 5
+            traits["workaholic"] += 5
+            traits["heavy sleeper"] -= 5
+        if school >= 8:
+            traits["bookworm"] += 5
+            traits["family-oriented"] += 5
+            traits["genius"] += 5
+            traits["nurturing"] += 5
+        if school <= 3:
+            traits["heavy sleeper"] += 5
+            traits["genius"] -= 5
+            traits["perceptive"] -= 5
+            traits["light sleeper"] -= 5
+            traits["workaholic"] -= 5
+        if school <= 2:
+            traits["rebellious"] += 5
+            traits["genius"] -= 5
+            traits["family-oriented"] -= 5
+            traits["bookworm"] -= 5
+            traits["nurturing"] -= 5
+
+        # SciFi
+        if sciFi >= 9:
+            traits["supernatural fan"] += 5
+            traits["loner"] += 5
+            traits["neurotic"] += 5
+            traits["absent-minded"] -= 5
+            traits["artistic"] -= 5
+            traits["virtuoso"] -= 5
+            traits["coward"] -= 5
+        if sciFi >= 7:
+            traits["bot fan"] += 5
+            traits["computer whiz"] += 5
+            traits["eccentric"] += 5
+            traits["easily impressed"] -= 5
+        if sciFi <= 3:
+            traits["coward"] += 5
+            traits["loner"] -= 5
+            traits["neurotic"] -= 5
+        if sciFi <= 2:
+            traits["supernatural sceptic"] += 5
+            traits["technophobe"] += 5
+            traits["absent-minded"] += 5
+            traits["easily impressed"] += 5
+            traits["artistic"] += 5
+            traits["virtuoso"] += 5
+            traits["eccentric"] -= 5
+
+        # Sports
+        if sports >= 8:
+            traits["daredevil"] += 5
+            traits["social butterfly"] += 5
+            traits["athletic"] += 5
+            traits["couch potato"] += 5
+            traits["disciplined"] -= 5
+        if sports == 5:
+            traits["excitable"] += 5
+        if sports <= 2:
+            traits["disciplined"] += 5
+            traits["athletic"] -= 5
+            traits["couch potato"] -= 5
+            traits["daredevil"] -= 5
+            traits["social butterfly"] -= 5
+
+        # Toys
+        if toys >= 8:
+            traits["childish"] += 5
+            traits["family-oriented"] += 5
+        if toys >= 6:
+            traits["nurturing"] += 5
+        if toys <= 2:
+            traits["dislikes children"] += 5
+            traits["family-oriented"] -= 5
+            traits["nurturing"] -= 5
+
+        # Travel
+        if travel >= 8:
+            traits["adventurous"] += 5
+            traits["loves the outdoors"] += 5
+            traits["photographer's eye"] += 5
+            traits["sailor"] += 5
+            traits["brave"] += 5
+            traits["grumpy"] -= 5
+            traits["hates the outdoors"] -= 5
+            traits["loves the cold"] -= 5
+        if travel >= 7:
+            traits["loves the heat"] += 5
+        if travel <= 3:
+            traits["loves the cold"] += 5
+        if travel <= 2:
+            traits["grumpy"] += 5
+            traits["hates the outdoors"] += 5
+            traits["brave"] -= 5
+            traits["adventurous"] -= 5
+            traits["loves the outdoors"] -= 5
+            traits["photographer's eye"] -= 5
+            traits["loves the heat"] -= 5
+            traits["sailor"] -= 5
+
+        # Weather
+        if weather >= 9:
+            traits["eco-friendly"] += 5
+            traits["loves the outdoors"] += 5
+        if weather >= 8:
+            traits["angler"] += 5
+            traits["loves to swim"] += 5
+            traits["sailor"] += 5
+            traits["hates the outdoors"] -= 5
+            traits["loves the cold"] -= 5
+        if weather >= 7:
+            traits["loves the heat"] += 5
+            traits["eccentric"] += 5
+        if weather <= 3:
+            traits["loves the cold"] += 5
+            traits["angler"] -= 5
+        if weather <= 2:
+            traits["hydrophobic"] += 5
+            traits["hates the outdoors"] += 5
+            traits["loves the outdoors"] -= 5
+            traits["eccentric"] -= 5
+            traits["eco-friendly"] -= 5
+            traits["loves the heat"] -= 5
+            traits["sailor"] -= 5
+
+        # Work
+        if work == 10:
+            traits["perfectionist"] += 5
+        if work >= 9:
+            traits["light sleeper"] += 5
+            traits["perceptive"] += 5
+            traits["workaholic"] += 5
+            traits["hates the outdoors"] += 5
+            traits["clumsy"] -= 5
+            traits["heavy sleeper"] -= 5
+        if work >= 8:
+            traits["ambitious"] += 5
+            traits["born salesman"] += 5
+            traits["schmoozer"] += 5
+            traits["clumsy"] -= 5
+            traits["rebellious"] -= 5
+        if work <= 5:
+            traits["handy"] += 5
+        if work <= 3:
+            traits["heavy sleeper"] += 5
+            traits["hot-headed"] += 5
+            traits["clumsy"] += 5
+            traits["hates the outdoors"] -= 5
+            traits["light sleeper"] -= 5
+        if work <= 2:
+            traits["rebellious"] += 5
+            traits["perfectionist"] -= 5
+            traits["perceptive"] -= 5
+            traits["workaholic"] -= 5
+            traits["born salesman"] -= 5
+            traits["schmoozer"] -= 5
+        if work == 0:
+            traits["loser"] += 5
