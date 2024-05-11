@@ -1,6 +1,17 @@
 from sim_physical.aspiration import generate_aspiration
 from sim_physical.turn_ons_off import get_turn_ons_off
-from sim_physical.traits import get_traits_old
+from sim_physical.traits import get_traits_old, remove_conflicting_traits
+
+from globals import (
+    TODDLER_CONFLICTS,
+    CHILD_CONFLICTS,
+    TEEN_CONFLICTS,
+    ADULT_CONFLICTS,
+    TODDLER_NUM_TRAITS,
+    CHILD_NUM_TRAITS,
+    TEEN_NUM_TRAITS,
+    ADULT_NUM_TRAITS,
+)
 
 # What age is the sim?
 
@@ -107,18 +118,6 @@ def generate_old(age):
         sciFi,
     ) = data_aspiration.values()
 
-    # print(f"Data: {data}")
-    # print(
-    #     f"Neat: {neat}, Outgoing: {outgoing}, Active: {active}, Playful: {playful}, Nice: {nice}"
-    # )
-    # print(
-    #     f"Politics: {politics}, Crime: {crime}, Food: {food}, Sports: {sports}, Work: {work}, School: {school}, Money: {money}, Entertainment: {entertainment}, Health: {health}, Paranormal: {paranormal}, Weather: {weather}, Toys: {toys}, Environment: {environment}, Culture: {culture}, Fashion: {fashion}, Travel: {travel}, Animals: {animals}, SciFi: {sciFi}"
-    # )
-    # print("")
-    # print(f"Aspirations: {aspirations}")
-
-    # print(aspiration_choice.items())
-
     data = get_turn_ons_off()
 
     turn_on_1, turn_on_2 = data[0]["turn_ons"][0], data[0]["turn_ons"][1]
@@ -167,9 +166,17 @@ def generate_old(age):
     for aspiration, value in aspiration_selection_combined:
         print(aspiration, value)
 
-    print(f"\nTraits for {age}:\n")
-    for trait, value in traits:
-        print(trait.capitalize(), value)
+
+    if age == "teen":
+        filtered_traits = remove_conflicting_traits(traits, TEEN_CONFLICTS)
+        #print(f"\nFiltered Traits: {filtered_traits}")
+        teen_traits = list(filtered_traits.items())[:TEEN_NUM_TRAITS]
+        print(f"Final Traits: {teen_traits}")
+    else:
+        filtered_traits = remove_conflicting_traits(traits, ADULT_CONFLICTS)
+        #print(f"Filtered Traits: {filtered_traits}")
+        adult_traits = list(filtered_traits.items())[:ADULT_NUM_TRAITS]
+        print(f"Final Traits: {adult_traits}")
 
 
 age = input("\nWhat age is the Sim? ").lower()

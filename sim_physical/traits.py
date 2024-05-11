@@ -7,6 +7,10 @@ from globals import (
     TEEN_NUM_TRAITS,
     ADULT_TRAITS,
     ADULT_NUM_TRAITS,
+    TODDLER_CONFLICTS,
+    CHILD_CONFLICTS,
+    TEEN_CONFLICTS,
+    ADULT_CONFLICTS,
 )
 from .turn_ons_off import (
     get_trait_turn_off_adult,
@@ -178,9 +182,7 @@ def get_traits_old(
         )
         aspiration_traits(aspirations, age, traits)
 
-        top_teen_traits = sorted(
-            traits.items(), key=lambda item: item[1], reverse=True
-        )[: TEEN_NUM_TRAITS + 1]
+        top_teen_traits = sorted(traits.items(), key=lambda item: item[1], reverse=True)
         teen_traits_combined = [(key, value) for key, value in top_teen_traits]
 
         return teen_traits_combined
@@ -216,9 +218,36 @@ def get_traits_old(
 
         aspiration_traits(aspirations, age, traits)
 
-        top_adult_traits = sorted(
-            traits.items(), key=lambda item: item[1], reverse=True
-        )[: ADULT_NUM_TRAITS + 1]
-        adult_traits_combined = [(key, value) for key, value in top_adult_traits]
+        sorted_traits = sorted(traits.items(), key=lambda x: x[1], reverse=True)
 
-        return adult_traits_combined
+        reordered_traits = {d: v for d, v in sorted_traits if v > 0}
+
+        return reordered_traits
+
+def remove_conflicting_traits(traits, conflict_traits):
+    # Make empty dict for final traits
+    # Loop through traits
+    # Loop through conflicts
+    # Compare trait and conflict trait
+    # If match, loop through traits and remove conflicting traits
+    # Add trait to final traits dict
+    # Return the final traits when completed
+
+    final_traits = {}  # Make empty dict for final traits
+
+    for trait, value in list(
+        traits.items()
+    ):  # Iterating over a copy to allow modification of original dictionary
+        conflicts = [
+            conflict
+            for conflict_trait in conflict_traits
+            if trait == conflict_trait["trait"]
+            for conflict in conflict_trait.values()
+            if conflict != trait
+        ]
+
+        if all(conflict not in final_traits for conflict in conflicts):
+            final_traits[trait] = value
+            del traits[trait]  # Remove the trait from the original dictionary
+
+    return final_traits

@@ -666,7 +666,7 @@ def aspiration_traits(aspirations, age, traits):
                 traits["rebellious"] -= 1
                 traits["schmoozer"] -= 1
                 traits["social butterfly"] -= 1
-                traits["social awkward"] += 1
+                traits["socially awkward"] += 1
                 traits["star quality"] -= 1
                 traits["supernatural fan"] += 1
                 traits["supernatural sceptic"] -= 1
