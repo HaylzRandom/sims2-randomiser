@@ -199,6 +199,7 @@ TODDLER_TRAITS = {
 CHILD_TRAITS = {
     "absent-minded": 0,
     "adventurous": 0,
+    "ambitious": 0,
     "angler": 0,
     "animal lover": 0,
     "artistic": 0,
@@ -275,6 +276,7 @@ CHILD_TRAITS = {
 TEEN_OLDER_TRAITS = {
     "absent-minded": 0,
     "adventurous": 0,
+    "ambitious": 0,
     "angler": 0,
     "animal lover": 0,
     "artistic": 0,
@@ -319,7 +321,7 @@ TEEN_OLDER_TRAITS = {
     "handy": 0,
     "hates the outdoors": 0,
     "heavy sleeper": 0,
-    "hopeless-romantic": 0,
+    "hopeless romantic": 0,
     "hot-headed": 0,
     "hydrophobic": 0,
     "inappropriate": 0,

@@ -3,20 +3,16 @@ from globals import (
     TODDLER_NUM_TRAITS,
     CHILD_TRAITS,
     CHILD_NUM_TRAITS,
-    TEEN_TRAITS,
+    TEEN_OLDER_TRAITS,
     TEEN_NUM_TRAITS,
-    ADULT_TRAITS,
     ADULT_NUM_TRAITS,
     TODDLER_CONFLICTS,
     CHILD_CONFLICTS,
-    TEEN_CONFLICTS,
-    ADULT_CONFLICTS,
+    TEEN_OLDER_CONFLICTS,
 )
 from .turn_ons_off import (
-    get_trait_turn_off_adult,
-    get_trait_turn_off_teen,
-    get_trait_turn_on_adult,
-    get_trait_turn_on_teen,
+    get_trait_turn_off,
+    get_trait_turn_on,
 )
 
 from .hobby import hobby_traits
@@ -150,79 +146,81 @@ def get_traits_old(
     aspirations,
 ):
 
-    if age == "teen":
-        traits = TEEN_TRAITS
-        get_trait_turn_on_teen(turn_on_1, traits)
-        get_trait_turn_on_teen(turn_on_2, traits)
-        get_trait_turn_off_teen(turn_off, traits)
-        hobby_traits(hobby, traits, age)
-        personality_traits(neat, outgoing, active, playful, nice, age, traits)
-        interests_traits(
-            politics,
-            crime,
-            food,
-            sports,
-            work,
-            school,
-            money,
-            entertainment,
-            health,
-            paranormal,
-            weather,
-            toys,
-            environment,
-            culture,
-            fashion,
-            travel,
-            animals,
-            sciFi,
-            traits,
-            age,
-        )
-        aspiration_traits(aspirations, age, traits)
+    # if age == "teen":
+    traits = TEEN_OLDER_TRAITS
+    get_trait_turn_on(turn_on_1, traits)
+    get_trait_turn_on(turn_on_2, traits)
+    get_trait_turn_off(turn_off, traits)
+    hobby_traits(hobby, traits, age)
+    personality_traits(neat, outgoing, active, playful, nice, age, traits)
+    interests_traits(
+        politics,
+        crime,
+        food,
+        sports,
+        work,
+        school,
+        money,
+        entertainment,
+        health,
+        paranormal,
+        weather,
+        toys,
+        environment,
+        culture,
+        fashion,
+        travel,
+        animals,
+        sciFi,
+        traits,
+        age,
+    )
+    aspiration_traits(aspirations, age, traits)
 
-        sorted_traits = sorted(traits.items(), key=lambda x: x[1], reverse=True)
+    sorted_traits = sorted(traits.items(), key=lambda x: x[1], reverse=True)
 
-        reordered_traits = {d: v for d, v in sorted_traits if v > 0}
+    reordered_traits = {d: v for d, v in sorted_traits if v > 0}
 
-        return reordered_traits
-    else:
-        traits = ADULT_TRAITS
-        get_trait_turn_on_adult(turn_on_1, traits)
-        get_trait_turn_on_adult(turn_on_2, traits)
-        get_trait_turn_off_adult(turn_off, traits)
-        hobby_traits(hobby, traits, age)
-        personality_traits(neat, outgoing, active, playful, nice, age, traits)
-        interests_traits(
-            politics,
-            crime,
-            food,
-            sports,
-            work,
-            school,
-            money,
-            entertainment,
-            health,
-            paranormal,
-            weather,
-            toys,
-            environment,
-            culture,
-            fashion,
-            travel,
-            animals,
-            sciFi,
-            traits,
-            age,
-        )
+    return reordered_traits
 
-        aspiration_traits(aspirations, age, traits)
 
-        sorted_traits = sorted(traits.items(), key=lambda x: x[1], reverse=True)
+# else:
+#     traits = TEEN_OLDER_TRAITS
+#     get_trait_turn_on_adult(turn_on_1, traits)
+#     get_trait_turn_on_adult(turn_on_2, traits)
+#     get_trait_turn_off_adult(turn_off, traits)
+#     hobby_traits(hobby, traits, age)
+#     personality_traits(neat, outgoing, active, playful, nice, age, traits)
+#     interests_traits(
+#         politics,
+#         crime,
+#         food,
+#         sports,
+#         work,
+#         school,
+#         money,
+#         entertainment,
+#         health,
+#         paranormal,
+#         weather,
+#         toys,
+#         environment,
+#         culture,
+#         fashion,
+#         travel,
+#         animals,
+#         sciFi,
+#         traits,
+#         age,
+#     )
 
-        reordered_traits = {d: v for d, v in sorted_traits if v > 0}
+#     aspiration_traits(aspirations, age, traits)
 
-        return reordered_traits
+#     sorted_traits = sorted(traits.items(), key=lambda x: x[1], reverse=True)
+
+#     reordered_traits = {d: v for d, v in sorted_traits if v > 0}
+
+#     return reordered_traits
 
 
 def remove_conflicting_traits(traits, conflict_traits):

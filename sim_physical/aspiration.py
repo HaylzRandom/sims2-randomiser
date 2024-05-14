@@ -11,75 +11,75 @@ def generate_aspiration():
 
     match hobby:
         case "Arts & Crafts":
-            aspiration_choice["Family"] += 5
-            aspiration_choice["Fortune"] -= 5
-            aspiration_choice["Knowledge"] -= 5
-            aspiration_choice["Pleasure"] -= 5
-            aspiration_choice["Popularity"] += 5
-            aspiration_choice["Romance"] += 5
+            aspiration_choice["Family"] += 10
+            aspiration_choice["Fortune"] -= 10
+            aspiration_choice["Knowledge"] -= 10
+            aspiration_choice["Pleasure"] -= 10
+            aspiration_choice["Popularity"] += 10
+            aspiration_choice["Romance"] += 10
         case "Cuisine":
-            aspiration_choice["Family"] += 5
-            aspiration_choice["Fortune"] -= 5
-            aspiration_choice["Knowledge"] -= 5
-            aspiration_choice["Pleasure"] += 5
-            aspiration_choice["Popularity"] -= 5
-            aspiration_choice["Romance"] += 5
+            aspiration_choice["Family"] += 10
+            aspiration_choice["Fortune"] -= 10
+            aspiration_choice["Knowledge"] -= 10
+            aspiration_choice["Pleasure"] += 10
+            aspiration_choice["Popularity"] -= 10
+            aspiration_choice["Romance"] += 10
         case "Film & Literature":
-            aspiration_choice["Family"] -= 5
-            aspiration_choice["Fortune"] -= 5
-            aspiration_choice["Knowledge"] -= 5
-            aspiration_choice["Popularity"] += 5
-            aspiration_choice["Romance"] += 5
-            aspiration_choice["Pleasure"] += 5
+            aspiration_choice["Family"] -= 10
+            aspiration_choice["Fortune"] -= 10
+            aspiration_choice["Knowledge"] -= 10
+            aspiration_choice["Popularity"] += 10
+            aspiration_choice["Romance"] += 10
+            aspiration_choice["Pleasure"] += 10
         case "Fitness":
-            aspiration_choice["Family"] -= 5
-            aspiration_choice["Fortune"] += 5
-            aspiration_choice["Knowledge"] -= 5
-            aspiration_choice["Pleasure"] -= 5
-            aspiration_choice["Popularity"] += 5
-            aspiration_choice["Romance"] += 5
+            aspiration_choice["Family"] -= 10
+            aspiration_choice["Fortune"] += 10
+            aspiration_choice["Knowledge"] -= 10
+            aspiration_choice["Pleasure"] -= 10
+            aspiration_choice["Popularity"] += 10
+            aspiration_choice["Romance"] += 10
         case "Games":
-            aspiration_choice["Family"] += 5
-            aspiration_choice["Fortune"] -= 5
-            aspiration_choice["Knowledge"] -= 5
-            aspiration_choice["Pleasure"] += 5
-            aspiration_choice["Popularity"] += 5
-            aspiration_choice["Romance"] -= 5
+            aspiration_choice["Family"] += 10
+            aspiration_choice["Fortune"] -= 10
+            aspiration_choice["Knowledge"] -= 10
+            aspiration_choice["Pleasure"] += 10
+            aspiration_choice["Popularity"] += 10
+            aspiration_choice["Romance"] -= 10
         case "Music & Dance":
-            aspiration_choice["Family"] += 5
-            aspiration_choice["Fortune"] -= 5
-            aspiration_choice["Knowledge"] -= 5
-            aspiration_choice["Pleasure"] += 5
-            aspiration_choice["Popularity"] += 5
-            aspiration_choice["Romance"] += 5
+            aspiration_choice["Family"] += 10
+            aspiration_choice["Fortune"] -= 10
+            aspiration_choice["Knowledge"] -= 10
+            aspiration_choice["Pleasure"] += 10
+            aspiration_choice["Popularity"] += 10
+            aspiration_choice["Romance"] += 10
         case "Nature":
-            aspiration_choice["Family"] += 5
-            aspiration_choice["Fortune"] -= 5
-            aspiration_choice["Knowledge"] += 5
-            aspiration_choice["Pleasure"] -= 5
-            aspiration_choice["Popularity"] += 5
-            aspiration_choice["Romance"] -= 5
+            aspiration_choice["Family"] += 10
+            aspiration_choice["Fortune"] -= 10
+            aspiration_choice["Knowledge"] += 10
+            aspiration_choice["Pleasure"] -= 10
+            aspiration_choice["Popularity"] += 10
+            aspiration_choice["Romance"] -= 10
         case "Science":
-            aspiration_choice["Family"] += 5
-            aspiration_choice["Fortune"] += 5
-            aspiration_choice["Knowledge"] += 5
-            aspiration_choice["Pleasure"] -= 5
-            aspiration_choice["Popularity"] -= 5
-            aspiration_choice["Romance"] -= 5
+            aspiration_choice["Family"] += 10
+            aspiration_choice["Fortune"] += 10
+            aspiration_choice["Knowledge"] += 10
+            aspiration_choice["Pleasure"] -= 10
+            aspiration_choice["Popularity"] -= 10
+            aspiration_choice["Romance"] -= 10
         case "Sports":
-            aspiration_choice["Family"] -= 5
-            aspiration_choice["Fortune"] += 5
-            aspiration_choice["Knowledge"] -= 5
-            aspiration_choice["Pleasure"] -= 5
-            aspiration_choice["Popularity"] += 5
-            aspiration_choice["Romance"] += 5
+            aspiration_choice["Family"] -= 10
+            aspiration_choice["Fortune"] += 10
+            aspiration_choice["Knowledge"] -= 10
+            aspiration_choice["Pleasure"] -= 10
+            aspiration_choice["Popularity"] += 10
+            aspiration_choice["Romance"] += 10
         case "Tinkering":
-            aspiration_choice["Family"] += 5
-            aspiration_choice["Fortune"] += 5
-            aspiration_choice["Knowledge"] += 5
-            aspiration_choice["Pleasure"] -= 5
-            aspiration_choice["Popularity"] -= 5
-            aspiration_choice["Romance"] -= 5
+            aspiration_choice["Family"] += 10
+            aspiration_choice["Fortune"] += 10
+            aspiration_choice["Knowledge"] += 10
+            aspiration_choice["Pleasure"] -= 10
+            aspiration_choice["Popularity"] -= 10
+            aspiration_choice["Romance"] -= 10
         case _:
             print("Unknown Hobby at this time!")
 
@@ -162,144 +162,94 @@ def generate_aspiration():
 
 def personality_aspiration(neat, outgoing, active, playful, nice, aspirations):
     # Active
-    if active >= 6:
-        aspirations["Family"] -= 5
-        aspirations["Fortune"] += 5
-        aspirations["Knowledge"] -= 5
-        aspirations["Pleasure"] -= 5
-        aspirations["Popularity"] += 5
-        aspirations["Romance"] += 5
-    else:
-        aspirations["Family"] += 5
-        aspirations["Fortune"] -= 5
-        aspirations["Knowledge"] += 5
-        aspirations["Pleasure"] += 5
-        aspirations["Popularity"] -= 5
-        aspirations["Romance"] -= 5
-    # if active >= 7:
-    #     aspirations["Pleasure"] += 5
-    # if active >= 6:
-    #     aspirations["Popularity"] += 5
-    #     aspirations["Fortune"]
-    # if active <= 4:
-    #     aspirations["Pleasure"] -= 5
-    #     aspirations["Family"] += 5
-    # if active <= 3:
-    #     aspirations["Popularity"] -= 5
-    #     aspirations["Knowledge"] += 5
+    if active >= 8:
+        aspirations["Knowledge"] -= 10
+        aspirations["Popularity"] += 10
+    if active >= 5 and active < 8:
+        aspirations["Family"] -= 10
+        aspirations["Fortune"] += 10
+        aspirations["Pleasure"] -= 10
+        aspirations["Romance"] += 10
+    if active >= 3 and active < 5:
+        aspirations["Family"] += 10
+        aspirations["Fortune"] -= 10
+        aspirations["Pleasure"] += 10
+        aspirations["Romance"] -= 10
+    if active <= 2:
+        aspirations["Knowledge"] += 10
+        aspirations["Popularity"] -= 10
 
     # Neat
-    if neat >= 6:
-        aspirations["Family"] += 5
-        aspirations["Fortune"] += 5
-        aspirations["Knowledge"] += 5
-        aspirations["Pleasure"] -= 5
-        aspirations["Popularity"] -= 5
-        aspirations["Romance"] -= 5
-    else:
-        aspirations["Family"] -= 5
-        aspirations["Fortune"] -= 5
-        aspirations["Knowledge"] -= 5
-        aspirations["Pleasure"] += 5
-        aspirations["Popularity"] += 5
-        aspirations["Romance"] += 5
-    # if neat > 6:
-    #     aspirations["Family"] += 5
-    #     aspirations["Knowledge"] += 5
-    # if neat < 6 and neat > 3:
-    #     aspirations["Knowledge"] -= 5
-    # if neat <= 3:
-    #     aspirations["Family"] -= 5
+    if neat >= 8:
+        aspirations["Family"] += 10
+        aspirations["Knowledge"] += 10
+    if neat >= 5 and neat < 8:
+        aspirations["Fortune"] += 10
+        aspirations["Pleasure"] -= 10
+        aspirations["Popularity"] -= 10
+        aspirations["Romance"] -= 10
+    if neat >= 3 and neat < 5:
+        aspirations["Fortune"] -= 10
+        aspirations["Popularity"] += 10
+        aspirations["Romance"] += 10
+    if neat <= 2:
+        aspirations["Family"] -= 10
+        aspirations["Knowledge"] -= 10
+        aspirations["Pleasure"] += 10
 
     # Nice
-    if nice >= 6:
-        aspirations["Family"] += 5
-        aspirations["Fortune"] -= 5
-        aspirations["Knowledge"] -= 5
-        aspirations["Pleasure"] += 5
-        aspirations["Popularity"] += 5
-        aspirations["Romance"] -= 5
-    else:
-        aspirations["Family"] -= 5
-        aspirations["Fortune"] += 5
-        aspirations["Knowledge"] += 5
-        aspirations["Pleasure"] -= 5
-        aspirations["Popularity"] -= 5
-        aspirations["Romance"] += 5
-    # if nice >= 7:
-    #     aspirations["Family"] += 5
-    #     aspirations["Popularity"] += 5
-    #     aspirations["Fortune"] -= 5
-    # if nice >= 6:
-    #     aspirations["Romance"] -= 5
-    # if nice == 4:
-    #     aspirations["Fortune"] += 5
-    #     aspirations["Romance"] += 5
-    # if nice <= 3:
-    #     aspirations["Family"] -= 5
-    #     aspirations["Popularity"] -= 5
+    if nice >= 8:
+        aspirations["Family"] += 10
+        aspirations["Knowledge"] -= 10
+        aspirations["Popularity"] += 10
+    if nice >= 5 and nice < 8:
+        aspirations["Fortune"] -= 10
+        aspirations["Pleasure"] += 10
+        aspirations["Romance"] -= 10
+    if nice >= 3 and nice < 5:
+        aspirations["Fortune"] += 10
+        aspirations["Pleasure"] -= 10
+        aspirations["Romance"] += 10
+    if nice <= 2:
+        aspirations["Family"] -= 10
+        aspirations["Knowledge"] += 10
+        aspirations["Popularity"] -= 10
 
     # Outgoing
-    if outgoing >= 6:
-        aspirations["Family"] -= 5
-        aspirations["Fortune"] += 5
-        aspirations["Knowledge"] -= 5
-        aspirations["Pleasure"] += 5
-        aspirations["Popularity"] += 5
-        aspirations["Romance"] += 5
-    else:
-        aspirations["Family"] += 5
-        aspirations["Fortune"] -= 5
-        aspirations["Knowledge"] += 5
-        aspirations["Pleasure"] -= 5
-        aspirations["Popularity"] -= 5
-        aspirations["Romance"] -= 5
-    # if outgoing >= 9:
-    #     aspirations["Popularity"] += 5
-    # if outgoing == 7:
-    #     aspirations["Fortune"] += 5
-    #     aspirations["Pleasure"] += 5
-    #     aspirations["Romance"] += 5
-    #     aspirations["Family"] -= 5
-    # if outgoing > 5:
-    #     aspirations["Knowledge"] -= 5
-    # if outgoing == 4:
-    #     aspirations["Family"] += 5
-    #     aspirations["Knowledge"] += 5
-    #     aspirations["Fortune"] -= 5
-    #     aspirations["Pleasure"] -= 5
-    #     aspirations["Romance"] -= 5
-    # if outgoing <= 3:
-    #     aspirations["Popularity"] -= 5
+    if outgoing >= 8:
+        aspirations["Knowledge"] -= 10
+        aspirations["Popularity"] += 10
+        aspirations["Romance"] += 10
+    if outgoing >= 5 and outgoing < 8:
+        aspirations["Family"] -= 10
+        aspirations["Fortune"] += 10
+        aspirations["Pleasure"] += 10
+    if outgoing >= 3 and outgoing < 5:
+        aspirations["Family"] += 10
+        aspirations["Fortune"] -= 10
+        aspirations["Pleasure"] -= 10
+    if outgoing <= 2:
+        aspirations["Knowledge"] += 10
+        aspirations["Popularity"] -= 10
+        aspirations["Romance"] -= 10
 
     # Playful
-    if playful >= 6:
-        aspirations["Family"] += 5
-        aspirations["Fortune"] -= 5
-        aspirations["Knowledge"] -= 5
-        aspirations["Pleasure"] += 5
-        aspirations["Popularity"] += 5
-        aspirations["Romance"] += 5
-    else:
-        aspirations["Family"] -= 5
-        aspirations["Fortune"] += 5
-        aspirations["Knowledge"] += 5
-        aspirations["Pleasure"] -= 5
-        aspirations["Popularity"] -= 5
-        aspirations["Romance"] -= 5
-    # if playful > 6:
-    #     aspirations["Pleasure"] += 5
-    #     aspirations["Romance"] += 5
-    #     aspirations["Fortune"] -= 5
-    # if playful == 5:  # 5?
-    #     aspirations["Knowledge"] -= 5
-    # if playful == 4:  # 4?
-    #     aspirations["Fortune"] += 5
-    #     aspirations["Pleasure"] -= 5
-    #     aspirations["Romance"] -= 5
-    # if playful <= 3:
-    #     aspirations["Knowledge"] += 5
-
+    if playful >= 8:
+        aspirations["Fortune"] -= 10
+        aspirations["Knowledge"] -= 10
+        aspirations["Pleasure"] += 10
+    if playful >= 5 and playful < 8:
+        aspirations["Family"] += 10
+        aspirations["Popularity"] -= 10
+        aspirations["Romance"] += 10
+    if playful >= 3 and playful < 5:
+        aspirations["Family"] -= 10
+        aspirations["Popularity"] += 10
+        aspirations["Romance"] -= 10
+    if playful <= 2:
+        aspirations["Fortune"] += 10
+        aspirations["Knowledge"] += 10
+        aspirations["Pleasure"] -= 10
 
 def aspiration_traits(aspirations, age, traits):
 

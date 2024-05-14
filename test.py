@@ -6,8 +6,7 @@ from sim_physical.generate_young import generate_young
 from globals import (
     TODDLER_CONFLICTS,
     CHILD_CONFLICTS,
-    TEEN_CONFLICTS,
-    ADULT_CONFLICTS,
+    TEEN_OLDER_CONFLICTS,
     TODDLER_NUM_TRAITS,
     CHILD_NUM_TRAITS,
     TEEN_NUM_TRAITS,
@@ -109,16 +108,16 @@ def generate_old(age):
     for aspiration, value in aspiration_selection_combined:
         print(aspiration, value)
 
-    if age == "teen":
-        filtered_traits = remove_conflicting_traits(traits, TEEN_CONFLICTS)
-        # print(f"\nFiltered Traits: {filtered_traits}")
-        teen_traits = list(filtered_traits.items())[:TEEN_NUM_TRAITS]
-        print(f"Final Traits: {teen_traits}")
-    else:
-        filtered_traits = remove_conflicting_traits(traits, ADULT_CONFLICTS)
-        # print(f"Filtered Traits: {filtered_traits}")
-        adult_traits = list(filtered_traits.items())[:ADULT_NUM_TRAITS]
-        print(f"Final Traits: {adult_traits}")
+    # if age == "teen":
+    #     filtered_traits = remove_conflicting_traits(traits, TEEN_CONFLICTS)
+    #     # print(f"\nFiltered Traits: {filtered_traits}")
+    #     teen_traits = list(filtered_traits.items())[:TEEN_NUM_TRAITS]
+    #     print(f"Final Traits: {teen_traits}")
+    # else:
+    #     filtered_traits = remove_conflicting_traits(traits, ADULT_CONFLICTS)
+    #     # print(f"Filtered Traits: {filtered_traits}")
+    #     adult_traits = list(filtered_traits.items())[:ADULT_NUM_TRAITS]
+    #     print(f"Final Traits: {adult_traits}")
 
 
 age = input("\nWhat age is the Sim? ").lower()
