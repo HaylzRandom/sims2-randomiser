@@ -82,7 +82,6 @@ def get_trait_turn_off(turn_off, traits):
             traits["adventurous"] -= 10
             traits["ambitious"] -= 10
             traits["bookworm"] -= 10
-            traits["born salesman"]
             traits["bot fan"] -= 10
             traits["brave"] -= 10
             traits["brooding"] += 10
@@ -101,8 +100,8 @@ def get_trait_turn_off(turn_off, traits):
             traits["proper"] += 10
             traits["rebellious"] += 10
             traits["shy"] -= 10
-            traits["social butterfly"] -= 10
-            traits["socially awkward"] += 10
+            traits["social butterfly"] += 10
+            traits["socially awkward"] -= 10
             traits["supernatural fan"] -= 10
             traits["supernatural sceptic"] += 10
         case "Animal Lover":
@@ -180,6 +179,7 @@ def get_trait_turn_off(turn_off, traits):
             traits["loner"] += 10
             traits["loser"] += 10
             traits["mean-spirited"] += 10
+            traits["natural born performer"] -= 10
             traits["no sense of humour"] += 10
             traits["rebellious"] += 10
             traits["schmoozer"] -= 10
@@ -198,6 +198,7 @@ def get_trait_turn_off(turn_off, traits):
             traits["couch potato"] -= 10
             traits["diva"] -= 10
             traits["loves the cold"] -= 10
+            traits["loves the heat"] += 10
             traits["photographer's eye"] -= 10
             traits["savvy sculptor"] -= 10
             traits["snob"] += 10
@@ -232,6 +233,8 @@ def get_trait_turn_off(turn_off, traits):
             traits["couch potato"] -= 10
             traits["disciplined"] += 10
             traits["equestrian"] += 10
+            traits["loves the cold"] -= 10
+            traits["loves the heat"] += 10
             traits["hates the outdoors"] -= 10
             traits["heavy sleeper"] -= 10
             traits["light sleeper"] += 10
@@ -240,6 +243,7 @@ def get_trait_turn_off(turn_off, traits):
             traits["never nude"] -= 10
             traits["sailor"] += 10
             traits["slob"] -= 10
+            traits["vegetarian"] += 10
         case "Fitness":
             traits["athletic"] -= 10
             traits["couch potato"] += 10
@@ -248,9 +252,12 @@ def get_trait_turn_off(turn_off, traits):
             traits["heavy sleeper"] += 10
             traits["hydrophobic"] += 10
             traits["light sleeper"] -= 10
+            traits["loves the cold"] += 10
+            traits["loves the heat"] -= 10
             traits["loves the outdoors"] -= 10
             traits["loves to swim"] -= 10
             traits["sailor"] -= 10
+            traits["vegetarian"] -= 10
         case "Foodie":
             traits["artistic"] -= 10
             traits["can't stand art"] += 10
@@ -276,12 +283,14 @@ def get_trait_turn_off(turn_off, traits):
             traits["computer whiz"] -= 10
             traits["couch potato"] -= 10
             traits["eco-friendly"] += 10
+            traits["equestrian"] += 10
             traits["gatherer"] += 10
             traits["green thumb"] += 10
             traits["hates the outdoors"] -= 10
             traits["loves the cold"] -= 10
             traits["loves the heat"] += 10
             traits["loves the outdoors"] += 10
+            traits["night owl"] -= 10
             traits["sailor"] += 10
             traits["shy"] -= 10
             traits["technophobe"] += 10
@@ -300,7 +309,7 @@ def get_trait_turn_off(turn_off, traits):
             traits["dramatic"] -= 10
             traits["easily impressed"] += 10
             traits["evil"] -= 10
-            traits["excitable"]
+            traits["excitable"] -= 10
             traits["family-oriented"] += 10
             traits["friendly"] += 10
             traits["good"] += 10
@@ -340,6 +349,9 @@ def get_trait_turn_off(turn_off, traits):
             traits["grumpy"] -= 10
             traits["hates the outdoors"] -= 10
             traits["hopeless romantic"] += 10
+            traits["loves the cold"] -= 10
+            traits["loves the heat"] += 10
+            traits["loves the outdoors"] += 10
             traits["party animal"] += 10
             traits["perceptive"] -= 10
             traits["rebellious"] += 10
@@ -485,7 +497,6 @@ def get_trait_turn_off(turn_off, traits):
             traits["adventurous"] -= 10
             traits["angler"] -= 10
             traits["bookworm"] += 10
-            traits["born salesman"]
             traits["bot fan"] += 10
             traits["computer whiz"] += 10
             traits["couch potato"] += 10
@@ -558,7 +569,6 @@ def get_trait_turn_off(turn_off, traits):
             traits["dog person"] -= 10
             traits["eco-friendly"] -= 10
             traits["gatherer"] -= 10
-            traits["good sense of humour"]
             traits["green thumb"] -= 10
             traits["hates the outdoors"] += 10
             traits["hydrophobic"] += 10
@@ -676,12 +686,14 @@ def get_trait_turn_off(turn_off, traits):
         case "Tidy":
             traits["absent-minded"] += 10
             traits["angler"] += 10
+            traits["animal lover"] += 10
+            traits["cat person"] += 10
             traits["childish"] += 10
             traits["clumsy"] += 10
             traits["commitment issues"] += 10
             traits["dislikes children"] += 10
             traits["diva"] += 10
-            traits["dog person"]
+            traits["dog person"] -= 10
             traits["dramatic"] += 10
             traits["family-oriented"] -= 10
             traits["friendly"] -= 10
@@ -1287,3341 +1299,766 @@ def get_trait_turn_off(turn_off, traits):
 #             traits["snob"] -= 1
 
 
+# TODO - Start Here
 def get_trait_turn_on(turn_on, traits):
     # Turn On
     match (turn_on):
         case "Adventurous":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
+            traits["absent-minded"] -= 10
+            traits["adventurous"] += 10
+            traits["ambitious"] += 10
+            traits["athletic"] += 10
+            traits["born salesman"] += 10
+            traits["brave"] += 10
+            traits["brooding"] -= 10
+            traits["charismatic"] += 10
+            traits["clumsy"] -= 10
+            traits["commitment issues"] -= 10
+            traits["couch potato"] -= 10
+            traits["coward"] -= 10
+            traits["daredevil"] += 10
+            traits["diva"] -= 10
+            traits["dramatic"] -= 10
+            traits["easily impressed"] -= 10
+            traits["evil"] += 10
+            traits["excitable"] += 10
+            traits["flirty"] -= 10
+            traits["friendly"] -= 10
+            traits["gatherer"] += 10
+            traits["grumpy"] -= 10
+            traits["hates the outdoors"] -= 10
+            traits["heavy sleeper"] -= 10
+            traits["hydrophobic"] -= 10
+            traits["inappropriate"] -= 10
+            traits["insane"] -= 10
+            traits["irresistible"] -= 10
+            traits["kleptomaniac"] += 10
+            traits["light sleeper"] += 10
+            traits["loner"] -= 10
+            traits["loser"] -= 10
+            traits["loves the cold"] -= 10
+            traits["loves the heat"] += 10
+            traits["loves the outdoors"] += 10
+            traits["lucky"] += 10
+            traits["neurotic"] -= 10
+            traits["never nude"] -= 10
+            traits["shy"] -= 10
+            traits["social butterfly"] += 10
+            traits["socially awkward"] -= 10
+            traits["supernatural fan"] += 10
+            traits["supernatural sceptic"] -= 10
+            traits["unlucky"] -= 10
+            traits["unstable"] -= 10
         case "Alien":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
+            traits["absent-minded"] -= 10
+            traits["adventurous"] += 10
+            traits["bookworm"] += 10
+            traits["bot fan"] += 10
+            traits["brave"] += 10
+            traits["brooding"] -= 10
+            traits["commitment issues"] -= 10
+            traits["coward"] += 10
+            traits["diva"] -= 10
+            traits["dramatic"] -= 10
+            traits["evil"] -= 10
+            traits["flirty"] -= 10
+            traits["grumpy"] -= 10
+            traits["inappropriate"] -= 10
+            traits["insane"] -= 10
+            traits["irresistible"] -= 10
+            traits["night owl"] += 10
+            traits["proper"] -= 10
+            traits["rebellious"] -= 10
+            traits["shy"] += 10
+            traits["social butterfly"] -= 10
+            traits["socially awkward"] += 10
+            traits["supernatural fan"] += 10
+            traits["supernatural sceptic"] -= 10
         case "Animal Lover":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
+            traits["animal lover"] += 10
+            traits["cat person"] += 10
+            traits["dog person"] += 10
+            traits["equestrian"] += 10
+            traits["evil"] -= 10
+            traits["family-oriented"] += 10
+            traits["grumpy"] -= 10
+            traits["inappropriate"] -= 10
+            traits["insane"] -= 10
+            traits["kleptomaniac"] -= 10
+            traits["neat"] -= 10
+            traits["socially awkward"] -= 10
         case "Artistic":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
+            traits["absent-minded"] -= 10
+            traits["ambitious"] += 10
+            traits["artistic"] += 10
+            traits["avant garde"] += 10
+            traits["brooding"] -= 10
+            traits["can't stand art"] -= 10
+            traits["eccentric"] -= 10
+            traits["evil"] -= 10
+            traits["photographer's eye"] += 10
+            traits["savvy sculptor"] += 10
+            traits["star quality"] += 10
+            traits["virtuoso"] += 10
         case "Athletic":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
-        case "Black Hair":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
-        case "Blonde Hair":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
-        case "Brown Hair":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
+            traits["ambitious"] += 10
+            traits["athletic"] += 10
+            traits["daredevil"] += 10
+            traits["disciplined"] += 10
+            traits["equestrian"] += 10
+            traits["hydrophobic"] -= 10
+            traits["loves to swim"] += 10
+            traits["sailor"] += 10
         case "Business Shark":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
+            traits["absent-minded"] -= 10
+            traits["ambitious"] += 10
+            traits["born salesman"] += 10
+            traits["easily impressed"] -= 10
+            traits["excitable"] -= 10
+            traits["family-oriented"] -= 10
+            traits["friendly"] -= 10
+            traits["good"] -= 10
+            traits["good sense of humour"] -= 10
+            traits["grumpy"] += 10
+            traits["heavy sleeper"] -= 10
+            traits["light sleeper"] += 10
+            traits["mean-spirited"] += 10
+            traits["nurturing"] -= 10
+            traits["schmoozer"] += 10
+            traits["shy"] -= 10
+            traits["snob"] += 10
+            traits["star quality"] += 10
+            traits["workaholic"] += 10
         case "Charismatic":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
+            traits["brooding"] -= 10
+            traits["charismatic"] += 10
+            traits["diva"] += 10
+            traits["dramatic"] += 10
+            traits["excitable"] += 10
+            traits["flirty"] += 10
+            traits["friendly"] += 10
+            traits["good"] += 10
+            traits["good sense of humour"] += 10
+            traits["grumpy"] -= 10
+            traits["hopeless romantic"] += 10
+            traits["hot-headed"] -= 10
+            traits["inappropriate"] -= 10
+            traits["insane"] -= 10
+            traits["irresistible"] += 10
+            traits["light sleeper"] += 10
+            traits["loner"] -= 10
+            traits["loser"] -= 10
+            traits["mean-spirited"] -= 10
+            traits["natural born performer"] += 10
+            traits["no sense of humour"] -= 10
+            traits["rebellious"] -= 10
+            traits["schmoozer"] += 10
+            traits["shy"] -= 10
+            traits["social butterfly"] += 10
+            traits["socially awkward"] -= 10
+            traits["star quality"] += 10
         case "Cultured":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
+            traits["absent-minded"] -= 10
+            traits["artistic"] += 10
+            traits["avant garde"] += 10
+            traits["bookworm"] += 10
+            traits["born salesman"] -= 10
+            traits["bot fan"] -= 10
+            traits["can't stand art"] -= 10
+            traits["couch potato"] += 10
+            traits["diva"] += 10
+            traits["loves the cold"] += 10
+            traits["loves the heat"] -= 10
+            traits["photographer's eye"] += 10
+            traits["savvy sculptor"] += 10
+            traits["snob"] -= 10
+            traits["technophobe"] -= 10
+            traits["virtuoso"] += 10
         case "Expressive":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
-        case "Facial Hair":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
+            traits["adventurous"] += 10
+            traits["artistic"] += 10
+            traits["avant garde"] += 10
+            traits["bookworm"] -= 10
+            traits["brooding"] -= 10
+            traits["charismatic"] += 10
+            traits["childish"] += 10
+            traits["diva"] += 10
+            traits["dramatic"] += 10
+            traits["excitable"] += 10
+            traits["grumpy"] -= 10
+            traits["loner"] -= 10
+            traits["loser"] -= 10
+            traits["mean-spirited"] -= 10
+            traits["neurotic"] -= 10
+            traits["no sense of humour"] -= 10
+            traits["over-emotional"] += 10
+            traits["party animal"] += 10
+            traits["rebellious"] -= 10
+            traits["shy"] -= 10
+            traits["social butterfly"] += 10
+            traits["socially awkward"] -= 10
         case "Fatness":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
+            traits["adventurous"] -= 10
+            traits["couch potato"] += 10
+            traits["disciplined"] -= 10
+            traits["equestrian"] -= 10
+            traits["hates the outdoors"] += 10
+            traits["heavy sleeper"] += 10
+            traits["light sleeper"] -= 10
+            traits["loves the cold"] += 10
+            traits["loves the heat"] -= 10
+            traits["loves the outdoors"] -= 10
+            traits["loves to swim"] -= 10
+            traits["never nude"] += 10
+            traits["sailor"] -= 10
+            traits["slob"] += 10
+            traits["vegetarian"] -= 10
         case "Fitness":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
+            traits["couch potato"] -= 10
+            traits["disciplined"] += 10
+            traits["hates the outdoors"] -= 10
+            traits["heavy sleeper"] -= 10
+            traits["hydrophobic"] -= 10
+            traits["light sleeper"] += 10
+            traits["loves the cold"] -= 10
+            traits["loves the heat"] += 10
+            traits["loves the outdoors"] += 10
+            traits["loves to swim"] += 10
+            traits["sailor"] += 10
+            traits["vegetarian"] += 10
         case "Foodie":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
-        case "Grey Hair":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
+            traits["artistic"] += 10
+            traits["can't stand art"] -= 10
+            traits["clumsy"] -= 10
+            traits["evil"] -= 10
+            traits["family-oriented"] += 10
+            traits["grumpy"] -= 10
+            traits["hot-headed"] -= 10
+            traits["irresistible"] -= 10
+            traits["mean-spirited"] -= 10
+            traits["natural cook"] += 10
+            traits["neat"] += 10
+            traits["nurturing"] += 10
+            traits["rebellious"] -= 10
+            traits["slob"] -= 10
+            traits["snob"] += 10
+            traits["vegetarian"] += 10
         case "Indoorsy":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
+            traits["adventurous"] -= 10
+            traits["angler"] -= 10
+            traits["bookworm"] += 10
+            traits["bot fan"] += 10
+            traits["computer whiz"] += 10
+            traits["couch potato"] += 10
+            traits["eco-friendly"] -= 10
+            traits["equestrian"] -= 10
+            traits["gatherer"] -= 10
+            traits["green thumb"] -= 10
+            traits["hates the outdoors"] += 10
+            traits["loves the cold"] += 10
+            traits["loves the heat"] -= 10
+            traits["loves the outdoors"] -= 10
+            traits["night owl"] += 10
+            traits["sailor"] -= 10
+            traits["shy"] += 10
+            traits["technophobe"] -= 10
+            traits["vehicle enthusiast"] -= 10
         case "Infamous":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
+            traits["animal lover"] -= 10
+            traits["avant garde"] += 10
+            traits["charismatic"] -= 10
+            traits["childish"] -= 10
+            traits["commitment issues"] += 10
+            traits["coward"] -= 10
+            traits["daredevil"] += 10
+            traits["disciplined"] -= 10
+            traits["dislikes children"] += 10
+            traits["diva"] += 10
+            traits["dramatic"] += 10
+            traits["easily impressed"] -= 10
+            traits["evil"] += 10
+            traits["excitable"] += 10
+            traits["family-oriented"] -= 10
+            traits["friendly"] -= 10
+            traits["good"] -= 10
             traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
+            traits["hopeless romantic"] -= 10
+            traits["inappropriate"] += 10
+            traits["insane"] += 10
+            traits["lucky"] -= 10
+            traits["mean-spirited"] += 10
+            traits["natural cook"] -= 10
+            traits["neat"] -= 10
+            traits["nurturing"] -= 10
+            traits["over-emotional"] -= 10
+            traits["perceptive"] -= 10
+            traits["perfectionist"] -= 10
+            traits["proper"] -= 10
+            traits["rebellious"] += 10
+            traits["shy"] -= 10
+            traits["supernatural fan"] -= 10
+            traits["supernatural sceptic"] += 10
+            traits["unlucky"] += 10
+            traits["unstable"] += 10
         case "Intellect":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
+            traits["absent-minded"] -= 10
+            traits["ambitious"] -= 10
+            traits["artistic"] -= 10
+            traits["bookworm"] += 10
+            traits["brooding"] += 10
+            traits["childish"] -= 10
+            traits["commitment issues"] -= 10
+            traits["evil"] -= 10
+            traits["excitable"] -= 10
+            traits["genius"] += 10
+            traits["grumpy"] += 10
+            traits["hates the outdoors"] += 10
+            traits["hopeless romantic"] -= 10
+            traits["loves the cold"] += 10
+            traits["loves the heat"] -= 10
+            traits["loves the outdoors"] -= 10
+            traits["party animal"] -= 10
+            traits["perceptive"] += 10
+            traits["rebellious"] -= 10
+            traits["schmoozer"] -= 10
+            traits["shy"] += 10
+            traits["social butterfly"] -= 10
+            traits["socially awkward"] += 10
+            traits["star quality"] -= 10
+            traits["supernatural fan"] += 10
+            traits["supernatural sceptic"] -= 10
+            traits["technophobe"] -= 10
+            traits["unflirty"] += 10
+            traits["unstable"] -= 10
+            traits["virtuoso"] -= 10
+            traits["workaholic"] -= 10
         case "Introvert":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
+            traits["adventurous"] -= 10
+            traits["ambitious"] -= 10
+            traits["bookworm"] += 10
+            traits["born salesman"] -= 10
+            traits["bot fan"] += 10
+            traits["brave"] += 10
+            traits["brooding"] += 10
+            traits["cat person"] += 10
+            traits["charismatic"] -= 10
+            traits["commitment issues"] -= 10
+            traits["coward"] += 10
+            traits["diva"] -= 10
+            traits["dog person"] -= 10
+            traits["dramatic"] -= 10
+            traits["easily impressed"] -= 10
+            traits["excitable"] -= 10
+            traits["flirty"] -= 10
+            traits["genius"] -= 10
+            traits["good sense of humour"] -= 10
+            traits["grumpy"] += 10
+            traits["hopeless romantic"] -= 10
+            traits["irresistible"] -= 10
+            traits["kleptomaniac"] -= 10
+            traits["loner"] += 10
+            traits["mooch"] -= 10
+            traits["natural born performer"] -= 10
+            traits["neurotic"] += 10
+            traits["never nude"] += 10
+            traits["night owl"] += 10
+            traits["no sense of humour"] += 10
+            traits["over-emotional"] -= 10
+            traits["party animal"] -= 10
+            traits["rebellious"] -= 10
+            traits["shy"] += 10
+            traits["social butterfly"] -= 10
+            traits["socially awkward"] += 10
+            traits["supernatural fan"] += 10
+            traits["supernatural sceptic"] -= 10
+            traits["unflirty"] += 10
+            traits["workaholic"] -= 10
         case "Laid Back":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
+            traits["adventurous"] -= 10
+            traits["athletic"] -= 10
+            traits["born salesman"] -= 10
+            traits["brave"] -= 10
+            traits["cat person"] += 10
+            traits["charismatic"] -= 10
+            traits["computer whiz"] += 10
+            traits["couch potato"] += 10
+            traits["diva"] -= 10
+            traits["dog person"] -= 10
+            traits["dramatic"] -= 10
+            traits["equestrian"] -= 10
+            traits["excitable"] -= 10
+            traits["gatherer"] -= 10
+            traits["green thumb"] -= 10
+            traits["handy"] -= 10
+            traits["hates the outdoors"] += 10
+            traits["hydrophobic"] += 10
+            traits["loves the cold"] += 10
+            traits["loves the heat"] -= 10
+            traits["loves the outdoors"] -= 10
+            traits["loves to swim"] -= 10
+            traits["mooch"] += 10
+            traits["natural born performer"] -= 10
+            traits["natural cook"] -= 10
+            traits["proper"] -= 10
+            traits["rebellious"] -= 10
+            traits["sailor"] -= 10
+            traits["slob"] += 10
+            traits["social butterfly"] -= 10
+            traits["socially awkward"] += 10
+            traits["star quality"] -= 10
+            traits["technophobe"] -= 10
+            traits["vehicle enthusiast"] -= 10
+            traits["workaholic"] -= 10
         case "Musical":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
+            traits["adventurous"] -= 10
+            traits["artistic"] -= 10
+            traits["avant garde"] -= 10
+            traits["bookworm"] -= 10
+            traits["bot fan"] -= 10
+            traits["brooding"] -= 10
+            traits["computer whiz"] -= 10
+            traits["couch potato"] -= 10
+            traits["diva"] += 10
+            traits["dramatic"] += 10
+            traits["eccentric"] -= 10
+            traits["evil"] -= 10
+            traits["genius"] -= 10
+            traits["irresistible"] += 10
+            traits["natural born performer"] += 10
+            traits["party animal"] += 10
+            traits["photographer's eye"] -= 10
+            traits["savvy sculptor"] -= 10
+            traits["star quality"] += 10
+            traits["virtuoso"] += 10
+            traits["workaholic"] -= 10
         case "Occult":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
+            traits["absent-minded"] -= 10
+            traits["animal lover"] -= 10
+            traits["avant garde"] -= 10
+            traits["born salesman"] -= 10
+            traits["bot fan"] += 10
+            traits["brooding"] -= 10
+            traits["daredevil"] -= 10
+            traits["diva"] -= 10
+            traits["dramatic"] -= 10
+            traits["excitable"] -= 10
+            traits["grumpy"] -= 10
+            traits["hot-headed"] -= 10
+            traits["inappropriate"] += 10
+            traits["insane"] += 10
+            traits["irresistible"] -= 10
+            traits["loser"] += 10
+            traits["night owl"] += 10
+            traits["nurturing"] -= 10
+            traits["proper"] -= 10
+            traits["schmoozer"] -= 10
+            traits["supernatural fan"] += 10
+            traits["supernatural sceptic"] -= 10
+            traits["unlucky"] += 10
+            traits["unstable"] += 10
+            traits["workaholic"] -= 10
         case "Outdoorsy":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
+            traits["absent-minded"] -= 10
+            traits["adventurous"] += 10
+            traits["angler"] += 10
+            traits["bookworm"] -= 10
+            traits["bot fan"] -= 10
+            traits["computer whiz"] -= 10
+            traits["couch potato"] -= 10
+            traits["eco-friendly"] += 10
+            traits["equestrian"] += 10
+            traits["gatherer"] += 10
+            traits["green thumb"] += 10
+            traits["hates the outdoors"] -= 10
+            traits["loves the cold"] -= 10
+            traits["loves the heat"] += 10
+            traits["loves the outdoors"] += 10
+            traits["loves to swim"] += 10
+            traits["sailor"] += 10
+            traits["shy"] -= 10
+            traits["technophobe"] += 10
+            traits["vehicle enthusiast"] += 10
         case "Outgoing":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
+            traits["absent-minded"] -= 10
+            traits["ambitious"] += 10
+            traits["angler"] -= 10
+            traits["animal lover"] += 10
+            traits["bookworm"] -= 10
+            traits["born salesman"] += 10
+            traits["brave"] += 10
+            traits["brooding"] -= 10
+            traits["cat person"] -= 10
+            traits["charismatic"] += 10
+            traits["childish"] += 10
+            traits["clumsy"] -= 10
+            traits["commitment issues"] += 10
+            traits["coward"] -= 10
+            traits["diva"] += 10
+            traits["dog person"] += 10
+            traits["dramatic"] += 10
+            traits["excitable"] += 10
+            traits["flirty"] += 10
+            traits["genius"] -= 10
+            traits["good sense of humour"] += 10
+            traits["hopeless romantic"] += 10
+            traits["hot-headed"] -= 10
+            traits["inappropriate"] -= 10
+            traits["insane"] -= 10
+            traits["irresistible"] += 10
+            traits["loner"] -= 10
+            traits["loser"] -= 10
+            traits["mean-spirited"] -= 10
+            traits["natural born performer"] += 10
+            traits["neurotic"] -= 10
+            traits["no sense of humour"] -= 10
+            traits["over-emotional"] += 10
+            traits["party animal"] += 10
+            traits["proper"] -= 10
+            traits["rebellious"] += 10
+            traits["schmoozer"] += 10
+            traits["shy"] -= 10
+            traits["snob"] -= 10
+            traits["social butterfly"] += 10
+            traits["socially awkward"] -= 10
+            traits["star quality"] += 10
+            traits["unflirty"] -= 10
+            traits["unlucky"] -= 10
+            traits["unstable"] -= 10
+            traits["workaholic"] -= 10
         case "Plant Lover":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
+            traits["animal lover"] += 10
+            traits["bookworm"] -= 10
+            traits["bot fan"] -= 10
+            traits["cat person"] -= 10
+            traits["couch potato"] -= 10
+            traits["dog person"] += 10
+            traits["eco-friendly"] += 10
+            traits["gatherer"] += 10
+            traits["green thumb"] += 10
+            traits["hates the outdoors"] -= 10
+            traits["hydrophobic"] -= 10
+            traits["loves the cold"] -= 10
+            traits["loves the heat"] += 10
+            traits["loves the outdoors"] += 10
+            traits["loves to swim"] += 10
+            traits["supernatural fan"] += 10
+            traits["supernatural sceptic"] -= 10
+            traits["vegetarian"] += 10
         case "Rebellious":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
-        case "Red Hair":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
+            traits["absent-minded"] -= 10
+            traits["ambitious"] -= 10
+            traits["animal lover"] -= 10
+            traits["bookworm"] -= 10
+            traits["bot fan"] -= 10
+            traits["brooding"] -= 10
+            traits["cat person"] -= 10
+            traits["clumsy"] -= 10
+            traits["coward"] -= 10
+            traits["daredevil"] += 10
+            traits["diva"] += 10
+            traits["dog person"] -= 10
+            traits["dramatic"] += 10
+            traits["easily impressed"] -= 10
+            traits["eco-friendly"] -= 10
+            traits["equestrian"] -= 10
+            traits["evil"] += 10
+            traits["excitable"] -= 10
+            traits["flirty"] -= 10
+            traits["friendly"] -= 10
+            traits["frugal"] -= 10
+            traits["good"] -= 10
+            traits["good sense of humour"] -= 10
+            traits["grumpy"] += 10
+            traits["hot-headed"] += 10
+            traits["inappropriate"] += 10
+            traits["insane"] += 10
+            traits["irresistible"] -= 10
+            traits["kleptomaniac"] += 10
+            traits["loner"] -= 10
+            traits["loser"] -= 10
+            traits["lucky"] -= 10
+            traits["natural born performer"] += 10
+            traits["neat"] -= 10
+            traits["proper"] -= 10
+            traits["rebellious"] += 10
+            traits["schmoozer"] += 10
+            traits["shy"] -= 10
+            traits["snob"] -= 10
+            traits["social butterfly"] -= 10
+            traits["socially awkward"] -= 10
+            traits["unflirty"] -= 10
+            traits["unlucky"] -= 10
+            traits["unstable"] -= 10
         case "Stylish":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
+            traits["absent-minded"] -= 10
+            traits["ambitious"] += 10
+            traits["angler"] -= 10
+            traits["bookworm"] -= 10
+            traits["bot fan"] -= 10
+            traits["charismatic"] += 10
+            traits["childish"] -= 10
+            traits["clumsy"] -= 10
+            traits["diva"] += 10
+            traits["dramatic"] += 10
+            traits["easily impressed"] -= 10
+            traits["eco-friendly"] -= 10
+            traits["evil"] += 10
+            traits["excitable"] -= 10
+            traits["family-oriented"] -= 10
+            traits["flirty"] += 10
+            traits["friendly"] -= 10
+            traits["frugal"] -= 10
+            traits["genius"] -= 10
+            traits["good"] -= 10
+            traits["hopeless romantic"] += 10
+            traits["irresistible"] += 10
+            traits["mooch"] -= 10
+            traits["natural born performer"] += 10
+            traits["over-emotional"] += 10
+            traits["party animal"] += 10
+            traits["perfectionist"] += 10
+            traits["photographer's eye"] += 10
+            traits["proper"] += 10
+            traits["schmoozer"] += 10
+            traits["shy"] -= 10
+            traits["snob"] += 10
+            traits["socially awkward"] -= 10
+            traits["star quality"] += 10
+            traits["unflirty"] -= 10
+            traits["unlucky"] -= 10
+            traits["workaholic"] -= 10
         case "Technology":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
+            traits["ambitious"] -= 10
+            traits["artistic"] -= 10
+            traits["avant garde"] -= 10
+            traits["bookworm"] -= 10
+            traits["bot fan"] += 10
+            traits["brooding"] -= 10
+            traits["can't stand art"] += 10
+            traits["computer whiz"] += 10
+            traits["couch potato"] += 10
+            traits["green thumb"] -= 10
+            traits["grumpy"] -= 10
+            traits["handy"] += 10
+            traits["inappropriate"] -= 10
+            traits["insane"] -= 10
+            traits["natural cook"] += 10
+            traits["photographer's eye"] += 10
+            traits["savvy sculptor"] -= 10
+            traits["technophobe"] -= 10
+            traits["vehicle enthusiast"] += 10
+            traits["virtuoso"] += 10
         case "Tidy":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
+            traits["absent-minded"] -= 11
+            traits["angler"] -= 10
+            traits["animal lover"] -= 10
+            traits["cat person"] -= 10
             traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
+            traits["childish"] -= 10
+            traits["clumsy"] -= 10
+            traits["commitment issues"] -= 10
+            traits["dislikes children"] -= 10
+            traits["diva"] -= 10
+            traits["dog person"] -= 10
+            traits["dramatic"] -= 10
+            traits["family-oriented"] += 10
+            traits["friendly"] += 10
+            traits["frugal"] += 10
+            traits["gatherer"] -= 10
+            traits["genius"] += 10
+            traits["green thumb"] -= 10
+            traits["grumpy"] -= 10
+            traits["heavy sleeper"] += 10
+            traits["hopeless romantic"] -= 10
+            traits["irresistible"] -= 10
+            traits["kleptomaniac"] -= 10
+            traits["light sleeper"] -= 10
+            traits["lucky"] += 10
+            traits["mean-spirited"] -= 10
+            traits["mooch"] -= 10
+            traits["neat"] += 10
+            traits["never nude"] += 10
+            traits["night owl"] += 10
+            traits["nurturing"] += 10
+            traits["perfectionist"] += 10
+            traits["photographer's eye"] += 10
+            traits["proper"] += 10
+            traits["unlucky"] -= 10
         case "Undead":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
+            traits["adventurous"] -= 10
+            traits["ambitious"] -= 10
+            traits["animal lover"] -= 10
+            traits["born salesman"] -= 10
+            traits["brave"] -= 10
+            traits["charismatic"] -= 10
+            traits["clumsy"] -= 10
+            traits["commitment issues"] -= 10
+            traits["coward"] -= 10
+            traits["disciplined"] -= 10
+            traits["diva"] -= 10
+            traits["dramatic"] -= 10
+            traits["easily impressed"] -= 10
+            traits["excitable"] -= 10
+            traits["flirty"] -= 10
+            traits["good sense of humour"] -= 10
+            traits["grumpy"] += 10
+            traits["hopeless romantic"] -= 10
+            traits["inappropriate"] += 10
+            traits["insane"] += 10
+            traits["irresistible"] -= 10
+            traits["kleptomaniac"] += 10
+            traits["loner"] += 10
+            traits["loser"] += 10
+            traits["lucky"] -= 10
+            traits["night owl"] += 10
+            traits["no sense of humour"] += 10
+            traits["over-emotional"] -= 10
+            traits["party animal"] -= 10
+            traits["social butterfly"] -= 10
+            traits["socially awkward"] += 10
+            traits["supernatural fan"] += 10
+            traits["supernatural sceptic"] -= 10
+            traits["unflirty"] += 10
+            traits["unlucky"] += 10
         case "Well-Liked":
-            traits["absent-minded"]
-            traits["adventurous"]
-            traits["angler"]
-            traits["animal lover"]
-            traits["artistic"]
-            traits["athletic"]
-            traits["avant garde"]
-            traits["bookworm"]
-            traits["born salesman"]
-            traits["bot fan"]
-            traits["brave"]
-            traits["brooding"]
-            traits["can't stand art"]
-            traits["cat person"]
-            traits["charismatic"]
-            traits["childish"]
-            traits["clumsy"]
-            traits["commitment issues"]
-            traits["computer whiz"]
-            traits["couch potato"]
-            traits["coward"]
-            traits["daredevil"]
-            traits["disciplined"]
-            traits["dislikes children"]
-            traits["diva"]
-            traits["dog person"]
-            traits["dramatic"]
-            traits["easily impressed"]
-            traits["eccentric"]
-            traits["eco-friendly"]
-            traits["equestrian"]
-            traits["evil"]
-            traits["excitable"]
-            traits["family-oriented"]
-            traits["flirty"]
-            traits["friendly"]
-            traits["frugal"]
-            traits["gatherer"]
-            traits["genius"]
-            traits["good"]
-            traits["good sense of humour"]
-            traits["green thumb"]
-            traits["grumpy"]
-            traits["handy"]
-            traits["hates the outdoors"]
-            traits["heavy sleeper"]
-            traits["hopeless romantic"]
-            traits["hot=headed"]
-            traits["hydrophobic"]
-            traits["inappropriate"]
-            traits["insane"]
-            traits["irresistible"]
-            traits["kleptomaniac"]
-            traits["light sleeper"]
-            traits["loner"]
-            traits["loser"]
-            traits["loves the cold"]
-            traits["loves the heat"]
-            traits["loves the outdoors"]
-            traits["loves to swim"]
-            traits["lucky"]
-            traits["mean-spirited"]
-            traits["mooch"]
-            traits["natural born performer"]
-            traits["natural cook"]
-            traits["neat"]
-            traits["neurotic"]
-            traits["never nude"]
-            traits["night owl"]
-            traits["no sense of humour"]
-            traits["nurturing"]
-            traits["over-emotional"]
-            traits["party animal"]
-            traits["perceptive"]
-            traits["perfectionist"]
-            traits["photographer's eye"]
-            traits["proper"]
-            traits["rebellious"]
-            traits["sailor"]
-            traits["savvy sculptor"]
-            traits["schmoozer"]
-            traits["shy"]
-            traits["slob"]
-            traits["snob"]
-            traits["social butterfly"]
-            traits["socially awkward"]
-            traits["star quality"]
-            traits["supernatural fan"]
-            traits["supernatural sceptic"]
-            traits["technophobe"]
-            traits["unflirty"]
-            traits["unlucky"]
-            traits["unstable"]
-            traits["vegetarian"]
-            traits["vehicle enthusiast"]
-            traits["virtuoso"]
-            traits["workaholic"]
+            traits["absent-minded"] += 10
+            traits["ambitious"] -= 10
+            traits["animal lover"] += 10
+            traits["brooding"] -= 10
+            traits["cat person"] += 10
+            traits["charismatic"] -= 10
+            traits["childish"] -= 10
+            traits["commitment issues"] -= 10
+            traits["daredevil"] -= 10
+            traits["dislikes children"] -= 10
+            traits["diva"] -= 10
+            traits["dog person"] += 10
+            traits["dramatic"] -= 10
+            traits["easily impressed"] += 10
+            traits["evil"] -= 10
+            traits["excitable"] += 10
+            traits["family-oriented"] += 10
+            traits["friendly"] += 10
+            traits["good"] += 10
+            traits["good sense of humour"] += 10
+            traits["grumpy"] -= 10
+            traits["hopeless romantic"] += 10
+            traits["inappropriate"] -= 10
+            traits["insane"] -= 10
+            traits["irresistible"] -= 10
+            traits["kleptomaniac"] -= 10
+            traits["lucky"] -= 10
+            traits["mean-spirited"] -= 10
+            traits["mooch"] -= 10
+            traits["never nude"] += 10
+            traits["no sense of humour"] -= 10
+            traits["nurturing"] += 10
+            traits["proper"] += 10
+            traits["rebellious"] -= 10
+            traits["supernatural fan"] += 10
+            traits["supernatural sceptic"] -= 10
+            traits["unflirty"] += 10
+            traits["unlucky"] += 10
 
 
 # def get_trait_turn_on_teen(turn_on, traits):
