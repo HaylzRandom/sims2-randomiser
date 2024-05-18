@@ -365,8 +365,6 @@ def hobby_traits(hobby, traits, age):
                 traits["lucky"] += 10
                 traits["mean-spirited"] -= 10
                 traits["mooch"] += 10
-                traits["natural born performer"] -= 10
-                traits["natural cook"] -= 10
                 traits["neat"] -= 10
                 traits["neurotic"] -= 10
                 traits["never nude"] -= 10
@@ -442,8 +440,6 @@ def hobby_traits(hobby, traits, age):
                 traits["lucky"] += 10
                 traits["mean-spirited"] -= 10
                 traits["mooch"] -= 10
-                traits["natural born performer"] -= 10
-                traits["natural cook"] += 10
                 traits["neat"] += 10
                 traits["neurotic"] -= 10
                 traits["never nude"] -= 10
@@ -519,8 +515,6 @@ def hobby_traits(hobby, traits, age):
                 traits["lucky"] -= 10
                 traits["mean-spirited"] += 10
                 traits["mooch"] -= 10
-                traits["natural born performer"] += 10
-                traits["natural cook"] -= 10
                 traits["neat"] -= 10
                 traits["neurotic"] += 10
                 traits["never nude"] += 10
@@ -596,8 +590,6 @@ def hobby_traits(hobby, traits, age):
                 traits["lucky"] += 10
                 traits["mean-spirited"] += 10
                 traits["mooch"] += 10
-                traits["natural born performer"] += 10
-                traits["natural cook"] += 10
                 traits["neat"] -= 10
                 traits["neurotic"] -= 10
                 traits["never nude"] -= 10
@@ -673,8 +665,6 @@ def hobby_traits(hobby, traits, age):
                 traits["lucky"] += 10
                 traits["mean-spirited"] += 10
                 traits["mooch"] -= 10
-                traits["natural born performer"] -= 10
-                traits["natural cook"] -= 10
                 traits["neat"] -= 10
                 traits["neurotic"] += 10
                 traits["never nude"] += 10
@@ -750,8 +740,6 @@ def hobby_traits(hobby, traits, age):
                 traits["lucky"] -= 10
                 traits["mean-spirited"] -= 10
                 traits["mooch"] += 10
-                traits["natural born performer"] += 10
-                traits["natural cook"] -= 10
                 traits["neat"] -= 10
                 traits["neurotic"] += 10
                 traits["never nude"] -= 10
@@ -827,8 +815,6 @@ def hobby_traits(hobby, traits, age):
                 traits["lucky"] -= 10
                 traits["mean-spirited"] -= 10
                 traits["mooch"] += 10
-                traits["natural born performer"] -= 10
-                traits["natural cook"] += 10
                 traits["neat"] -= 10
                 traits["neurotic"] -= 10
                 traits["never nude"] += 10
@@ -904,8 +890,6 @@ def hobby_traits(hobby, traits, age):
                 traits["lucky"] -= 10
                 traits["mean-spirited"] += 10
                 traits["mooch"] += 10
-                traits["natural born performer"] -= 10
-                traits["natural cook"] -= 10
                 traits["neat"] += 10
                 traits["neurotic"] += 10
                 traits["never nude"] += 10
@@ -981,8 +965,6 @@ def hobby_traits(hobby, traits, age):
                 traits["lucky"] += 10
                 traits["mean-spirited"] -= 10
                 traits["mooch"] -= 10
-                traits["natural born performer"] -= 10
-                traits["natural cook"] -= 10
                 traits["neat"] -= 10
                 traits["neurotic"] -= 10
                 traits["never nude"] += 10
@@ -1058,8 +1040,6 @@ def hobby_traits(hobby, traits, age):
                 traits["lucky"] -= 10
                 traits["mean-spirited"] -= 10
                 traits["mooch"] += 10
-                traits["natural born performer"] -= 10
-                traits["natural cook"] -= 10
                 traits["neat"] += 10
                 traits["neurotic"] += 10
                 traits["never nude"] += 10
