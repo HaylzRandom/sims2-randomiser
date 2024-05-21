@@ -316,6 +316,7 @@ TEEN_OLDER_TRAITS = {
     "genius": 0,
     "good": 0,
     "good sense of humour": 0,
+    "great kisser": 0,
     "green thumb": 0,
     "grumpy": 0,
     "handy": 0,
