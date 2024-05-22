@@ -7,7 +7,7 @@ from globals import (
 from .hobby import get_hobby
 from .personality import get_personality
 from .interests import get_interests
-from .traits import get_traits_young, remove_conflicting_traits
+from .traits import get_traits_young, remove_conflicting_traits, print_trait_list
 
 
 def generate_young(age):
@@ -66,11 +66,11 @@ def generate_young(age):
 
     if age == "toddler":
         filtered_traits = remove_conflicting_traits(traits, TODDLER_CONFLICTS)
-        # print(f"\nFiltered Traits: {filtered_traits}")
         toddler_traits = list(filtered_traits.items())[:TODDLER_NUM_TRAITS]
-        print(f"Final Traits: {toddler_traits}")
+        print(f"\nTraits for {age}: ")
+        print_trait_list(toddler_traits)
     else:
         filtered_traits = remove_conflicting_traits(traits, CHILD_CONFLICTS)
-        # print(f"Filtered Traits: {filtered_traits}")
         child_traits = list(filtered_traits.items())[:CHILD_NUM_TRAITS]
-        print(f"Final Traits: {child_traits}")
+        print(f"\nTraits for {age}: ")
+        print_trait_list(child_traits)
