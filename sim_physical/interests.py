@@ -50,13 +50,6 @@ def interests_aspiration(
     sciFi,
     aspirations,
 ):
-    # aspiration_choice["Family"] += school + toys + animals + food
-    # aspiration_choice["Fortune"] += crime + money + work + politics
-    # aspiration_choice["Knowledge"] += weather + paranormal + environment + sciFi
-    # aspiration_choice["Pleasure"] += food + entertainment + culture + travel
-    # aspiration_choice["Popularity"] += politics + sports + fashion + entertainment
-    # aspiration_choice["Romance"] += fashion + travel + health + culture
-
     # Politics
     if politics >= 8:
         aspirations["Family"] -= 10

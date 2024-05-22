@@ -1,23 +1,24 @@
 from globals import (
     TODDLER_TRAITS,
-    TODDLER_NUM_TRAITS,
     CHILD_TRAITS,
-    CHILD_NUM_TRAITS,
     TEEN_OLDER_TRAITS,
-    TEEN_NUM_TRAITS,
-    ADULT_NUM_TRAITS,
-    TODDLER_CONFLICTS,
-    CHILD_CONFLICTS,
-    TEEN_OLDER_CONFLICTS,
 )
 from .turn_ons_off import (
     get_trait_turn_off,
     get_trait_turn_on,
 )
 
-from .hobby import hobby_traits
-from .personality import personality_traits
-from .interests import interests_traits
+from .hobby import hobby_traits_all, hobby_traits_child, hobby_traits_teen
+from .personality import (
+    personality_traits_all,
+    personality_traits_child,
+    personality_traits_teen,
+)
+from .interests import (
+    interests_traits_all,
+    interests_traits_child,
+    interests_traits_teen,
+)
 from .aspiration import aspiration_traits
 
 
@@ -50,9 +51,9 @@ def get_traits_young(
 ):
     if age == "toddler":
         traits = TODDLER_TRAITS
-        hobby_traits(hobby, traits, age)
-        personality_traits(neat, outgoing, active, playful, nice, age, traits)
-        interests_traits(
+        hobby_traits_all(hobby, traits)
+        personality_traits_all(neat, outgoing, active, playful, nice, traits)
+        interests_traits_all(
             politics,
             crime,
             food,
@@ -72,7 +73,6 @@ def get_traits_young(
             animals,
             sciFi,
             traits,
-            age,
         )
 
         sorted_traits = sorted(traits.items(), key=lambda x: x[1], reverse=True)
@@ -82,9 +82,14 @@ def get_traits_young(
         return reordered_traits
     else:
         traits = CHILD_TRAITS
-        hobby_traits(hobby, traits, age)
-        personality_traits(neat, outgoing, active, playful, nice, age, traits)
-        interests_traits(
+
+        hobby_traits_all(hobby, traits)
+        hobby_traits_child(hobby, traits)
+
+        personality_traits_all(neat, outgoing, active, playful, nice, traits)
+        personality_traits_child(neat, outgoing, active, playful, nice, traits)
+
+        interests_traits_all(
             politics,
             crime,
             food,
@@ -104,7 +109,27 @@ def get_traits_young(
             animals,
             sciFi,
             traits,
-            age,
+        )
+        interests_traits_child(
+            politics,
+            crime,
+            food,
+            sports,
+            work,
+            school,
+            money,
+            entertainment,
+            health,
+            paranormal,
+            weather,
+            toys,
+            environment,
+            culture,
+            fashion,
+            travel,
+            animals,
+            sciFi,
+            traits,
         )
 
         sorted_traits = sorted(traits.items(), key=lambda x: x[1], reverse=True)
@@ -115,7 +140,6 @@ def get_traits_young(
 
 
 def get_traits_old(
-    age,
     neat,
     outgoing,
     active,
@@ -146,14 +170,21 @@ def get_traits_old(
     aspirations,
 ):
 
-    # if age == "teen":
     traits = TEEN_OLDER_TRAITS
+
     get_trait_turn_on(turn_on_1, traits)
     get_trait_turn_on(turn_on_2, traits)
     get_trait_turn_off(turn_off, traits)
-    hobby_traits(hobby, traits, age)
-    personality_traits(neat, outgoing, active, playful, nice, age, traits)
-    interests_traits(
+
+    hobby_traits_all(hobby, traits)
+    hobby_traits_child(hobby, traits)
+    hobby_traits_teen(hobby, traits)
+
+    personality_traits_all(neat, outgoing, active, playful, nice, traits)
+    personality_traits_child(neat, outgoing, active, playful, nice, traits)
+    personality_traits_teen(neat, outgoing, active, playful, nice, traits)
+
+    interests_traits_all(
         politics,
         crime,
         food,
@@ -173,54 +204,56 @@ def get_traits_old(
         animals,
         sciFi,
         traits,
-        age,
     )
-    aspiration_traits(aspirations, age, traits)
+    interests_traits_child(
+        politics,
+        crime,
+        food,
+        sports,
+        work,
+        school,
+        money,
+        entertainment,
+        health,
+        paranormal,
+        weather,
+        toys,
+        environment,
+        culture,
+        fashion,
+        travel,
+        animals,
+        sciFi,
+        traits,
+    )
+    interests_traits_teen(
+        politics,
+        crime,
+        food,
+        sports,
+        work,
+        school,
+        money,
+        entertainment,
+        health,
+        paranormal,
+        weather,
+        toys,
+        environment,
+        culture,
+        fashion,
+        travel,
+        animals,
+        sciFi,
+        traits,
+    )
+    aspiration_traits(aspirations, traits)
 
     sorted_traits = sorted(traits.items(), key=lambda x: x[1], reverse=True)
 
     reordered_traits = {d: v for d, v in sorted_traits if v > 0}
 
     return reordered_traits
-
-
-# else:
-#     traits = TEEN_OLDER_TRAITS
-#     get_trait_turn_on_adult(turn_on_1, traits)
-#     get_trait_turn_on_adult(turn_on_2, traits)
-#     get_trait_turn_off_adult(turn_off, traits)
-#     hobby_traits(hobby, traits, age)
-#     personality_traits(neat, outgoing, active, playful, nice, age, traits)
-#     interests_traits(
-#         politics,
-#         crime,
-#         food,
-#         sports,
-#         work,
-#         school,
-#         money,
-#         entertainment,
-#         health,
-#         paranormal,
-#         weather,
-#         toys,
-#         environment,
-#         culture,
-#         fashion,
-#         travel,
-#         animals,
-#         sciFi,
-#         traits,
-#         age,
-#     )
-
-#     aspiration_traits(aspirations, age, traits)
-
-#     sorted_traits = sorted(traits.items(), key=lambda x: x[1], reverse=True)
-
-#     reordered_traits = {d: v for d, v in sorted_traits if v > 0}
-
-#     return reordered_traits
 
 
 def remove_conflicting_traits(traits, conflict_traits):
@@ -250,3 +283,9 @@ def remove_conflicting_traits(traits, conflict_traits):
             del traits[trait]  # Remove the trait from the original dictionary
 
     return final_traits
+
+
+def print_trait_list(traits):
+
+    for i, (trait, value) in enumerate(traits, start=1):
+        print(f"{i}. {trait.capitalize()} ({value})")

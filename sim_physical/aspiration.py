@@ -7,6 +7,7 @@ from .interests import get_interests, interests_aspiration
 def generate_aspiration():
     aspiration_choice = dict(ASPIRATION_MODEL)
     sim_data = {}
+    print("")
     hobby = get_hobby()
 
     match hobby:

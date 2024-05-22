@@ -2,14 +2,15 @@
 def get_personality():
     personality = {"Neat": 0, "Outgoing": 0, "Active": 0, "Playful": 0, "Nice": 0}
 
-    print("\nPersonality Values\n")
+    print("Personality Values\n")
     for value in personality:
         personality[value] = int(input(f"Please enter value for {value}: "))
 
     return personality.values()
 
+
 def personality_traits_all(neat, outgoing, active, playful, nice, traits):
-    
+
     if neat >= 8:
         traits["artistic"] -= 10
         traits["clumsy"] -= 10
@@ -70,7 +71,7 @@ def personality_traits_all(neat, outgoing, active, playful, nice, traits):
         traits["perceptive"] -= 10
         traits["sailor"] += 10
         traits["slob"] += 10
-        
+
     if outgoing >= 8:
         traits["absent-minded"] -= 10
         traits["brave"] += 10
@@ -131,7 +132,7 @@ def personality_traits_all(neat, outgoing, active, playful, nice, traits):
         traits["perceptive"] += 10
         traits["sailor"] -= 10
         traits["virtuoso"] -= 10
-        
+
     if active >= 8:
         traits["athletic"] += 10
         traits["brave"] += 10
@@ -158,7 +159,7 @@ def personality_traits_all(neat, outgoing, active, playful, nice, traits):
         traits["insane"] -= 10
         traits["loner"] -= 10
         traits["loves the cold"] -= 10
-        traits["loves the heat"] += 10 
+        traits["loves the heat"] += 10
         traits["neurotic"] -= 10
         traits["perceptive"] -= 10
         traits["virtuoso"] += 10
@@ -192,7 +193,7 @@ def personality_traits_all(neat, outgoing, active, playful, nice, traits):
         traits["loves the outdoors"] -= 10
         traits["sailor"] -= 10
         traits["slob"] += 10
-        
+
     if playful >= 8:
         traits["absent-minded"] += 10
         traits["athletic"] -= 10
@@ -253,7 +254,7 @@ def personality_traits_all(neat, outgoing, active, playful, nice, traits):
         traits["neurotic"] += 10
         traits["perceptive"] += 10
         traits["slob"] -= 10
-        
+
     if nice >= 8:
         traits["artistic"] += 10
         traits["athletic"] -= 10
@@ -317,7 +318,7 @@ def personality_traits_all(neat, outgoing, active, playful, nice, traits):
 
 
 def personality_traits_child(neat, outgoing, active, playful, nice, traits):
-    
+
     if neat >= 8:
         traits["adventurous"] -= 10
         traits["animal lover"] -= 10
@@ -414,7 +415,7 @@ def personality_traits_child(neat, outgoing, active, playful, nice, traits):
         traits["snob"] -= 10
         traits["technophobe"] -= 10
         traits["vegetarian"] -= 10
-        
+
     if outgoing >= 8:
         traits["adventurous"] += 10
         traits["angler"] -= 10
@@ -511,7 +512,7 @@ def personality_traits_child(neat, outgoing, active, playful, nice, traits):
         traits["technophobe"] -= 10
         traits["unlucky"] += 10
         traits["vehicle enthusiast"] -= 10
-        
+
     if active >= 8:
         traits["adventurous"] += 10
         traits["angler"] -= 10
@@ -608,7 +609,7 @@ def personality_traits_child(neat, outgoing, active, playful, nice, traits):
         traits["unlucky"] += 10
         traits["vegetarian"] -= 10
         traits["workaholic"] -= 10
-        
+
     if playful >= 8:
         traits["ambitious"] -= 10
         traits["angler"] -= 10
@@ -705,7 +706,7 @@ def personality_traits_child(neat, outgoing, active, playful, nice, traits):
         traits["supernatural fan"] += 10
         traits["vegetarian"] += 10
         traits["workaholic"] += 10
-        
+
     if nice >= 8:
         traits["ambitious"] -= 10
         traits["animal lover"] += 10
@@ -803,7 +804,8 @@ def personality_traits_child(neat, outgoing, active, playful, nice, traits):
         traits["unstable"] += 10
         traits["workaholic"] += 10
 
-def personality_traits_teen(neat, outgoing, active, playful, nice, traits):   
+
+def personality_traits_teen(neat, outgoing, active, playful, nice, traits):
     if neat >= 8:
         traits["avant garde"] -= 10
         traits["charismatic"] -= 10
@@ -856,7 +858,7 @@ def personality_traits_teen(neat, outgoing, active, playful, nice, traits):
         traits["savvy sculptor"] += 10
         traits["social butterfly"] += 10
         traits["socially awkward"] -= 10
-        
+
     if outgoing >= 8:
         traits["born salesman"] += 10
         traits["brooding"] -= 10
@@ -909,7 +911,7 @@ def personality_traits_teen(neat, outgoing, active, playful, nice, traits):
         traits["schmoozer"] -= 10
         traits["social butterfly"] -= 10
         traits["socially awkward"] += 10
-        
+
     if active >= 8:
         traits["brooding"] -= 10
         traits["commitment issues"] += 10
@@ -962,7 +964,7 @@ def personality_traits_teen(neat, outgoing, active, playful, nice, traits):
         traits["irresistible"] -= 10
         traits["natural born performer"] -= 10
         traits["proper"] += 10
-        
+
     if playful >= 8:
         traits["born salesman"] -= 10
         traits["brooding"] -= 10
@@ -1015,7 +1017,7 @@ def personality_traits_teen(neat, outgoing, active, playful, nice, traits):
         traits["natural cook"] += 10
         traits["nurturing"] -= 10
         traits["supernatural sceptic"] -= 10
-        
+
     if nice >= 8:
         traits["avant garde"] += 10
         traits["born salesman"] -= 10
