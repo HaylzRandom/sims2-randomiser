@@ -1,3 +1,6 @@
+import inquirer
+
+
 # Get Interests - Politics, Crime, Food, Sports, Work, School, Money, Entertainment, Health, Paranormal, Weather, Toys, Environment, Culture, Fashion, Travel, Animals and SciFi
 def get_interests():
     interests = {
@@ -22,9 +25,26 @@ def get_interests():
     }
 
     print("\nInterest Values\n")
+    print("Enter sim's interests value (0-10)\n")
 
     for interest in interests:
-        interests[interest] = int(input(f"Please enter value for {interest}: "))
+        while True:
+            question = [inquirer.Text(interest, message=f"{interest}")]
+
+            answer = inquirer.prompt(question)
+
+            if answer is not None:
+                try:
+                    value = int(answer[interest])
+                    if 0 <= value <= 10:
+                        interests[interest] = value
+                        break
+                    else:
+                        print("Please enter a number between 0 and 10.")
+                except ValueError:
+                    print("Please enter a valid number.")
+            else:
+                print("No input provided. Please try again.")
 
     return interests.values()
 

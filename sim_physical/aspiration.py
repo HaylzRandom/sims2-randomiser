@@ -257,7 +257,7 @@ def aspiration_traits(aspirations, traits):
 
     for key, value in aspirations.items():
         if key == "Family":
-            if value >= 100:
+            if value >= 80:
                 traits["adventurous"] += 10
                 traits["ambitious"] -= 10
                 traits["animal lover"] += 10
@@ -301,7 +301,7 @@ def aspiration_traits(aspirations, traits):
                 traits["supernatural sceptic"] -= 10
                 traits["unstable"] -= 10
                 traits["workaholic"] -= 10
-            if value >= 50 and value < 100:
+            if value >= 50 and value < 80:
                 traits["absent-minded"] += 10
                 traits["angler"] += 10
                 traits["artistic"] -= 10
@@ -357,7 +357,7 @@ def aspiration_traits(aspirations, traits):
                 traits["vegetarian"] += 10
                 traits["vehicle enthusiast"] += 10
                 traits["virtuoso"] -= 10
-            if value > 0 and value < 50:
+            if value >= 30 and value < 50:
                 traits["absent-minded"] -= 10
                 traits["angler"] -= 10
                 traits["artistic"] += 10
@@ -458,7 +458,7 @@ def aspiration_traits(aspirations, traits):
                 traits["unstable"] += 10
                 traits["workaholic"] += 10
         if key == "Fortune":
-            if value >= 100:
+            if value >= 80:
                 traits["absent-minded"] -= 10
                 traits["adventurous"] += 10
                 traits["ambitious"] += 10
@@ -512,7 +512,7 @@ def aspiration_traits(aspirations, traits):
                 traits["vegetarian"] -= 10
                 traits["vehicle enthusiast"] += 10
                 traits["workaholic"] += 10
-            if value >= 50 and value < 100:
+            if value >= 50 and value < 80:
                 traits["angler"] -= 10
                 traits["animal lover"] -= 10
                 traits["athletic"] += 10
@@ -558,7 +558,7 @@ def aspiration_traits(aspirations, traits):
                 traits["unflirty"] -= 10
                 traits["unstable"] += 10
                 traits["virtuoso"] += 10
-            if value > 0 and value < 50:
+            if value > 30 and value < 50:
                 traits["angler"] += 10
                 traits["animal lover"] += 10
                 traits["athletic"] -= 10
@@ -659,7 +659,7 @@ def aspiration_traits(aspirations, traits):
                 traits["vehicle enthusiast"] -= 10
                 traits["workaholic"] -= 10
         if key == "Knowledge":
-            if value >= 100:
+            if value >= 80:
                 traits["adventurous"] += 10
                 traits["angler"] += 10
                 traits["artistic"] -= 10
@@ -719,7 +719,7 @@ def aspiration_traits(aspirations, traits):
                 traits["technophobe"] -= 10
                 traits["unflirty"] += 10
                 traits["virtuoso"] -= 10
-            if value >= 50 and value < 100:
+            if value >= 50 and value < 80:
                 traits["absent-minded"] -= 10
                 traits["ambitious"] += 10
                 traits["animal lover"] -= 10
@@ -759,7 +759,7 @@ def aspiration_traits(aspirations, traits):
                 traits["vegetarian"] -= 10
                 traits["vehicle enthusiast"] += 10
                 traits["workaholic"] += 10
-            if value > 0 and value < 50:
+            if value >= 30 and value < 50:
                 traits["absent-minded"] += 10
                 traits["ambitious"] -= 10
                 traits["animal lover"] += 10
@@ -860,7 +860,7 @@ def aspiration_traits(aspirations, traits):
                 traits["unflirty"] -= 10
                 traits["virtuoso"] += 10
         if key == "Pleasure":
-            if value >= 100:
+            if value >= 80:
                 traits["absent-minded"] += 10
                 traits["adventurous"] += 10
                 traits["ambitious"] -= 10
@@ -909,7 +909,7 @@ def aspiration_traits(aspirations, traits):
                 traits["unlucky"] -= 10
                 traits["vehicle enthusiast"] += 10
                 traits["workaholic"] -= 10
-            if value >= 50 and value < 100:
+            if value >= 50 and value < 80:
                 traits["angler"] -= 10
                 traits["artistic"] -= 10
                 traits["avant garde"] -= 10
@@ -959,7 +959,7 @@ def aspiration_traits(aspirations, traits):
                 traits["unstable"] += 10
                 traits["vegetarian"] -= 10
                 traits["virtuoso"] -= 10
-            if value > 0 and value < 50:
+            if value > 30 and value < 50:
                 traits["angler"] += 10
                 traits["artistic"] += 10
                 traits["avant garde"] += 10
@@ -1059,7 +1059,7 @@ def aspiration_traits(aspirations, traits):
                 traits["vehicle enthusiast"] -= 10
                 traits["workaholic"] += 10
         if key == "Popularity":
-            if value >= 100:
+            if value >= 80:
                 traits["absent-minded"] += 10
                 traits["angler"] -= 10
                 traits["animal lover"] += 10
@@ -1112,7 +1112,7 @@ def aspiration_traits(aspirations, traits):
                 traits["star quality"] += 10
                 traits["vehicle enthusiast"] += 10
                 traits["virtuoso"] += 10
-            if value >= 50 and value < 100:
+            if value >= 50 and value < 80:
                 traits["ambitious"] += 10
                 traits["avant garde"] += 10
                 traits["bookworm"] += 10
@@ -1158,7 +1158,7 @@ def aspiration_traits(aspirations, traits):
                 traits["unstable"] -= 10
                 traits["vegetarian"] += 10
                 traits["workaholic"] += 10
-            if value > 0 and value < 50:
+            if value >= 30 and value < 50:
                 traits["ambitious"] -= 10
                 traits["avant garde"] -= 10
                 traits["bookworm"] -= 10
@@ -1258,7 +1258,7 @@ def aspiration_traits(aspirations, traits):
                 traits["vehicle enthusiast"] -= 10
                 traits["virtuoso"] -= 10
         if key == "Romance":
-            if value >= 100:
+            if value >= 80:
                 traits["adventurous"] += 10
                 traits["ambitious"] -= 10
                 traits["artistic"] += 10
@@ -1316,7 +1316,7 @@ def aspiration_traits(aspirations, traits):
                 traits["vegetarian"] -= 10
                 traits["virtuoso"] += 10
                 traits["workaholic"] += 10
-            if value >= 50 and value < 100:
+            if value >= 50 and value < 80:
                 traits["absent-minded"] -= 10
                 traits["angler"] -= 10
                 traits["animal lover"] -= 10
@@ -1358,7 +1358,7 @@ def aspiration_traits(aspirations, traits):
                 traits["unlucky"] -= 10
                 traits["unstable"] += 10
                 traits["vehicle enthusiast"] += 10
-            if value > 0 and value < 50:
+            if value >= 30 and value < 50:
                 traits["absent-minded"] += 10
                 traits["angler"] += 10
                 traits["animal lover"] += 10

@@ -1,10 +1,36 @@
+import inquirer
+
+
 # Get personality - Neat, Outgoing, Active, Playful, Nice
 def get_personality():
     personality = {"Neat": 0, "Outgoing": 0, "Active": 0, "Playful": 0, "Nice": 0}
 
     print("Personality Values\n")
-    for value in personality:
-        personality[value] = int(input(f"Please enter value for {value}: "))
+    print("Enter sim's personality value (0-10)\n")
+    # for value in personality:
+    #     personality[value] = int(input(f"Please enter value for {value}: "))
+
+    for personality_value in personality:
+        while True:
+            question = [
+                inquirer.Text(personality_value, message=f"{personality_value}")
+            ]
+
+            answer = inquirer.prompt(question)
+
+            if answer is not None:
+                try:
+                    value = int(answer[personality_value])
+
+                    if 0 <= value <= 10:
+                        personality[personality_value] = value
+                        break
+                    else:
+                        print("Please enter a number between 0 and 10.")
+                except ValueError:
+                    print("Please enter a valid number.")
+            else:
+                print("No input provided. Please try again.")
 
     return personality.values()
 
