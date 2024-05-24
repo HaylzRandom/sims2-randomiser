@@ -1,3 +1,4 @@
+from random import shuffle
 from globals import TEEN_OLDER_CONFLICTS, TEEN_NUM_TRAITS, ADULT_NUM_TRAITS
 from .aspiration import generate_aspiration
 from .turn_ons_off import get_turn_ons_off
@@ -6,7 +7,12 @@ from .traits import get_traits_old, remove_conflicting_traits, print_trait_list
 
 def generate_old(age):
 
-    data_aspiration, aspirations = generate_aspiration()
+    data = get_turn_ons_off()
+
+    turn_on_1, turn_on_2 = data[0]["turn_ons"][0], data[0]["turn_ons"][1]
+    turn_off = data[1]["turn_off"]
+
+    data_aspiration, aspirations = generate_aspiration(turn_on_1, turn_on_2, turn_off)
 
     (
         hobby,
@@ -34,11 +40,6 @@ def generate_old(age):
         animals,
         sciFi,
     ) = data_aspiration.values()
-
-    data = get_turn_ons_off()
-
-    turn_on_1, turn_on_2 = data[0]["turn_ons"][0], data[0]["turn_ons"][1]
-    turn_off = data[1]["turn_offs"]
 
     traits = get_traits_old(
         neat,
@@ -84,11 +85,13 @@ def generate_old(age):
 
     if age == "teen":
         filtered_traits = remove_conflicting_traits(traits, TEEN_OLDER_CONFLICTS)
-        teen_traits = list(filtered_traits.items())[:TEEN_NUM_TRAITS]
+        teen_traits = list(filtered_traits.keys())[: TEEN_NUM_TRAITS + 4]
+        shuffle(teen_traits)
         print(f"\nTraits for {age}: ")
         print_trait_list(teen_traits)
     else:
         filtered_traits = remove_conflicting_traits(traits, TEEN_OLDER_CONFLICTS)
-        adult_traits = list(filtered_traits.items())[:ADULT_NUM_TRAITS]
+        adult_traits = list(filtered_traits.keys())[: ADULT_NUM_TRAITS + 4]
+        shuffle(adult_traits)
         print(f"\nTraits for {age}: ")
         print_trait_list(adult_traits)

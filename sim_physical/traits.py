@@ -172,81 +172,81 @@ def get_traits_old(
 
     traits = TEEN_OLDER_TRAITS
 
-    get_trait_turn_on(turn_on_1, traits)
-    get_trait_turn_on(turn_on_2, traits)
-    get_trait_turn_off(turn_off, traits)
+    # get_trait_turn_on(turn_on_1, traits)
+    # get_trait_turn_on(turn_on_2, traits)
+    # get_trait_turn_off(turn_off, traits)
 
-    hobby_traits_all(hobby, traits)
-    hobby_traits_child(hobby, traits)
-    hobby_traits_teen(hobby, traits)
+    # hobby_traits_all(hobby, traits)
+    # hobby_traits_child(hobby, traits)
+    # hobby_traits_teen(hobby, traits)
 
-    personality_traits_all(neat, outgoing, active, playful, nice, traits)
-    personality_traits_child(neat, outgoing, active, playful, nice, traits)
-    personality_traits_teen(neat, outgoing, active, playful, nice, traits)
+    # personality_traits_all(neat, outgoing, active, playful, nice, traits)
+    # personality_traits_child(neat, outgoing, active, playful, nice, traits)
+    # personality_traits_teen(neat, outgoing, active, playful, nice, traits)
 
-    interests_traits_all(
-        politics,
-        crime,
-        food,
-        sports,
-        work,
-        school,
-        money,
-        entertainment,
-        health,
-        paranormal,
-        weather,
-        toys,
-        environment,
-        culture,
-        fashion,
-        travel,
-        animals,
-        sciFi,
-        traits,
-    )
-    interests_traits_child(
-        politics,
-        crime,
-        food,
-        sports,
-        work,
-        school,
-        money,
-        entertainment,
-        health,
-        paranormal,
-        weather,
-        toys,
-        environment,
-        culture,
-        fashion,
-        travel,
-        animals,
-        sciFi,
-        traits,
-    )
-    interests_traits_teen(
-        politics,
-        crime,
-        food,
-        sports,
-        work,
-        school,
-        money,
-        entertainment,
-        health,
-        paranormal,
-        weather,
-        toys,
-        environment,
-        culture,
-        fashion,
-        travel,
-        animals,
-        sciFi,
-        traits,
-    )
+    # interests_traits_all(
+    #     politics,
+    #     crime,
+    #     food,
+    #     sports,
+    #     work,
+    #     school,
+    #     money,
+    #     entertainment,
+    #     health,
+    #     paranormal,
+    #     weather,
+    #     toys,
+    #     environment,
+    #     culture,
+    #     fashion,
+    #     travel,
+    #     animals,
+    #     sciFi,
+    #     traits,
+    # )
+    # interests_traits_child(
+    #     politics,
+    #     crime,
+    #     food,
+    #     sports,
+    #     work,
+    #     school,
+    #     money,
+    #     entertainment,
+    #     health,
+    #     paranormal,
+    #     weather,
+    #     toys,
+    #     environment,
+    #     culture,
+    #     fashion,
+    #     travel,
+    #     animals,
+    #     sciFi,
+    #     traits,
+    # )
+    # interests_traits_teen(
+    #     politics,
+    #     crime,
+    #     food,
+    #     sports,
+    #     work,
+    #     school,
+    #     money,
+    #     entertainment,
+    #     health,
+    #     paranormal,
+    #     weather,
+    #     toys,
+    #     environment,
+    #     culture,
+    #     fashion,
+    #     travel,
+    #     animals,
+    #     sciFi,
+    #     traits,
+    # )
     aspiration_traits(aspirations, traits)
 
     sorted_traits = sorted(traits.items(), key=lambda x: x[1], reverse=True)
@@ -287,5 +287,5 @@ def remove_conflicting_traits(traits, conflict_traits):
 
 def print_trait_list(traits):
 
-    for i, (trait, value) in enumerate(traits, start=1):
-        print(f"{i}. {trait.capitalize()} ({value})")
+    for i, (trait) in enumerate(traits, start=1):
+        print(f"{i}. {trait.capitalize()}")

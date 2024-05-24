@@ -1,3 +1,4 @@
+from random import shuffle
 from globals import (
     TODDLER_CONFLICTS,
     TODDLER_NUM_TRAITS,
@@ -66,11 +67,13 @@ def generate_young(age):
 
     if age == "toddler":
         filtered_traits = remove_conflicting_traits(traits, TODDLER_CONFLICTS)
-        toddler_traits = list(filtered_traits.items())[:TODDLER_NUM_TRAITS]
+        toddler_traits = list(filtered_traits.items())[: TODDLER_NUM_TRAITS + 4]
+        shuffle(toddler_traits)
         print(f"\nTraits for {age}: ")
         print_trait_list(toddler_traits)
     else:
         filtered_traits = remove_conflicting_traits(traits, CHILD_CONFLICTS)
-        child_traits = list(filtered_traits.items())[:CHILD_NUM_TRAITS]
+        child_traits = list(filtered_traits.items())[: CHILD_NUM_TRAITS + 4]
+        shuffle(child_traits)
         print(f"\nTraits for {age}: ")
         print_trait_list(child_traits)
